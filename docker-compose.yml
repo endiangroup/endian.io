@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+
+    endian.io:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ".:/sites/endian.io"
+        ports:
+            - "1313:1313"
+        entrypoint: "tail -f /dev/null"

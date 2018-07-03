@@ -1,0 +1,34 @@
+// {{.Site.Params.headerComment | safeHTML }}
+= doctype html
+html lang={{.Site.LanguageCode}}
+  {{ partial "head" . }}
+
+  body
+    .container
+      header
+        = yield header
+      content
+        = yield main
+      footer
+        = yield footer
+
+  script src="/js/jquery.min.js"
+  script src="/js/foundation.core.min.js"
+  script src="/js/aos.min.js"
+
+  script.
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        .then(function(registration) {
+              console.log('Service Worker Registered');
+        });
+
+      navigator.serviceWorker.ready.then(function(registration) {
+          console.log('Service Worker Ready');
+      });
+    }
+
+  script.
+    AOS.init();
+
+  script defer="true" src="/js/app.js?v={{getenv "GITHASH"}}"

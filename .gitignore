@@ -1,0 +1,8 @@
+.DS_Store
+themes/sherpa/static/css
+themes/sherpa/static/fonts
+themes/sherpa/static/sw.js
+public/
+.sass-cache
+node_modules/
+.started

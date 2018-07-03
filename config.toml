@@ -1,0 +1,16 @@
+# Hugo params for global setup
+baseurl      = "https://www.endian.io"
+languageCode = "en-us"
+title        = "Endian"
+theme        = "sherpa"
+
+# Site-wide content params
+[params]
+	description = ""
+
+	##############################################################
+    # This is the ASCII art in the output source code. It looks
+    # garbled here because it has no line breaks.
+	##############################################################
+
+  headerComment = "\n######## ##    ## ########  ####    ###    ##    ##     ####  #######  \n##       ###   ## ##     ##  ##    ## ##   ###   ##      ##  ##     ## \n##       ####  ## ##     ##  ##   ##   ##  ####  ##      ##  ##     ## \n######   ## ## ## ##     ##  ##  ##     ## ## ## ##      ##  ##     ## \n##       ##  #### ##     ##  ##  ######### ##  ####      ##  ##     ## \n##       ##   ### ##     ##  ##  ##     ## ##   ### ###  ##  ##     ## \n######## ##    ## ########  #### ##     ## ##    ## ### ####  #######  \nMade with Hugo + Foundation 6.\n"

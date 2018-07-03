@@ -1,0 +1,60 @@
+= content header
+  img src="/img/endian-logo.svg"
+  span endian
+= content main
+  section#introduction
+    h1 We're not an agency.
+    h1 We're digital sherpas.
+    img src="/img/mountains.svg"
+    h2 Holistic technical solutions from first principles to world domination.
+    h5
+      | Want the TLDR?
+      a  Here's what we do
+    p Much of our work at Endian has been figuring out how to get clarity on ideas, create a team that's harmonious and deliver solutions that provably work. Over the years we've distilled that thinking into processes, tools and training that we call the Endian Way. And we'd like to share it with you.
+  section#the-endian-way
+    h1 The Endian Way
+    ul
+      li
+        h3 Aspirational
+        p We believe everything beyond basic survival is art. We believe that everything ugly was intended to be beautiful, and that everything beautiful was meant to be useful.
+      li
+        h3 Defiant
+        p We don't invest in ego and we don't believe in hierarchy. We believe in walking the shortest path. We believe in goals, but we know the work's never done. We're here for the creating, not just the creation.
+      li
+        h3 Accessible
+        p We're all about goals. We like defining them but we love achieving them. Since you're reading this, you probably have something exciting in mind; some world-changing startup idea or product. If that sounds like you, keep reading!
+  section#how-we-get-there
+    h1 How we get there from here
+    ul
+      li
+        h3 Planning
+        p Knowing where you're going and how to get there is critical. From the grand vision to the daily details, all projects need careful thought and a comprehensive plan.
+      li
+        h3 Implementation
+        p The economic application of effort vectored onto goals is vital. In other words, the right people must apply the right processes to the right problems.
+  section#what-we-do
+    h1 What we do (how we help you)
+    p We believe in what you're doing, and we'd love to be a part of it.
+    ul
+      li
+        h3 Braintrust
+        p Finding a direction can be hard, and understanding the lay of the technical landscape can be daunting. We're a collective of philosophers, engineers and life Sherpas; you bring the why, we'll bring the what.
+      li
+        h3 Indoctrination
+        p The Endian Way is comprised of a set of processes and tools that we've spent years honing. We'd love to invite you to one of our Forced Reeducation Camps (sometimes called training sessions) so you can level up.
+      li
+        h3 Muscle
+        p If you need experts, you've found them. We have world-class thinkers and doers who eat complex software problems for breakfast. You bring the what, we'll bring the how.
+      li
+        h3 Stewardship
+        p Sometimes you want a full valet service for your product. We can deliver a well-defined, fully tested, document solution for your software. You bring the problem, we'll deliver the solution with a full tank.
+  section#who-weve-helped
+    h1 Who we've helped
+  section#meet-the-sherpas
+    h1 Meet the Sherpas
+  section#say-hi
+    h1 Say hi
+    a hello@endian.io
+= content footer
+  span © Endian Ltd. 2018 |
+  a href="#"  Privacy Policy

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+	"module": "amd",
+	"target": "es2015",
+	"outDir": "themes/sherpa/static/js",
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.iterable"
+    ],
+    "baseUrl": ".",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "jquery",
+	    "foundation-sites"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "include": [
+	  "themes/sherpa/scripts/**/*.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
+}

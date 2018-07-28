@@ -6,7 +6,7 @@ theme        = "sherpa"
 
 # Site-wide content params
 [params]
-	description = ""
+	description = "This is the description of the site."
 
 	##############################################################
     # This is the ASCII art in the output source code. It looks

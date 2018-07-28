@@ -11,7 +11,7 @@ head
   meta name="author" content="{{ . }}"
   {{ end }}
 
-  title {{ .Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }}
+  title {{ .Title }}
 
-  link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet"  
+  link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet"
   link href="/css/sherpa.css?v={{getenv "GITHASH"}}" rel="stylesheet"

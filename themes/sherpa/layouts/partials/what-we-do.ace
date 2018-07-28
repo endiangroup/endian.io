@@ -1,0 +1,16 @@
+section#what-we-do
+  h1 What we do (how we help you)
+  p We believe in what you're doing, and we'd love to be a part of it.
+  ul
+    li
+      h3 Braintrust
+      p Finding a direction can be hard, and understanding the lay of the technical landscape can be daunting. We're a collective of philosophers, engineers and life Sherpas; you bring the why, we'll bring the what.
+    li
+      h3 Indoctrination
+      p The Endian Way is comprised of a set of processes and tools that we've spent years honing. We'd love to invite you to one of our Forced Reeducation Camps (sometimes called training sessions) so you can level up.
+    li
+      h3 Muscle
+      p If you need experts, you've found them. We have world-class thinkers and doers who eat complex software problems for breakfast. You bring the what, we'll bring the how.
+    li
+      h3 Stewardship
+      p Sometimes you want a full valet service for your product. We can deliver a well-defined, fully tested, document solution for your software. You bring the problem, we'll deliver the solution with a full tank.

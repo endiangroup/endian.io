@@ -1,5 +1,5 @@
 
-// Aniamted on Scroll
+// Animate on Scroll
 @import aos
 
 // Foundation
@@ -9,23 +9,81 @@
 +foundation-menu
 +foundation-typography
 
+@import shapes
+@import border-gradient
+
 body
   text-align: center
-  max-width: 960px
+  max-width: 720px
   margin: 0 auto
+  padding: 1em
+  p
+    font-size: 1em
+    line-height: 1.2em
+    font-weight: 500
+    width: 75%
+    margin: 2em auto
+  h1, h2, h3, h4, h5
+    text-align: center
+    width: 60%
+    margin: 0 auto
+  h1
+    font-size: 2rem
+    font-weight: 700
+    width: 100%
+  h2
+    font-size: 1.2rem
+    font-weight: 500
+  h3
+    font-size: 1.1rem
+    font-weight: 700
+  h4
+    font-size: 1.1rem
+    width: 55%
+    margin: 1em auto
+  h5
+    font-size: 0.9rem
+    margin: 2em auto
+  ul
+    list-style-type: none
 
 header
   +grid-row(12)
-  margin-top: 1em
+  margin: 1em auto
+  +breakpoint(medium)
+    margin-top: 4em
+    margin-bottom: 2em
   img
     height: 4em
   span
     margin-left: 0.5em
+    margin-top: 2em
     font-size: 2em
     font-weight: bold
 
-content
+main
   +grid-row(12)
-
+  section
+    margin: 6em 0
+    &#introduction
+      margin: 2em 0
+      a
+        color: #d3161a
+        text-decoration: underline dashed
+        &:hover
+          text-decoration: underline
+      img
+        height: 25vh
+        margin: 2em 0
+    &#how-we-get-there
+      ul
+        li
+          margin-bottom: 2em
+          width: 60%
+    &#what-we-do
+      ul
+        list-style-type: none
+        padding: 0
+        margin: 0
 footer
   +grid-row(12)

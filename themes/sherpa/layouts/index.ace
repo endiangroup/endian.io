@@ -1,17 +1,18 @@
 = content header
-  img src="/img/endian-logo.svg"
-  span endian
+  .logo data-aos="fade-down"
+    img src="/img/endian-logo.svg"
+    span endian
 = content main
   section#introduction
-    h1 We're not an agency.
-    h1 We're digital sherpas.
-    img src="/img/mountains.svg"
-    h2 Holistic technical solutions from first principles to world domination.
+    h1 data-aos="fade-up" data-aos-delay="400" We're not an agency.
+    h1 data-aos="fade-up" data-aos-delay="800" We're digital sherpas.
+    img src="/img/mountains.svg" data-aos="fade-up" data-aos-delay="1200"
+    h2 data-aos="fade-up" Holistic technical solutions from first principles to world domination.
     h5
-      | Want the TLDR?
-      a  Here's what we do
+      | Want the TLDR? &nbsp;
+      a href="#what-we-do" Here's what we do
     p Much of our work at Endian has been figuring out how to get clarity on ideas, create a team that's harmonious and deliver solutions that provably work. Over the years we've distilled that thinking into processes, tools and training that we call the Endian Way. And we'd like to share it with you.
-  section#the-endian-way
+  section#the-endian-way data-aos="fade-up"
     h1 The Endian Way
     ul
       li
@@ -23,7 +24,7 @@
       li
         h3 Accessible
         p We're all about goals. We like defining them but we love achieving them. Since you're reading this, you probably have something exciting in mind; some world-changing startup idea or product. If that sounds like you, keep reading!
-  section#how-we-get-there
+  section#how-we-get-there data-aos="fade-up"
     h1 How we get there from here
     ul
       li
@@ -32,9 +33,12 @@
       li
         h3 Implementation
         p The economic application of effort vectored onto goals is vital. In other words, the right people must apply the right processes to the right problems.
-  section#what-we-do
-    h1 What we do (how we help you)
-    p We believe in what you're doing, and we'd love to be a part of it.
+  section#what-we-do data-aos="fade-up"
+    h1
+      ||
+        What we do
+        (how we help you)
+    h4 We believe in what you're doing, and we'd love to be a part of it.
     ul
       li
         h3 Braintrust
@@ -48,11 +52,11 @@
       li
         h3 Stewardship
         p Sometimes you want a full valet service for your product. We can deliver a well-defined, fully tested, document solution for your software. You bring the problem, we'll deliver the solution with a full tank.
-  section#who-weve-helped
+  section#who-weve-helped data-aos="fade-up"
     h1 Who we've helped
-  section#meet-the-sherpas
+  section#meet-the-sherpas data-aos="fade-up"
     h1 Meet the Sherpas
-  section#say-hi
+  section#say-hi data-aos="fade-up"
     h1 Say hi
     a hello@endian.io
 = content footer

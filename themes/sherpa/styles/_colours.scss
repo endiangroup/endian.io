@@ -1,0 +1,72 @@
+$colour-white:  #ffffff;
+$colour-grey:   #777777;
+$colour-marine: #46565f;
+$colour-red:    #df1f1b;
+$colour-orange: #ea7d1a;
+$colour-yellow: #ffcd03;
+$colour-green:  #81b725;
+$colour-olive:  #079239;
+$colour-blue:   #3f95d1;
+
+$colour-shade-amount: 5.5%;
+$colour-trans-amount: 0.5;
+
+$colours: (
+  white: (
+	base: $colour-white,
+    dark: darken($colour-white, 1%),
+    trans: transparentize($colour-white, $colour-trans-amount),
+  ),
+  grey: (
+    base: $colour-grey,
+    light: lighten($colour-grey, $colour-shade-amount),
+    dark: darken($colour-grey, $colour-shade-amount),
+    trans: transparentize($colour-grey, $colour-trans-amount),
+  ),
+  marine: (
+    base: $colour-marine,
+    light: lighten($colour-marine, $colour-shade-amount),
+    dark: darken($colour-marine, $colour-shade-amount),
+    trans: transparentize($colour-marine, $colour-trans-amount),
+  ),
+  red: (
+    base: $colour-red,
+    light: lighten($colour-red, $colour-shade-amount),
+    dark: darken($colour-red, $colour-shade-amount),
+    trans: transparentize($colour-red, $colour-trans-amount),
+  ),
+  orange: (
+    base: $colour-orange,
+    light: lighten($colour-orange, $colour-shade-amount),
+    dark: darken($colour-orange, $colour-shade-amount),
+    trans: transparentize($colour-orange, $colour-trans-amount),
+  ),
+  yellow: (
+    base: $colour-yellow,
+    light: lighten($colour-yellow, $colour-shade-amount),
+    dark: darken($colour-yellow, $colour-shade-amount),
+    trans: transparentize($colour-yellow, $colour-trans-amount),
+  ),
+  green: (
+    base: $colour-green,
+    light: lighten($colour-green, $colour-shade-amount),
+    dark: darken($colour-green, $colour-shade-amount),
+    trans: transparentize($colour-green, $colour-trans-amount),
+  ),
+  olive: (
+    base: $colour-olive,
+    light: lighten($colour-olive, $colour-shade-amount),
+    dark: darken($colour-olive, $colour-shade-amount),
+    trans: transparentize($colour-olive, $colour-trans-amount),
+  ),
+  blue: (
+    base: $colour-blue,
+    light: lighten($colour-blue, $colour-shade-amount),
+    dark: darken($colour-blue, $colour-shade-amount),
+    trans: transparentize($colour-blue, $colour-trans-amount),
+  ),
+);
+
+@function colour($name, $tone: 'base') {
+    @return map-get(map-get($colours, $name), $tone);
+}

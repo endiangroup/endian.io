@@ -7,7 +7,7 @@ html lang={{.Site.LanguageCode}}
     .container
       header
         = yield header
-      content
+      main
         = yield main
       footer
         = yield footer
@@ -17,7 +17,8 @@ html lang={{.Site.LanguageCode}}
   script src="/js/aos.min.js"
 
   script.
-    if('serviceWorker' in navigator) {
+    // if('serviceWorker' in navigator) {
+    if(false) {
       navigator.serviceWorker.register('/sw.js', { scope: '/' })
         .then(function(registration) {
               console.log('Service Worker Registered');

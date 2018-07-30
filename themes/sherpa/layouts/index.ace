@@ -1,6 +1,6 @@
 = content header
   img src="/img/endian-logo.svg"
-  span endian
+  h1 endian
 
 = content main
   {{ partial "introduction" . }}
@@ -10,7 +10,7 @@
   {{ partial "who-weve-helped" . }}
   {{ partial "meet-the-sherpas" . }}
   {{ partial "say-hi" . }}
-  
+
 = content footer
-  span © Endian Ltd. 2018 |
-  a href="#"  Privacy Policy
+  p © Endian Ltd. 2018 | &nbsp;
+    a href="#" Privacy Policy

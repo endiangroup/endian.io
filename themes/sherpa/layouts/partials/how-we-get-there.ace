@@ -1,9 +1,10 @@
 section#how-we-get-there
-  h1 How we get there from here
+  .title
+    h1 How we get there from here
   ul
-    li
+    li.planning
       h3 Planning
       p Knowing where you're going and how to get there is critical. From the grand vision to the daily details, all projects need careful thought and a comprehensive plan.
-    li
+    li.implementation
       h3 Implementation
       p The economic application of effort vectored onto goals is vital. In other words, the right people must apply the right processes to the right problems.

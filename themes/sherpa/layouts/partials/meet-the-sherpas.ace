@@ -1,2 +1,28 @@
 section#meet-the-sherpas
-  h1 Meet the Sherpas
+  .title
+    h1 Meet the Sherpas
+  ul
+    li
+      .sherpa
+      h3 Name
+      h4 Title
+      a
+        h4 email@email.com
+      a
+        h4 LinkedIn
+    li
+      .sherpa
+      h3 Name
+      h4 Title
+      a
+        h4 email@email.com
+      a
+        h4 LinkedIn
+    li
+      .sherpa
+      h3 Name
+      h4 Title
+      a
+        h4 email@email.com
+      a
+        h4 LinkedIn

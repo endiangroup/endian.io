@@ -1,9 +1,10 @@
 section#introduction
-  h1 We're not an agency.
-  h1 We're digital sherpas.
+  .title
+    h1 We're not an agency.
+    h1 We're digital sherpas.
   img src="/img/mountains.svg"
-  h2 Holistic technical solutions from first principles to world domination.
+  h3 Holistic technical solutions from first principles to world domination.
   h5
-    | Want the TLDR?
-    a  Here's what we do
+    | Want the TLDR? &nbsp;
+    a href="#what-we-do" Here's what we do
   p Much of our work at Endian has been figuring out how to get clarity on ideas, create a team that's harmonious and deliver solutions that provably work. Over the years we've distilled that thinking into processes, tools and training that we call the Endian Way. And we'd like to share it with you.

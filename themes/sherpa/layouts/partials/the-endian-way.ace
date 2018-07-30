@@ -1,5 +1,6 @@
 section#the-endian-way
-  h1 The Endian Way
+  .title
+    h1 The Endian Way
   ul
     li
       h3 Aspirational

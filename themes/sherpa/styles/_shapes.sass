@@ -1,0 +1,24 @@
+=square-border
+  border: 4px solid white
+
+=circle
+  border: 4px solid white
+  width: 100%
+  height: auto
+  padding-bottom: 100%
+  -moz-border-radius: 50%
+  -webkit-border-radius: 50%
+  border-radius: 50%
+
+=chevron($bgColor)
+  text-align: left
+  width: 100%
+  height: auto
+  background: $bgColor
+  padding: 3em 0
+  margin-bottom: 0
+  +breakpoint(medium)
+    -webkit-clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%)
+    clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%)
+    margin-bottom: -9vh
+    padding: 8vh 5vw 12vh 5vw

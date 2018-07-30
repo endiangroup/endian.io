@@ -1,2 +1,9 @@
 section#who-weve-helped
-  h1 Who we've helped
+  .title
+    h1 Who we've helped
+  .client
+    h2 Kowala
+  .client
+    h2 NIWA
+  .client
+    h2 Other

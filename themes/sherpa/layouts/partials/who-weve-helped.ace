@@ -1,9 +1,9 @@
 section#who-weve-helped
-  .title
+  .title data-aos="fade-down"
     h1 Who we've helped
-  .client
+  .client data-aos="fade-down"
     h2 Kowala
-  .client
+  .client data-aos="fade-down"
     h2 NIWA
-  .client
+  .client data-aos="fade-down"
     h2 Other

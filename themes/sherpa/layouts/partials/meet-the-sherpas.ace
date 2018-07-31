@@ -1,8 +1,8 @@
 section#meet-the-sherpas
-  .title
+  .title data-aos="fade-down"
     h1 Meet the Sherpas
   ul
-    li
+    li data-aos="fade-down"
       .sherpa
       h3 Name
       h4 Title
@@ -10,7 +10,7 @@ section#meet-the-sherpas
         h4 email@email.com
       a
         h4 LinkedIn
-    li
+    li data-aos="fade-down"
       .sherpa
       h3 Name
       h4 Title
@@ -18,7 +18,7 @@ section#meet-the-sherpas
         h4 email@email.com
       a
         h4 LinkedIn
-    li
+    li data-aos="fade-down"
       .sherpa
       h3 Name
       h4 Title

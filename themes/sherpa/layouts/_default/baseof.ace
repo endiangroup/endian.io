@@ -5,7 +5,7 @@ html lang={{.Site.LanguageCode}}
 
   body
     .container
-      header
+      header data-aos="fade-down"
         = yield header
       main
         = yield main

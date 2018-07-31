@@ -1,10 +1,10 @@
 section#introduction
-  .title
+  .title data-aos="fade-down"
     h1 We're not an agency.
     h1 We're digital sherpas.
-  img src="/img/mountains.svg"
-  h3 Holistic technical solutions from first principles to world domination.
-  h5
+  img src="/img/mountains.svg" data-aos="fade-down"
+  h3 data-aos="fade-down" Holistic technical solutions from first principles to world domination.
+  h5 data-aos="fade-down"
     | Want the TLDR? &nbsp;
     a href="#what-we-do" Here's what we do
-  p Much of our work at Endian has been figuring out how to get clarity on ideas, create a team that's harmonious and deliver solutions that provably work. Over the years we've distilled that thinking into processes, tools and training that we call the Endian Way. And we'd like to share it with you.
+  p data-aos="fade-down" Much of our work at Endian has been figuring out how to get clarity on ideas, create a team that's harmonious and deliver solutions that provably work. Over the years we've distilled that thinking into processes, tools and training that we call the Endian Way. And we'd like to share it with you.

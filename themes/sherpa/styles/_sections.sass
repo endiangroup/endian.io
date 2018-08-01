@@ -28,12 +28,22 @@ section
         border-bottom: 3px solid
   &#the-endian-way
     ul
+      padding-top: 2em
+      background-repeat: no-repeat
+      background-size: 50%
+      background-image: url(/img/line.svg)
       li
-        margin-bottom: 4em
+        +xy-grid
+        margin-bottom: 6em
+        margin-top: 6em
+        img
+          +xy-cell(2)
         h3
+          +xy-cell(10)
           margin: 1em auto
           text-align: left
         p
+          +xy-cell-offset(1)
           text-align: left
   &#how-we-get-there
     ul

@@ -10,7 +10,7 @@ pipeline:
     staging:
       image: plugins/s3
       acl: public-read
-      region: "us-west-1"
+      region: "eu-west-1"
       bucket: "www.staging.endian.io"
       source: public/**/*
       strip_prefix: public/
@@ -22,7 +22,7 @@ pipeline:
     production:
       image: plugins/s3
       acl: public-read
-      region: "us-west-1"
+      region: "eu-west-1"
       bucket: "endian.io"
       source: public/**/*
       strip_prefix: public/

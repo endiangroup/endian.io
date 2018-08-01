@@ -47,16 +47,28 @@ section
           text-align: left
   &#how-we-get-there
     ul
+      +xy-grid
       li
+        +xy-cell(12)
+        padding: 40% 5% 15% 5%
+        +breakpoint(medium)
+          padding: 50% 5% 30% 5%
+        +breakpoint(large)
+          +xy-cell(8)
+          +xy-cell-offset(2)
+          padding: 30% 5% 15% 5%
         background-repeat: no-repeat
         background-position: center
         background-size: 100%
-        padding: 50% 5% 30% 5%
         h3
           margin-bottom: 1em
         p
+          font-size: 1.4em
+          +breakpoint(large)
+            font-size: 1.4em
       li.planning
         background-image: url(/img/planning.svg)
+        margin-bottom: 4em
       li.implementation
         background-image: url(/img/implementation.svg)
   &#what-we-do
@@ -73,7 +85,7 @@ section
       li
         +xy-grid
         img
-          +xy-cell(12)
+          +xy-grid
           +breakpoint(medium)
             +xy-cell(3)
         .description

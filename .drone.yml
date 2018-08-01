@@ -1,0 +1,32 @@
+pipeline:
+
+    build:
+      image: kowalatech/hugo-dev:1.0.4
+      commands:
+        - make docker-build
+      when:
+        branch: [develop, master]
+
+    staging:
+      image: plugins/s3
+      acl: public-read
+      region: "us-west-1"
+      bucket: "www.staging.endian.io"
+      source: public/**/*
+      strip_prefix: public/
+      target: /
+      encryption: AES256
+      when:
+        branch: [develop]
+
+    production:
+      image: plugins/s3
+      acl: public-read
+      region: "us-west-1"
+      bucket: "endian.io"
+      source: public/**/*
+      strip_prefix: public/
+      target: /
+      encryption: AES256
+      when:
+        branch: master

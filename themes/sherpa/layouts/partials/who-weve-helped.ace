@@ -1,9 +1,19 @@
 section#who-weve-helped
   .title data-aos="fade-down"
     h1 Who we've helped
-  .client data-aos="fade-down"
-    h2 Kowala
-  .client data-aos="fade-down"
-    h2 NIWA
-  .client data-aos="fade-down"
-    h2 Other
+  ul
+    li data-aos="fade-down"
+      img src="/img/endian-logo.svg"
+      .company
+        h2 Kowala
+        h4 Description of the project.
+    li data-aos="fade-down"
+      img src="/img/endian-logo.svg"
+      .company
+        h2 Kowala
+        h4 Description of the project.
+    li data-aos="fade-down"
+      img src="/img/endian-logo.svg"
+      .company
+        h2 Kowala
+        h4 Description of the project.

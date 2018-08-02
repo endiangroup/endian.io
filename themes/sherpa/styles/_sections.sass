@@ -115,9 +115,16 @@ section
             text-align: left
 
   &#who-weve-helped
-    .client
-      margin-bottom: 2em
-      +square-border
+    ul
+      li
+        +xy-grid
+        +square-border
+        margin-bottom: 4em
+        padding: 2em
+        img
+          +xy-cell(4)
+        .company
+          +xy-cell(8)
   &#meet-the-sherpas
     ul
       +xy-grid
@@ -125,8 +132,6 @@ section
         margin-bottom: 2em
         h3
           margin-top: 2em
-        .sherpa
-          +circle
         +xy-cell(12)
         +breakpoint(medium)
           +xy-cell(5)

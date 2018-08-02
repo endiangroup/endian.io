@@ -3,7 +3,7 @@ section#meet-the-sherpas
     h1 Meet the Sherpas
   ul
     li data-aos="fade-down"
-      .sherpa
+      img src="/img/paul.png"
       h3 Name
       h4 Title
       a
@@ -11,7 +11,7 @@ section#meet-the-sherpas
       a
         h4 LinkedIn
     li data-aos="fade-down"
-      .sherpa
+      img src="/img/paul.png"
       h3 Name
       h4 Title
       a
@@ -19,7 +19,7 @@ section#meet-the-sherpas
       a
         h4 LinkedIn
     li data-aos="fade-down"
-      .sherpa
+      img src="/img/paul.png"
       h3 Name
       h4 Title
       a

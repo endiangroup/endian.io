@@ -2,15 +2,12 @@ section#the-endian-way
   .title data-aos="fade-down"
     h1 The Endian Way
   ul
-    li data-aos="fade-right"
-      img src="/img/aspirational.svg" data-aos="fade-right"
-      h3 data-aos="fade-right" Aspirational
-      p We believe everything beyond basic survival is art. We believe that everything ugly was intended to be beautiful, and that everything beautiful was meant to be useful.
-    li data-aos="fade-right"
-      img src="/img/defiant.svg" data-aos="fade-right"
-      h3 data-aos="fade-right" Defiant
-      p We don't invest in ego and we don't believe in hierarchy. We believe in walking the shortest path. We believe in goals, but we know the work's never done. We're here for the creating, not just the creation.
-    li data-aos="fade-right"
-      img src="/img/accessible.svg" data-aos="fade-right"
-      h3 data-aos="fade-right" Accessible
-      p We're all about goals. We like defining them but we love achieving them. Since you're reading this, you probably have something exciting in mind; some world-changing startup idea or product. If that sounds like you, keep reading!
+    li
+      h2 data-aos="fade-right" Aspirational
+      p data-aos="fade-right" We believe everything beyond basic survival is art. We believe that everything ugly was intended to be beautiful, and that everything beautiful was meant to be useful.
+    li
+      h2 data-aos="fade-right" Defiant
+      p data-aos="fade-right" We don't invest in ego and we don't believe in hierarchy. We believe in walking the shortest path. We believe in goals, but we know the work's never done. We're here for the creating, not just the creation.
+    li
+      h2 data-aos="fade-right" Accessible
+      p data-aos="fade-right" We're all about goals. We like defining them but we love achieving them. Since you're reading this, you probably have something exciting in mind; some world-changing startup idea or product. If that sounds like you, keep reading!

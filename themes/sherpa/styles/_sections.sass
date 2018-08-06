@@ -29,16 +29,19 @@ section
   &#the-endian-way
     ul
       padding-top: 2em
-      background-repeat: no-repeat
-      background-size: 50%
-      background-image: url(/img/line.svg)
       li
         +xy-grid
-        margin-bottom: 6em
-        margin-top: 6em
+        margin-top: 0
+        margin-left: 0px
+        &:nth-child(2)
+          margin-top: 0
+        &:nth-child(3)
+          margin-top: 0
         img
           +xy-cell(2)
-        h3
+          margin-left: 0px
+        h2
+          font-weight: 700
           +xy-cell(10)
           margin: 1em auto
           text-align: left
@@ -50,25 +53,22 @@ section
       +xy-grid
       li
         +xy-cell(12)
-        padding: 40% 5% 15% 5%
-        +breakpoint(medium)
-          padding: 50% 5% 30% 5%
+        padding: 45% 5% 25% 5%
         +breakpoint(large)
-          +xy-cell(8)
-          +xy-cell-offset(2)
-          padding: 30% 5% 15% 5%
+          p
+            font-size: 1.2em
+          +xy-cell(6)
+          padding: 250px 5% 125px 5%
         background-repeat: no-repeat
         background-position: center
         background-size: 100%
         h3
           margin-bottom: 1em
-        p
-          font-size: 1.4em
-          +breakpoint(large)
-            font-size: 1.4em
       li.planning
         background-image: url(/img/planning.svg)
         margin-bottom: 4em
+        +breakpoint(large)
+          margin-bottom: 0
       li.implementation
         background-image: url(/img/implementation.svg)
   &#what-we-do
@@ -86,6 +86,7 @@ section
         +xy-grid
         img
           +xy-grid
+          margin: 0 auto
           +breakpoint(medium)
             +xy-cell(3)
         .description
@@ -108,8 +109,6 @@ section
           +breakpoint(medium)
             text-align: left
         p
-          font-size: 1.4em
-          line-height: normal
           text-align: center
           +breakpoint(medium)
             text-align: left
@@ -122,9 +121,13 @@ section
         margin-bottom: 4em
         padding: 2em
         img
-          +xy-cell(4)
+          +xy-cell(12)
+          +breakpoint(medium)
+            +xy-cell(4)
         .company
-          +xy-cell(8)
+          +xy-cell(12)
+          +breakpoint(medium)
+            +xy-cell(8)
   &#meet-the-sherpas
     ul
       +xy-grid
@@ -134,11 +137,7 @@ section
           margin-top: 2em
         +xy-cell(12)
         +breakpoint(medium)
-          +xy-cell(5)
-          &:nth-child(2)
-            +xy-cell-offset(2)
-          &:nth-child(3)
-            +xy-cell-offset(3.5)
+          +xy-cell(6)
   &#say-hi
     background-repeat: no-repeat
     background-position: center

@@ -48,7 +48,7 @@ docker-serve: docker-install
 	@sass --style $(SASS_STYLE) $(SASS_INCLUDES) --watch $(SASS_PATHS) -E "UTF-8" &
 	@tsc -w &
 	@sed 's/GITHASH/$(GITHASH)/' themes/sherpa/scripts/sw.js > themes/sherpa/static/sw.js &
-	@GITHASH=$(GITHASH) hugo serve . --bind=0.0.0.0 --disableFastRender
+	@GITHASH=$(GITHASH) hugo serve . --bind=0.0.0.0 -w
 
 docker-clean:
 	@rm -rf node_modules

@@ -12,5 +12,4 @@
   {{ partial "say-hi" . }}
 
 = content footer
-  p © Endian Ltd. 2018 | &nbsp;
-    a href="#" Privacy Policy
+  p © Endian Ltd. 2018

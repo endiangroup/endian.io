@@ -1,19 +1,28 @@
 section#who-weve-helped
   .title data-aos="fade-down"
     h1 Who we've helped
+  img src="/img/bbc.svg"
+  img src="/img/farfetch.svg"
+  img src="/img/jagex.svg"
+  img src="/img/schibsted.svg"
+  img src="/img/marshall.svg"
+  img src="/img/samlabs.svg"
+  img src="/img/o2.svg"
+  img src="/img/kowala.svg"
+  img src="/img/underscore.svg"
   ul
     li data-aos="fade-down"
-      img src="/img/endian-logo.svg"
+      img src="/img/kowala.svg"
       .company
         h2 Kowala
         h4 Description of the project.
     li data-aos="fade-down"
-      img src="/img/endian-logo.svg"
+      img src="/img/bbc.svg"
       .company
         h2 Kowala
         h4 Description of the project.
     li data-aos="fade-down"
-      img src="/img/endian-logo.svg"
+      img src="/img/marshall.svg"
       .company
         h2 Kowala
         h4 Description of the project.

@@ -20,6 +20,9 @@ section
     width: 95%
   &#introduction
     margin-top: 2em
+    +breakpoint(medium)
+      padding-left: 5%
+      padding-right: 5%
     h3
       margin-top: 2em
     p
@@ -32,6 +35,24 @@ section
       &:hover
         color: colour(red)
         border-bottom: 3px solid
+    .mountains
+      position: relative
+      .cloud-1
+        position: absolute
+        top: 10%
+        right: 30%
+        width: 10%
+      .cloud-2
+        position: absolute
+        top: 65%
+        left: 27%
+        width: 12%
+      .fog
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 200vw
+        height: auto
   &#the-endian-way
     position: relative
     img

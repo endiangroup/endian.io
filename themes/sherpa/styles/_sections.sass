@@ -114,6 +114,22 @@ section
             text-align: left
 
   &#who-weve-helped
+    .row1, .row2
+      img
+        background: #1a1a1a
+        height: 200px
+        padding: 40px
+        margin-bottom: 1em
+    .row1
+      img
+        +xy-cell(12)
+        +breakpoint(medium)
+          +xy-cell(4)
+    .row2
+      img
+        +xy-cell(6)
+        +breakpoint(medium)
+          +xy-cell(1 of 5)
     ul
       li
         +xy-grid

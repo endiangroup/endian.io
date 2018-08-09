@@ -5,8 +5,8 @@ section
   margin-bottom: 3em
   +breakpoint(medium)
     margin-bottom: 5em
-    padding-left: 25%
-    padding-right: 25%
+    padding-left: 20%
+    padding-right: 20%
   .title
     margin-bottom: 4em
 
@@ -14,12 +14,16 @@ section
     margin: 0 auto
     width: 100%
     +breakpoint(medium)
-      width: 75%
+      width: 65%
   p
     text-align: center
-    margin: 0 auto
+    width: 95%
   &#introduction
     margin-top: 2em
+    h3
+      margin-top: 2em
+    p
+      margin-top: 6em
     h5
       margin: 2em auto
     a
@@ -29,12 +33,18 @@ section
         color: colour(red)
         border-bottom: 3px solid
   &#the-endian-way
+    position: relative
+    img
+      height: 100vh
+      margin-left: -50%
     ul
-      padding-top: 2em
+      position: absolute
+      top: 0
+      left: 0
       li
         +xy-grid
-        margin-top: 0
-        margin-left: 0px
+        margin-top: 20vw
+        margin-left: 20vw
         &:nth-child(2)
           margin-top: 0
         &:nth-child(3)
@@ -43,36 +53,41 @@ section
           +xy-cell(2)
           margin-left: 0px
         h2
-          font-weight: 700
           +xy-cell(10)
           margin: 1em auto
           text-align: left
+          font-size: 2vw
         p
           +xy-cell-offset(1)
           text-align: left
+          font-size: 1.6vw
   &#how-we-get-there
+    padding-left: 5%
+    padding-right: 5%
     ul
+      margin-top: 10vw
       +xy-grid
       li
+        padding-top: 35vw
+        padding-bottom: 25vw
+        img
+          position: absolute
+          left: 0
+          top: 0
         +xy-cell(12)
-        padding: 45% 5% 25% 5%
-        +breakpoint(large)
-          p
-            font-size: 1.2em
-          +xy-cell(6)
-          padding: 250px 5% 125px 5%
-        background-repeat: no-repeat
-        background-position: center
-        background-size: 100%
-        h3
+        +breakpoint(xlarge)
+          +xy-cell(5)
+          padding-top: 13vw
+          padding-bottom: 6vw
+        h4
+          width: 90%
           margin-bottom: 1em
-      li.planning
-        background-image: url(/img/planning.svg)
-        margin-bottom: 4em
-        +breakpoint(large)
-          margin-bottom: 0
+          font-size: 3vw
+          +breakpoint(xlarge)
+            font-size: 1.5vw
       li.implementation
-        background-image: url(/img/implementation.svg)
+        +breakpoint(xlarge)
+          +xy-cell-offset(2)
   &#what-we-do
     padding-left: 0
     padding-right: 0
@@ -87,8 +102,7 @@ section
       li
         +xy-grid
         img
-          +xy-grid
-          margin: 0 auto
+          +xy-cell(12)
           +breakpoint(medium)
             +xy-cell(3)
         .description
@@ -108,6 +122,7 @@ section
         h3
           margin: 1em 0
           text-align: center
+
           +breakpoint(medium)
             text-align: left
         p
@@ -125,43 +140,56 @@ section
     .row1
       img
         +xy-cell(12)
-        +breakpoint(medium)
+        +breakpoint(large)
           +xy-cell(4)
     .row2
       img
         +xy-cell(6)
-        +breakpoint(medium)
+        +breakpoint(large)
           +xy-cell(1 of 5)
     ul
+      +xy-grid
       li
-        +xy-grid
         +square-border
+        +xy-grid
+        +xy-cell(12)
+        +breakpoint(large)
+          +xy-cell(6)
         margin-bottom: 4em
         padding: 2em
         img
           +xy-cell(12)
-          +breakpoint(medium)
+          +breakpoint(large)
             +xy-cell(4)
         .company
           +xy-cell(12)
-          +breakpoint(medium)
+          +breakpoint(large)
             +xy-cell(8)
   &#meet-the-sherpas
     ul
+      margin-top: 4em
       +xy-grid
       li
         margin-bottom: 2em
-        h3
+        h4
           margin-top: 2em
-        +xy-cell(6)
+        +xy-cell(12)
         +breakpoint(medium)
+          +xy-cell(6)
+        +breakpoint(xlarge)
           +xy-cell(3)
+        a img
+          width: 25%
+          margin-top: 2em
   &#say-hi
     background-repeat: no-repeat
     background-position: center
     background-size: 100%
     background-image: url(/img/rainbow-border.svg)
-    padding: 20%
+    padding: 10%
+    +breakpoint(medium)
+      width: 50%
+      margin: 0 auto
     a
       color: white
       border: none

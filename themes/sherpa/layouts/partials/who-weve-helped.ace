@@ -2,29 +2,36 @@ section#who-weve-helped
   .title data-aos="fade-down"
     h1 Who we've helped
   .row1
-    img src="/img/bbc.svg"
-    img src="/img/farfetch.svg"
-    img src="/img/jagex.svg"
+    img src="/img/bbc.svg" data-aos="fade-down-left"
+    img src="/img/farfetch.svg" data-aos="fade-down"
+    img src="/img/jagex.svg" data-aos="fade-down-right"
   .row2
-    img src="/img/schibsted.svg"
-    img src="/img/marshall.svg"
-    img src="/img/samlabs.svg"
-    img src="/img/o2.svg"
-    img src="/img/kowala.svg"
-  img src="/img/underscore.svg"
+    img src="/img/schibsted.svg" data-aos="fade-down-left"
+    img src="/img/marshall.svg" data-aos="fade-down-left"
+    img src="/img/samlabs.svg" data-aos="fade-down"
+    img src="/img/o2.svg" data-aos="fade-down-right"
+    img src="/img/kowala.svg" data-aos="fade-down-right"
+  img src="/img/underscore.svg" data-aos="fade-down"
+  .title data-aos="fade-down"
+    h1 Case Studies
   ul
     li data-aos="fade-down"
       img src="/img/kowala.svg"
       .company
-        h2 Kowala
-        h4 Description of the project.
+        h4 Kowala
+        h5 Description of the project.
     li data-aos="fade-down"
       img src="/img/bbc.svg"
       .company
-        h2 BBC
-        h4 Description of the project.
+        h4 BBC
+        h5 Description of the project.
     li data-aos="fade-down"
       img src="/img/marshall.svg"
       .company
-        h2 Marshall
-        h4 Description of the project.
+        h4 Marshall
+        h5 Description of the project.
+    li data-aos="fade-down"
+      img src="/img/samlabs.svg"
+      .company
+        h4 Sam Labs
+        h5 Description of the project.

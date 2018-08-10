@@ -20,9 +20,6 @@ section
     width: 95%
   &#introduction
     margin-top: 2em
-    +breakpoint(medium)
-      padding-left: 5%
-      padding-right: 5%
     h3
       margin-top: 2em
     p
@@ -37,6 +34,8 @@ section
         border-bottom: 3px solid
     .mountains
       position: relative
+      max-width: 1000px
+      margin: 0 auto
       .cloud-1
         position: absolute
         top: 10%
@@ -55,21 +54,9 @@ section
         height: auto
   &#the-endian-way
     position: relative
-    img
-      height: 100vh
-      margin-left: -50%
     ul
-      position: absolute
-      top: 0
-      left: 0
       li
         +xy-grid
-        margin-top: 20vw
-        margin-left: 20vw
-        &:nth-child(2)
-          margin-top: 0
-        &:nth-child(3)
-          margin-top: 0
         img
           +xy-cell(2)
           margin-left: 0px
@@ -77,38 +64,35 @@ section
           +xy-cell(10)
           margin: 1em auto
           text-align: left
-          font-size: 2vw
         p
           +xy-cell-offset(1)
           text-align: left
-          font-size: 1.6vw
   &#how-we-get-there
     padding-left: 5%
     padding-right: 5%
+    +breakpoint(xlarge)
+      padding-left: 15%
+      padding-right: 15%
     ul
-      margin-top: 10vw
+      margin-top: 5vw
       +xy-grid
       li
-        padding-top: 35vw
-        padding-bottom: 25vw
+        padding-top: 35%
+        padding-bottom: 35%
         img
           position: absolute
           left: 0
           top: 0
         +xy-cell(12)
         +breakpoint(xlarge)
-          +xy-cell(5)
-          padding-top: 13vw
+          +xy-cell(6)
+          padding-top: 17%
           padding-bottom: 6vw
+          h4
+            font-size: 1.4vw
         h4
           width: 90%
           margin-bottom: 1em
-          font-size: 3vw
-          +breakpoint(xlarge)
-            font-size: 1.5vw
-      li.implementation
-        +breakpoint(xlarge)
-          +xy-cell-offset(2)
   &#what-we-do
     padding-left: 0
     padding-right: 0

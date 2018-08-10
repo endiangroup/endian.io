@@ -54,27 +54,43 @@ section
         height: auto
   &#the-endian-way
     position: relative
-    +breakpoint(medium)
-      margin-bottom: 5em
     img
       position: absolute
       top: 100px
       right: 50%
-      height: 1000px
+      height: 500px
     ul
-      padding-top: 163px
-      max-width: 1080px
-      width: 75%
+      padding-top: 82px
+      margin-left: 100px
+      margin-bottom: 5em
       li
-        height: 365px
+        height: 185px
         &:nth-child(2)
-          height: 405px
+          height: 200px
         h2
           text-align: left
         p
-          margin-top: 20px
+          margin-top: 10px
           text-align: left
-          width: 75%
+          font-size: 0.9em
+    +breakpoint(medium)
+      img
+        position: absolute
+        top: 100px
+        height: 1000px
+      ul
+        padding-top: 163px
+        margin-left: 75px
+        li
+          height: 365px
+          &:nth-child(2)
+            height: 405px
+          p
+            margin-top: 20px
+            margin-left: 100px
+            text-align: left
+            width: 75%
+            font-size: 1.4em
   &#how-we-get-there
     max-width: 1500px
     p
@@ -191,6 +207,7 @@ section
     background-size: 100%
     background-image: url(/img/rainbow-border.svg)
     padding: 10%
+    margin: 2em
     +breakpoint(medium)
       width: 50%
       margin: 0 auto

@@ -3,10 +3,10 @@
 section
   padding: 1em
   margin-bottom: 3em
+  max-width: 960px
+  margin: 0 auto
   +breakpoint(medium)
     margin-bottom: 5em
-    padding-left: 20%
-    padding-right: 20%
   .title
     margin-bottom: 4em
 
@@ -54,27 +54,34 @@ section
         height: auto
   &#the-endian-way
     position: relative
+    +breakpoint(medium)
+      margin-bottom: 5em
+    img
+      position: absolute
+      top: 100px
+      right: 50%
+      height: 1000px
     ul
+      padding-top: 163px
+      max-width: 1080px
+      width: 75%
       li
-        +xy-grid
-        img
-          +xy-cell(2)
-          margin-left: 0px
+        height: 365px
+        &:nth-child(2)
+          height: 405px
         h2
-          +xy-cell(10)
-          margin: 1em auto
           text-align: left
         p
-          +xy-cell-offset(1)
+          margin-top: 20px
           text-align: left
+          width: 75%
   &#how-we-get-there
-    padding-left: 5%
-    padding-right: 5%
-    +breakpoint(xlarge)
-      padding-left: 15%
-      padding-right: 15%
+    max-width: 1500px
+    p
+      margin: 0 auto
     ul
       margin-top: 5vw
+      text-align: center
       +xy-grid
       li
         padding-top: 35%
@@ -88,17 +95,10 @@ section
           +xy-cell(6)
           padding-top: 17%
           padding-bottom: 6vw
-          h4
-            font-size: 1.4vw
-        h4
-          width: 90%
-          margin-bottom: 1em
   &#what-we-do
     padding-left: 0
     padding-right: 0
-    margin-left: 0
-    margin-right: 0
-    width: 100%
+    max-width: 100%
     h4
       +breakpoint(medium)
         width: 60%
@@ -115,7 +115,6 @@ section
           +breakpoint(medium)
             +xy-cell(8)
             +xy-cell-offset(1)
-        margin-bottom: 2em
         +chevron(linear-gradient(135deg, #d8001d 0%,#e65b20 100%))
         &:nth-child(2)
           +chevron(linear-gradient(135deg, #e56522 0%,#dcbf3a 100%))

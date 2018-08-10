@@ -4,9 +4,9 @@ section#how-we-get-there
   ul
     li.planning data-aos="fade-down"
       img src="/img/planning.svg"
-      h4 Planning
-      h4 Knowing where you're going and how to get there is critical. From the grand vision to the daily details, all projects need careful thought and a comprehensive plan.
+      p Planning
+      p Knowing where you're going and how to get there is critical. From the grand vision to the daily details, all projects need careful thought and a comprehensive plan.
     li.implementation data-aos="fade-down"
       img src="/img/implementation.svg"
-      h4 Implementation
-      h4 The economic application of effort vectored onto goals is vital. In other words, the right people must apply the right processes to the right problems.
+      p Implementation
+      p The economic application of effort vectored onto goals is vital. In other words, the right people must apply the right processes to the right problems.

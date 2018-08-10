@@ -1,5 +1,5 @@
 # Hugo params for global setup
-baseurl      = "https://www.endian.io"
+baseurl      = "http://www.staging.endian.io"
 languageCode = "en-us"
 title        = "Endian Group"
 theme        = "sherpa"

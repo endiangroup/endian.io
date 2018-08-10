@@ -3,12 +3,12 @@ section#introduction
     h1 We're not an agency.
     h1 We're digital sherpas.
   .mountains
-    img.cloud-1 src="/img/cloud.svg" data-aos="fade-right" data-aos-duration="2500" data-aos-easing="ease-in-sine"
+    img.cloud-1 src="/img/cloud.svg" data-aos="fade-right" data-aos-duration="3000" data-aos-easing="ease-in-sine"
     img.mountain src="/img/mountains.svg" data-aos="fade-up"
-    img.cloud-2 src="/img/cloud.svg" data-aos="fade-left" data-aos-duration="2500" data-aos-easing="ease-in-sine"
-    img.fog src="/img/fog.svg" data-aos="fade-left" data-aos-duration="2500" data-aos-easing="ease-in-sine"
-    img.fog src="/img/fog.svg" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-sine"
     img.fog src="/img/fog.svg" data-aos="fade-up"
+    img.cloud-2 src="/img/cloud.svg" data-aos="fade-left" data-aos-duration="2500" data-aos-easing="ease-in-sine"
+    img.fog-1 src="/img/fog.svg" data-aos="fade-up-right" data-aos-duration="3000"
+    img.fog-2 src="/img/fog.svg" data-aos="fade-up-left" data-aos-duration="2500"
   h3 data-aos="fade-down-right" Holistic technical solutions from first principles to world domination.
   h5 data-aos="fade-down-right"
     | Want the TLDR? &nbsp;

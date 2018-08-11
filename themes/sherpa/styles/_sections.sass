@@ -51,7 +51,6 @@ section
         position: absolute
         bottom: -5px
         left: 5px
-        opacity: 0.95
       .fog-1
         position: absolute
         bottom: -5px
@@ -136,10 +135,16 @@ section
           +xy-cell(12)
           +breakpoint(medium)
             +xy-cell(3)
+          +breakpoint(xlarge)
+            +xy-cell(2)
+            +xy-cell-offset(2)
         .description
           +xy-cell(12)
           +breakpoint(medium)
             +xy-cell(8)
+            +xy-cell-offset(1)
+          +breakpoint(xlarge)
+            +xy-cell(6)
             +xy-cell-offset(1)
         +chevron(gradient("hot"))
         &:nth-child(2)
@@ -161,29 +166,28 @@ section
             text-align: left
 
   &#who-weve-helped
+    img
+      margin: 20px
     .row1, .row2
       img
-        +bg-gradient(cold)
         box-shadow: inset 5px 5px #000000, inset -5px -5px #000000
-        margin: 20px
+        background-clip: content-box
+        &:nth-child(1)
+          +bg-gradient(hot)
         &:nth-child(2)
-          +bg-gradient(chill)
+          +bg-gradient(warm)
         &:nth-child(3)
           +bg-gradient(mid)
         &:nth-child(4)
-          +bg-gradient(warm)
+          +bg-gradient(chill)
         &:nth-child(5)
-          +bg-gradient(hot)
+          +bg-gradient(cold)
     .row1
       img
-        +xy-cell(12)
-        +breakpoint(large)
-          +xy-cell(4)
+        height: 90px
     .row2
       img
-        +xy-cell(6)
-        +breakpoint(large)
-          +xy-cell(1 of 5)
+        height: 120px
     ul
       +xy-grid
       li

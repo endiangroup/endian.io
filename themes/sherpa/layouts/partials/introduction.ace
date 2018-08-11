@@ -4,8 +4,9 @@ section#introduction
     h1 We're digital sherpas.
   .mountains
     img.cloud-1 src="/img/cloud.svg" data-aos="fade-right" data-aos-duration="3000" data-aos-easing="ease-in-sine"
-    img.mountain src="/img/mountains.svg" data-aos="fade-up"
-    img.fog src="/img/fog.svg" data-aos="fade-up"
+    div data-aos="fade-up"
+      img.mountain src="/img/mountains.svg"
+      img.fog src="/img/fog.svg"
     img.cloud-2 src="/img/cloud.svg" data-aos="fade-left" data-aos-duration="2500" data-aos-easing="ease-in-sine"
     img.fog-1 src="/img/fog.svg" data-aos="fade-up-right" data-aos-duration="3000"
     img.fog-2 src="/img/fog.svg" data-aos="fade-up-left" data-aos-duration="2500"

@@ -11,7 +11,7 @@ section#what-we-do
         p Finding a direction can be hard, and understanding the lay of the technical landscape can be daunting. We're a collective of philosophers, engineers and life Sherpas; you bring the why, we'll bring the what.
     li
       img src="/img/indoctrination.svg" data-aos="zoom-in-up"
-      .description
+      .description data-aos="zoom-in-up"
         h3 Indoctrination
         p The Endian Way is comprised of a set of processes and tools that we've spent years honing. We'd love to invite you to one of our Forced Reeducation Camps (sometimes called training sessions) so you can level up.
     li

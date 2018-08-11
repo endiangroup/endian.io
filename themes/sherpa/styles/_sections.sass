@@ -28,10 +28,10 @@ section
     h5
       margin: 2em auto
     a
-      color: colour(red)
+      color: $colour-red
       border-bottom: 3px dotted
       &:hover
-        color: colour(red)
+        color: $colour-red
         border-bottom: 3px solid
     .mountains
       position: relative
@@ -141,13 +141,13 @@ section
           +breakpoint(medium)
             +xy-cell(8)
             +xy-cell-offset(1)
-        +chevron(linear-gradient(135deg, #d8001d 0%,#e65b20 100%))
+        +chevron(gradient("hot"))
         &:nth-child(2)
-          +chevron(linear-gradient(135deg, #e56522 0%,#dcbf3a 100%))
+          +chevron(gradient("warm"))
         &:nth-child(3)
-          +chevron(linear-gradient(135deg, #0c8344 0%,#d4c13b 100%))
+          +chevron(gradient("chill"))
         &:nth-child(4)
-          +chevron(linear-gradient(135deg, #018051 0%,#358dbf 100%))
+          +chevron(gradient("cold"))
           margin-bottom: 0 !important
         h3
           margin: 1em 0
@@ -163,10 +163,17 @@ section
   &#who-weve-helped
     .row1, .row2
       img
-        background: #1a1a1a
-        height: 200px
-        padding: 40px
-        margin-bottom: 1em
+        +bg-gradient(cold)
+        height: 100%
+        margin: 20px
+        &:nth-child(2)
+          +bg-gradient(chill)
+        &:nth-child(3)
+          +bg-gradient(mid)
+        &:nth-child(4)
+          +bg-gradient(warm)
+        &:nth-child(5)
+          +bg-gradient(hot)
     .row1
       img
         +xy-cell(12)
@@ -226,15 +233,12 @@ section
           width: 25%
           margin-top: 2em
   &#say-hi
-    background-repeat: no-repeat
-    background-position: center
-    background-size: 100%
-    background-image: url(/img/rainbow-border.svg)
-    padding: 10%
-    margin: 2em
+    +border-gradient(rainbow)
     +breakpoint(medium)
       width: 50%
-      margin: 0 auto
+      margin: 2em auto
+    padding: 5%
+    margin-bottom: 2em
     a
       color: white
       border: none

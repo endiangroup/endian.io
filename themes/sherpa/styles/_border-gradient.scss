@@ -1,9 +1,13 @@
+@import "colours";
+
 $gradients: () !default;
 $gradients: map-merge((
-    chill: linear-gradient(135deg, #b8ba3e 0%,#0f8541 100%),
-    warm: linear-gradient(135deg, #f79b2e 0%,#e7c63b 100%),
-    hot: linear-gradient(135deg, #de331d 0%,#f18629 100%),
-    cold: linear-gradient(135deg, #007f42 0%,#2c8aa2 100%)
+    cold: linear-gradient(135deg, $colour-olive 0%,$colour-blue 100%),
+    chill: linear-gradient(135deg, $colour-green 0%, $colour-olive 100%),
+    mid: linear-gradient(135deg, $colour-yellow 0%, $colour-green 100%),
+    warm: linear-gradient(135deg, $colour-orange 0%,$colour-yellow 100%),
+    hot: linear-gradient(135deg, $colour-red 0%, $colour-orange 100%),
+    rainbow: linear-gradient(135deg, $colour-red 0%, $colour-orange 20%, $colour-yellow 40%, $colour-green 60%, $colour-olive 80%, $colour-blue 100% )
 ), $gradients);
 
 @function gradient($name) {

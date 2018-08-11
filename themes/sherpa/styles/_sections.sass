@@ -238,16 +238,13 @@ section
           margin-top: 2em
   &#say-hi
     +border-gradient(rainbow)
+    margin: 2em auto
+    padding: 2em
     +breakpoint(medium)
+      width: 30rem
+    h1, span
       width: 50%
-      margin: 2em auto
-    padding: 5%
-    margin-bottom: 2em
-    a
-      color: white
-      border: none
+      margin: 0 auto
+    span
       font-size: 2em
       +colour-highlight-shift
-      &:hover
-        color: white
-        border: none

@@ -1,3 +1,4 @@
-section#say-hi data-aos="fade-down"
-  h1 Say hi
-  a hello@endian.io
+a href="mailto:hello@endian.io"
+  section#say-hi data-aos="fade-down"
+    h1 Say hi
+    span hello@endian.io

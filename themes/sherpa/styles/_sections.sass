@@ -165,32 +165,34 @@ section
             text-align: left
 
   &#who-weve-helped
-    img
-      margin: 20px
-    .row1, .row2
+    padding: 0
+    .container
+      +bg-gradient(rainbow)
+      +breakpoint(medium)
+        box-shadow: inset 6.7vw 5px $colour-black, inset -6.7vw -5px $colour-black
+      +breakpoint(large)
+        box-shadow: inset 40px 5px $colour-black, inset -40px -5px $colour-black
       img
-        box-shadow: inset 5px 5px #000000, inset -5px -5px #000000
-        background-clip: content-box
-        &:nth-child(1)
-          +bg-gradient(hot)
-        &:nth-child(2)
-          +bg-gradient(warm)
-        &:nth-child(3)
-          +bg-gradient(mid)
-        &:nth-child(4)
-          +bg-gradient(chill)
-        &:nth-child(5)
-          +bg-gradient(cold)
-    .row1
-      img
-        height: 90px
-    .row2
-      img
-        height: 120px
+        margin: -0.1rem
+        border: 10px solid $colour-black
+        box-shadow: inset 5px 5px $colour-black, inset -5px -5px $colour-black
+        +breakpoint(medium)
+          display: inline
+      .row1
+        img
+          +breakpoint(medium)
+            height: 12.5vw
+          +breakpoint(large)
+            height: 7.5rem
+      .row2
+        img
+          +breakpoint(medium)
+            height: 16.2vw
+          +breakpoint(large)
+            height: 10.5rem
     ul
       +xy-grid
       li
-        +square-border
         +xy-grid
         +xy-cell(12)
         +breakpoint(large)

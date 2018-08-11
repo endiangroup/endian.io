@@ -1,17 +1,18 @@
 section#who-weve-helped
   .title data-aos="fade-down"
     h1 Who we've helped
-  .row1
-    img src="/img/bbc.svg" data-aos="fade-down-left"
-    img src="/img/farfetch.svg" data-aos="fade-down"
-    img src="/img/jagex.svg" data-aos="fade-down-right"
-  .row2
-    img src="/img/schibsted.svg" data-aos="fade-down-left"
-    img src="/img/marshall.svg" data-aos="fade-down-left"
-    img src="/img/samlabs.svg" data-aos="fade-down"
-    img src="/img/o2.svg" data-aos="fade-down-right"
-    img src="/img/kowala.svg" data-aos="fade-down-right"
-  img src="/img/underscore.svg" data-aos="fade-down"
+  .container data-aos="fade-down-left"
+    .row1
+      img src="/img/bbc.svg"
+      img src="/img/farfetch.svg"
+      img src="/img/jagex.svg"
+    .row2
+      img src="/img/schibsted.svg"
+      img src="/img/marshall.svg"
+      img src="/img/samlabs.svg"
+      img src="/img/o2.svg"
+      img src="/img/kowala.svg"
+  img src="/img/underscore.svg"
   .title data-aos="fade-down"
     h1 Case Studies
   ul

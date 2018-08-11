@@ -103,23 +103,41 @@ section
   &#how-we-get-there
     max-width: 1500px
     p
-      margin: 0 auto
+      margin: 2rem auto
     ul
-      margin-top: 5vw
-      text-align: center
       +xy-grid
-      li
-        padding-top: 35%
-        padding-bottom: 35%
+      text-align: center
+      img
+        border-radius: 100%
+        border-width: 5px
+        width: 50%
+        margin-top: -35%
+      .planning
+        margin-top: 5rem
+        +breakpoint(medium)
+          margin-top: 15rem
+        +border-gradient(hotHalf)
         img
-          position: absolute
-          left: 0
-          top: 0
+          +border-gradient(hot)
+          +bg-gradient(hot)
+        +breakpoint(large)
+          +xy-cell(5)
+          +xy-cell-offset(1)
+      .implementation
+        margin-top: 5rem
+        +breakpoint(medium)
+          margin-top: 15rem
+        +border-gradient(coldHalf)
+        img
+          +border-gradient(chill)
+          +bg-gradient(chill)
+        +breakpoint(large)
+          +xy-cell(5)
+      li
+        padding: 2em
+        margin-bottom: 2rem
         +xy-cell(12)
-        +breakpoint(xlarge)
-          +xy-cell(6)
-          padding-top: 17%
-          padding-bottom: 6vw
+
   &#what-we-do
     padding-left: 0
     padding-right: 0

@@ -14,7 +14,7 @@ section#who-weve-helped
       img src="/img/kowala.svg"
   img src="/img/underscore.svg"
   .title data-aos="fade-down"
-    h1 Case Studies
+    h1 Case studies
   ul
     li data-aos="fade-down"
       img src="/img/kowala.svg"

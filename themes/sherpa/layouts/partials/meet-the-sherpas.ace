@@ -1,6 +1,6 @@
 section#meet-the-sherpas
   .title data-aos="fade-down"
-    h1 Meet the Sherpas
+    h1 Meet some of our sherpas
   ul
     li data-aos="fade-down"
       img.headshot src="/img/paul.svg"

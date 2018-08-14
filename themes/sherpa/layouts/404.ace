@@ -1,0 +1,6 @@
+= content main
+  #error-page
+    h1 404
+    h3 It appears that you've been led off-track. Don't worry, just click on the compass to return to home base.
+    a href="/"
+      img src="img/map.svg"

@@ -23,16 +23,47 @@ section#who-weve-helped
   img src="/img/underscore.svg"
   .title data-aos="fade-down"
     h1 Case studies
-  ul#case-studies
-    li data-aos="fade-down"
+  #case-studies
+    .study
       .image-container
         img src="/img/kowala.svg"
       .company
-        h2 Kowala
-        p The description of the project will go here.
-    li data-aos="fade-down"
+        h2 Kowala - Cryptocurrency Startup
+        h5 Technical Consulting (Braintrust)
+        ul
+          li Product research and development
+          li US legality review
+          li Whitepaper foundations
+          li Algorithm design
+          li Proof of concept implementation
+          li Cryptocurrency security best practises
+          li Product team sizing and requirements
+        h5 Talent acquisition (Muscle)
+        ul
+          li 1x Head of Development
+          li 5x Blockchain Engineers
+          li 3x Software Engineers
+          li 1x Security Engineer
+          li 1x Frontend Engineer
+          li 1x Designer
+    .study
       .image-container
-        img src="/img/kowala.svg"
+        img src="/img/scytale.svg"
       .company
-        h2 Kowala
-        p The description of the project will go here.
+        h2 Scytale - Digital Agency
+        h5 Training (Indoctrination)
+        ul
+          li US legality review
+          li Whitepaper foundations
+          li Algorithm design
+          li Proof of concept implementation
+          li Cryptocurrency security best practises
+          li Product team sizing and requirements
+        h5 Talent acquisition (Muscle)
+        ul
+          li 1x Head of Development
+          li 5x Blockchain Engineers
+          li 3x Software Engineers
+          li 1x Security Engineer
+          li 1x Frontend Engineer
+          li 1x Designer

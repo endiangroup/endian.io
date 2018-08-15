@@ -204,7 +204,9 @@ section
             min-height: 18vh
 
   &#who-weve-helped
-    padding: 0
+    h1, h2, h3, h4, h5
+      text-align: left
+      width: 100%
     h1
       margin-top: 1em
     ul#logos
@@ -219,29 +221,30 @@ section
         img
           border: 10px solid $colour-black
           box-shadow: inset 5px 5px $colour-black, inset -5px -5px $colour-black
-    ul#case-studies
-      +xy-grid
-      h4
+    #case-studies
+      h2
         margin-bottom: 1em
-      li
+      h5
+        font-weight: 700
+      .study
         +xy-grid
-        +xy-cell(12)
         margin-bottom: 2em
         .image-container
-          +bg-gradient(rainbow)
-          box-shadow: inset 10px 10px $colour-black, inset -10px -10px $colour-black
+          margin-bottom: 1em
           +xy-cell(12)
-          +breakpoint(large)
+          +breakpoint(medium)
             +xy-cell(4)
           img
-            height: 100%
+            +bg-gradient-fade(rainbow)
+            box-shadow: inset 10px 10px $colour-black, inset -10px -10px $colour-black
+            height: auto
             width: 100%
         .company
-          h2, p
+          p, li
             text-align: left
             width: 100%
           +xy-cell(12)
-          +breakpoint(large)
+          +breakpoint(medium)
             +xy-cell(8)
   &#meet-the-sherpas
     ul

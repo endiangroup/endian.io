@@ -2,11 +2,11 @@ section#how-we-get-there
   .title data-aos="fade-down"
     h1 How we get there from here
   ul
-    li.planning data-aos="fade-down"
+    li.planning data-aos="fade-down-right"
       img src="/img/planning.svg"
       p Planning
       p Knowing where you're going and how to get there is critical. From the grand vision to the daily details, all projects need careful thought and a comprehensive plan.
-    li.implementation data-aos="fade-down"
+    li.implementation data-aos="fade-down-left"
       img src="/img/implementation.svg"
       p Implementation
       p The economic application of effort vectored onto goals is vital. In other words, the right people must apply the right processes to the right problems.

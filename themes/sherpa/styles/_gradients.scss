@@ -9,7 +9,7 @@ $gradients: map-merge((
     hot: linear-gradient(135deg, $colour-red 0%, $colour-orange 100%),
     hotHalf: linear-gradient(135deg, $colour-red 0%, $colour-orange 50%,$colour-yellow 100%),
     coldHalf: linear-gradient(135deg, $colour-yellow 0%, $colour-green 50%, $colour-blue 100%),
-    rainbow: linear-gradient(135deg, $colour-red, $colour-orange, $colour-yellow, $colour-green, $colour-olive, $colour-blue)
+    rainbow: linear-gradient(135deg, $colour-orange 0%, $colour-yellow 50%, $colour-green 75%, $colour-blue 100%)
 ), $gradients);
 
 @function gradient($name) {
@@ -35,125 +35,36 @@ $gradients: map-merge((
   background-clip: text;
 }
 
-@mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }
-    @keyframes #{$animation-name} {
-        @content;
-    }
-}
-
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
-}
-
-@mixin colourshiftkeyframes($element, $name) {
-    @include keyframes($name) {
-        0% { #{$element}: colour(red) !important; }
-        20% { #{$element}: colour(orange); }
-        40% { #{$element}: colour(yellow); }
-        60% { #{$element}: colour(green); }
-        80% { #{$element}: colour(olive); }
-        100% { #{$element}: colour(blue); }
-    }
-}
-
-@include colourshiftkeyframes(color,colour_shift);
-@include colourshiftkeyframes(background-color,background_colour_shift);
-@include colourshiftkeyframes(border-color,border_colour_shift);
-
-@mixin colour-highlight-shift {
-    @include animation('colour_shift 5s infinite alternate');
-}
-
-@mixin background-colour-highlight-shift {
-    @include animation('background_colour_shift 5s infinite alternate');
-}
-
-@mixin border-colour-highlight-shift {
-    @include animation('border_colour_shift 5s infinite alternate');
-}
-
-@mixin border-and-colour-highlight-shift {
-    @include animation('border_colour_shift 5s infinite alternate,colour_shift 5s infinite alternate');
-}
-
-/*
-This can be used to create a rainbow effect in a set of nested elements.
-
-For example, it can be used to animate the anchors in a list
-
-```
-li
-    a
-li
-    a
-```
-
-using
-
-`@import element-colour-offset-shift(li,a);`
-
-The $start param is an option starting index, so that some elements can be
-skipped.
-*/
-
-@mixin element-colour-offset-shift($container, $element:a, $start:0) {
-
-    #{$element} {
-        @include colour-highlight-shift;
-    }
-
-    @each $index, $offset in (
-                                1: 0,
-                                2: -0.132s,
-                                3: -0.264s,
-                                4: -0.396s,
-                                5: -0.528s,
-                                6: -0.66s,
-                             ) {
-        #{$container}:nth-of-type(#{$index + $start}) {
-            #{$element} {
-                animation-delay: $offset;
-            }
-        }
-    }
+@mixin text-gradient-fade($gradientName) {
+  @include text-gradient($gradientName);
+  @include fade-animation();
+  background-size: 200% 200%;
 }
 
 @mixin bg-gradient-fade($gradientName) {
   @include bg-gradient($gradientName);
-  background-size: 200% 200%;
-  -webkit-animation: bgGradientFade 5s ease infinite;
-  -moz-animation: bgGradientFade 5s ease infinite;
-  animation: bgGradientFade 5s ease infinite;
+  @include fade-animation();
+  background-size: 600% 600%;
+}
+
+@mixin fade-animation() {
+  -webkit-animation: bgGradientFade 10s ease infinite;
+  -moz-animation: bgGradientFade 10s ease infinite;
+  animation: bgGradientFade 10s ease infinite;
 }
 
 @-webkit-keyframes bgGradientFade {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 @-moz-keyframes bgGradientFade {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 @keyframes bgGradientFade {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }

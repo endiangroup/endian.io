@@ -1,7 +1,7 @@
 section#who-weve-helped
   .title data-aos="fade-down"
     h1 Who we've helped
-  ul#logos
+  ul#logos data-aos="fade-up"
     li
       img src="/img/bbc.svg"
     li
@@ -24,7 +24,7 @@ section#who-weve-helped
   .title data-aos="fade-down"
     h1 Case studies
   #case-studies
-    .study
+    .study data-aos="fade-up"
       .image-container
         img src="/img/kowala.svg"
       .company
@@ -46,7 +46,7 @@ section#who-weve-helped
           li 1x Security Engineer
           li 1x Frontend Engineer
           li 1x Designer
-    .study
+    .study data-aos="fade-up"
       .image-container
         img src="/img/scytale.svg"
       .company

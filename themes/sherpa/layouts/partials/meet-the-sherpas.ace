@@ -2,28 +2,28 @@ section#meet-the-sherpas
   .title data-aos="fade-down"
     h1 Meet some of our sherpas
   ul
-    li data-aos="fade-down"
+    li data-aos="fade-up-right"
       img.headshot src="/img/paul.svg"
       .text
         h4 Paul Fox
         h5 Co-founder & Solutions Engineer
       a href="https://www.linkedin.com/in/yourheropaul"
         img src="img/linkedIn.svg"
-    li data-aos="fade-down"
+    li data-aos="fade-up-right"
       img.headshot src="/img/adrian.svg"
       .text
         h4 Adrian Duke
         h5 Co-founder & Solutions Engineer
       a href="https://www.linkedin.com/in/adrian-duke-aa259729/"
         img src="img/linkedIn.svg"
-    li data-aos="fade-down"
+    li data-aos="fade-up-left"
       img.headshot src="/img/kai.svg"
       .text
         h4 Kai Posner
         h5 Head of Talent
       a href="https://www.linkedin.com/in/kaiposner/"
         img src="img/linkedIn.svg"
-    li data-aos="fade-down"
+    li data-aos="fade-up-left"
       img.headshot src="/img/cat.svg"
       .text
         h4 Cat Neligan

@@ -30,7 +30,7 @@ $gradients: map-merge((
 
 @mixin text-gradient($gradientName) {
   background-image: gradient($gradientName);
-  color:transparent;
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }

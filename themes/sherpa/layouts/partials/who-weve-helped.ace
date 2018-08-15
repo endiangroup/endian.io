@@ -1,25 +1,7 @@
 section#who-weve-helped
   .title data-aos="fade-down"
     h1 Who we've helped
-  ul#logos data-aos="fade-up"
-    li
-      img src="/img/bbc.svg"
-    li
-      img src="/img/farfetch.svg"
-    li
-      img src="/img/jagex.svg"
-    li
-      img src="/img/samlabs.svg"
-    li
-      img src="/img/o2.svg"
-    li
-      img src="/img/kowala.svg"
-    li
-      img src="/img/scytale.svg"
-    li
-      img src="/img/schibsted.svg"
-    li
-      img src="/img/marshall.svg"
+    img#clients src="/img/clients.svg"
   img src="/img/underscore.svg"
   .title data-aos="fade-down"
     h1 Case studies

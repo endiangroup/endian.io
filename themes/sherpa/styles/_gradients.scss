@@ -26,7 +26,7 @@ $gradients: map-merge((
 
 @mixin bg-gradient($gradientName) {
   background: gradient($gradientName);
-  background-size: 150% 150%;
+  background-size: 120% 120%;
 }
 
 @mixin text-gradient($gradientName) {
@@ -136,9 +136,9 @@ skipped.
 }
 
 @mixin gradient-fade() {
-  -webkit-animation: gradientFade 10s ease infinite;
-  -moz-animation: gradientFade 10s ease infinite;
-  animation: gradientFade 10s ease infinite;
+  -webkit-animation: gradientFade 2s ease infinite;
+  -moz-animation: gradientFade 2s ease infinite;
+  animation: gradientFade 2s ease infinite;
 }
 
 @-webkit-keyframes gradientFade {

@@ -17,22 +17,14 @@ section#who-weve-helped
     h1 Case studies
   ul
     li data-aos="fade-down"
-      img src="/img/kowala.svg"
+      .image-container
+        img src="/img/kowala.svg"
       .company
-        h4 Kowala
-        h5 Description of the project.
+        h2 Kowala
+        p The description of the project will go here.
     li data-aos="fade-down"
-      img src="/img/bbc.svg"
+      .image-container
+        img src="/img/kowala.svg"
       .company
-        h4 BBC
-        h5 Description of the project.
-    li data-aos="fade-down"
-      img src="/img/marshall.svg"
-      .company
-        h4 Marshall
-        h5 Description of the project.
-    li data-aos="fade-down"
-      img src="/img/samlabs.svg"
-      .company
-        h4 Sam Labs
-        h5 Description of the project.
+        h2 Kowala
+        p The description of the project will go here.

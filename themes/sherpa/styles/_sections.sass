@@ -207,35 +207,20 @@ section
     padding: 0
     h1
       margin-top: 1em
-    +breakpoint(medium)
-      margin: 1% auto
-    .container
+    ul#logos
+      +xy-grid
       +bg-gradient(rainbow)
       +gradient-fade
-      +breakpoint(medium)
-        box-shadow: inset 6.7vw 5px $colour-black, inset -6.7vw -5px $colour-black
-      +breakpoint(large)
-        box-shadow: inset 40px 5px $colour-black, inset -40px -5px $colour-black
-      img
-        margin: -0.1rem
-        border: 10px solid $colour-black
-        box-shadow: inset 5px 5px $colour-black, inset -5px -5px $colour-black
-        +breakpoint(medium)
-          display: inline
-      .row1
+      background-clip: content-box
+      box-shadow: inset 5px 5px $colour-black, inset -5px -5px $colour-black
+      li
+        +xy-cell(1 of 3, false)
+        width: 33.33333%
+        margin-top: -1px
         img
-          +breakpoint(medium)
-            height: 12.5vw
-          +breakpoint(large)
-            height: 7.5rem
-      .row2
-        margin-bottom: 2em
-        img
-          +breakpoint(medium)
-            height: 16.2vw
-          +breakpoint(large)
-            height: 10.5rem
-    ul
+          border: 10px solid $colour-black
+          box-shadow: inset 5px 5px $colour-black, inset -5px -5px $colour-black
+    ul#case-studies
       +xy-grid
       h4
         margin-bottom: 1em

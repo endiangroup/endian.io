@@ -9,7 +9,7 @@ $gradients: map-merge((
     hot: linear-gradient(135deg, $colour-red 0%, $colour-orange 100%),
     hotHalf: linear-gradient(135deg, $colour-red 0%, $colour-orange 50%,$colour-yellow 100%),
     coldHalf: linear-gradient(135deg, $colour-yellow 0%, $colour-green 50%, $colour-blue 100%),
-    rainbow: linear-gradient(135deg, $colour-orange 10%, $colour-yellow 25%, $colour-green 45%, $colour-olive 60%, $colour-blue 100% )
+    rainbow: linear-gradient(135deg, $colour-red, $colour-orange, $colour-yellow, $colour-green, $colour-olive, $colour-blue)
 ), $gradients);
 
 @function gradient($name) {
@@ -26,7 +26,6 @@ $gradients: map-merge((
 
 @mixin bg-gradient($gradientName) {
   background: gradient($gradientName);
-  background-size: 120% 120%;
 }
 
 @mixin text-gradient($gradientName) {
@@ -135,24 +134,26 @@ skipped.
     }
 }
 
-@mixin gradient-fade() {
-  -webkit-animation: gradientFade 2s ease infinite;
-  -moz-animation: gradientFade 2s ease infinite;
-  animation: gradientFade 2s ease infinite;
+@mixin bg-gradient-fade($gradientName) {
+  @include bg-gradient($gradientName);
+  background-size: 200% 200%;
+  -webkit-animation: bgGradientFade 5s ease infinite;
+  -moz-animation: bgGradientFade 5s ease infinite;
+  animation: bgGradientFade 5s ease infinite;
 }
 
-@-webkit-keyframes gradientFade {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+@-webkit-keyframes bgGradientFade {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-@-moz-keyframes gradientFade {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+@-moz-keyframes bgGradientFade {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-@keyframes gradientFade {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+@keyframes bgGradientFade {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }

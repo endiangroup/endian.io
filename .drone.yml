@@ -22,7 +22,7 @@ pipeline:
     production:
       image: plugins/s3
       acl: public-read
-      region: "eu-west-1"
+      region: "eu-west-2"
       bucket: "endian.io"
       source: public/**/*
       strip_prefix: public/

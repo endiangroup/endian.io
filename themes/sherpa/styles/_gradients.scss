@@ -25,7 +25,7 @@ $gradients: map-merge((
 }
 
 @mixin bg-gradient($gradientName) {
-  background: gradient($gradientName);
+  background-image: gradient($gradientName);
 }
 
 @mixin text-gradient($gradientName) {

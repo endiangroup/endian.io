@@ -34,7 +34,6 @@ section
   &#introduction
     +breakpoint(medium)
       h1
-        +text-gradient-fade(rainbow)
         font-size: 3rem
         line-height: 3rem
     h3
@@ -220,7 +219,31 @@ section
     img#clients
       box-shadow: inset 10px 10px $colour-black, inset -10px -10px $colour-black
       +bg-gradient-fade(rainbow)
-
+    #quotes
+      margin: 2rem auto
+      width: 95%
+      .quote
+        padding: 5%
+        +xy-grid
+        background-color: $colour-grey
+        .quotation-mark
+          +xy-cell(1)
+          img
+        p
+          +xy-cell(11)
+          font-size: 1em
+          +breakpoint(medium)
+            font-size: 2vw
+          +breakpoint(large)
+            font-size: 1em
+          text-align: left
+          position: relative
+          margin-bottom: 0
+          span
+            display: block
+            text-align: left
+            margin-top: 1em
+            color: #999
     #case-studies
       h2
         margin-bottom: 1em

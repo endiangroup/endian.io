@@ -1,11 +1,18 @@
 section#who-weve-helped
   .title data-aos="fade-down"
     h1 Who we've helped
-    img#clients src="/img/clients.svg"
+  img#clients src="/img/clients.svg"
+  #quotes
+    .quote
+      .quotation-mark
+        img src="/img/quotation-mark.svg"
+      p
+        | Endian hired us our entire product team and as a testament to the quality of hires and their work we've since raised multi-million dollar funding rounds.”
+        span ~ Eiland Glover, CEO, Kowala Inc.
   img src="/img/underscore.svg"
-  .title data-aos="fade-down"
-    h1 Case studies
   #case-studies
+    .title data-aos="fade-down"
+      h1 Case studies
     .study data-aos="fade-up"
       .image-container
         img src="/img/kowala.svg"

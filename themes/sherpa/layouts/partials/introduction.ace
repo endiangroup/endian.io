@@ -14,5 +14,5 @@ section#introduction
   h5 data-aos="fade-down-right"
     | Want the TL;DR? &nbsp;
     a href="#what-we-do" Here's what we do
-section#gray
-  p data-aos="fade-down-right" Much of our work at Endian has been figuring out how to get clarity on ideas, create a team that's harmonious and deliver solutions that provably work. Over the years we've distilled that thinking into processes, tools and training that we call the Endian Way. And we'd like to share it with you.
+section#gray data-aos="fade-up"
+  p data-aos="fade-up" Much of our work at Endian has been figuring out how to get clarity on ideas, create a team that's harmonious and deliver solutions that provably work. Over the years we've distilled that thinking into processes, tools and training that we call the Endian Way. And we'd like to share it with you.

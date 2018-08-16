@@ -2,7 +2,7 @@ section#the-endian-way
   .title data-aos="fade-down"
     h1 The Endian Way
   .wrapper
-    img src="img/endianway.svg"
+    img data-aos="zoom-out" src="img/endianway.svg"
     ul
       li
         h2 data-aos="fade-right" Aspirational

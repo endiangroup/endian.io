@@ -38,16 +38,15 @@ $gradients: map-merge((
 @mixin text-gradient-fade($gradientName) {
   @include text-gradient($gradientName);
   @include fade-animation();
-  background-size: 200% 200%;
 }
 
 @mixin bg-gradient-fade($gradientName) {
   @include bg-gradient($gradientName);
   @include fade-animation();
-  background-size: 600% 600%;
 }
 
 @mixin fade-animation() {
+  background-size: 200% 200%;
   -webkit-animation: bgGradientFade 10s ease infinite;
   -moz-animation: bgGradientFade 10s ease infinite;
   animation: bgGradientFade 10s ease infinite;

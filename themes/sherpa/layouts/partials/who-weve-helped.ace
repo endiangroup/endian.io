@@ -1,7 +1,7 @@
 section#who-weve-helped
   .title data-aos="fade-down"
     h1 Who we've helped
-  img#clients data-aos="zoom-in" src="/img/clients.svg"
+  img#clients data-aos="zoom-in" src="/img/clients.png"
   #quotes
     .quote data-aos="fade-up"
       .quotation-mark

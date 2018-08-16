@@ -19,10 +19,22 @@ section
   p
     text-align: center
     width: 95%
+  &#gray
+    background: $colour-grey
+    max-width: 100%
+    p
+      margin: 0 auto
+      max-width: 1080px
+      padding: 2em
+      font-size: 1rem
+      +breakpoint(medium)
+        font-size: 2vw
+      +breakpoint(large)
+        font-size: 1.5rem
   &#introduction
-    margin-top: 2em
     +breakpoint(medium)
       h1
+        +text-gradient-fade(rainbow)
         font-size: 3rem
         line-height: 3rem
     h3
@@ -31,7 +43,6 @@ section
     p
       margin-top: 4em
     h5
-      margin: 2em auto
       margin-top: 2rem
     a
       color: $colour-red
@@ -204,12 +215,10 @@ section
             min-height: 18vh
 
   &#who-weve-helped
-    h1, h2, h3, h4, h5
-      text-align: left
-      width: 100%
     h1
       margin-top: 1em
     img#clients
+      box-shadow: inset 10px 10px $colour-black, inset -10px -10px $colour-black
       +bg-gradient-fade(rainbow)
 
     #case-studies
@@ -231,7 +240,7 @@ section
             height: auto
             width: 100%
         .company
-          p, li
+          h1, h2, h3, h4, h5, p, li
             text-align: left
             width: 100%
           +xy-cell(12)

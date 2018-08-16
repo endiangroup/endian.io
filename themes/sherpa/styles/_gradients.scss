@@ -9,7 +9,7 @@ $gradients: map-merge((
     hot: linear-gradient(135deg, $colour-red 0%, $colour-orange 100%),
     hotHalf: linear-gradient(135deg, $colour-red 0%, $colour-orange 50%,$colour-yellow 100%),
     coldHalf: linear-gradient(135deg, $colour-yellow 0%, $colour-green 50%, $colour-blue 100%),
-    rainbow: linear-gradient(135deg, $colour-orange 0%, $colour-yellow 50%, $colour-green 75%, $colour-blue 100%)
+    rainbow: linear-gradient(135deg, $colour-red 0%, $colour-orange 25%, $colour-yellow 45%, $colour-green 65%, $colour-olive 75%, $colour-blue 100%)
 ), $gradients);
 
 @function gradient($name) {

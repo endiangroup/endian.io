@@ -8,8 +8,14 @@ section#who-weve-helped
       .quotation-mark
         img src="/img/quotation-mark.svg"
       p
-        | Endian hired us our entire product team and as a testament to the quality of hires and their work we've since raised multi-million dollar funding rounds.”
+        | Endian hired our entire product team and as a testament to the quality of hires and their work we've since raised multi-million dollar funding rounds.”
         span ~ Eiland Glover, CEO, Kowala Inc.
+    .quote data-aos="fade-up"
+      .quotation-mark
+        img src="/img/quotation-mark.svg"
+      p
+        | It’s always a pleasure working with Endian. Their ability to understand our business is second to none. We think of them as an extension of ourselves.”
+        span ~ Aleks Malchrzyk, HR Manager, Sam Labs.
   img data-aos="fade-down" src="/img/underscore.svg"
   #case-studies
     .title data-aos="fade-down"
@@ -38,11 +44,24 @@ section#who-weve-helped
           li 1x Designer
     .study data-aos="fade-up"
       .image-container
+        img src="/img/niwa.svg"
+      .company
+        h2 Niwa - Agricultural Technology Startup
+        h5 Design & Build (Stewardship)
+        ul
+          li Built to support 1000+ units
+          li Minimum viable product (MVP) build
+          li Ionic hybrid mobile application -- Android & iOS
+          li Nodejs backend -- Amazon AWS platform
+          li C++ IoT firmware -- Particle IoT platform
+    .study data-aos="fade-up"
+      .image-container
         img src="/img/scytale.svg"
       .company
         h2 Scytale - Digital Agency
         h5 Training (Indoctrination)
         ul
+          li Test Driven Development (TDD)
           li Onsite
-          li 10x Attendees
+          li x10 Attendees
           li 98% positive feedback

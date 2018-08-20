@@ -224,10 +224,13 @@ section
       img
         box-shadow: inset 10px 10px 0px $colour-black, inset -10px -10px 0px $colour-black
     #quotes
+      > :first-child
+        margin-top: 0 !important
       margin: 2rem auto
       width: 95%
       .quote
         padding: 5%
+        margin-top: 1em
         +xy-grid
         background-color: $colour-grey
         .quotation-mark

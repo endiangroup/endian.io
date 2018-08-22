@@ -4,8 +4,6 @@ pipeline:
       image: kowalatech/hugo-dev:1.0.4
       commands:
         - make docker-build
-      when:
-        branch: [develop, master]
 
     staging:
       image: plugins/s3

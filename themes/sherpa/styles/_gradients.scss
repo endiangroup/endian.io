@@ -1,4 +1,5 @@
 @import "colours";
+@import "shapes";
 
 $gradients: () !default;
 $gradients: map-merge((
@@ -16,10 +17,13 @@ $gradients: map-merge((
   @return map-get($gradients, $name);
 }
 
-@mixin border-gradient($gradientName) {
-  border: 20px solid transparent;
-  border-width: 4px;
-  border-style: solid;
+@mixin round-border-gradient($gradientName) {
+  @include circle;
+  padding: 4px;
+}
+
+@mixin square-border-gradient($gradientName) {
+  border: 4px solid transparent;
   border-image: gradient($gradientName);
   border-image-slice: 1;
 }

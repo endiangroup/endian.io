@@ -143,17 +143,15 @@ section
       +xy-grid
       text-align: center
       img
-        border-radius: 100%
-        border-width: 5px
         width: 50%
         margin-top: -35%
       .planning
         margin-top: 5rem
         +breakpoint(medium)
           margin-top: 15rem
-        +border-gradient(hotHalf)
+        +square-border-gradient(hotHalf)
         img
-          +border-gradient(hot)
+          +round-border-gradient(hot)
           +bg-gradient(hot)
         +breakpoint(large)
           +xy-cell(5)
@@ -162,9 +160,9 @@ section
         margin-top: 5rem
         +breakpoint(medium)
           margin-top: 15rem
-        +border-gradient(coldHalf)
+        +square-border-gradient(coldHalf)
         img
-          +border-gradient(chill)
+          +round-border-gradient(chill)
           +bg-gradient(chill)
         +breakpoint(large)
           +xy-cell(5)
@@ -286,19 +284,19 @@ section
       margin-top: 6em
       +xy-grid
       li img.headshot
-        border-radius: 100%
+        +circle
       li:nth-child(1) img.headshot
         +bg-gradient(hot)
-        +border-gradient(hot)
+        +round-border-gradient(hot)
       li:nth-child(2) img.headshot
         +bg-gradient(warm)
-        +border-gradient(warm)
+        +round-border-gradient(warm)
       li:nth-child(3) img.headshot
         +bg-gradient(chill)
-        +border-gradient(chill)
+        +round-border-gradient(chill)
       li:nth-child(4) img.headshot
         +bg-gradient(cold)
-        +border-gradient(cold)
+        +round-border-gradient(cold)
       li
         margin-bottom: 2em
         .text
@@ -318,7 +316,7 @@ section
           margin-top: 2em
   &#say-hi
     max-width: 90%
-    +border-gradient(rainbow)
+    +square-border-gradient(rainbow)
     background: #000000
     margin: 4em auto
     padding: 2em

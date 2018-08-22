@@ -1,7 +1,7 @@
 pipeline:
 
     build:
-      image: kowalatech/hugo-dev:1.0.4
+      image: kowalatech/hugo-dev:1.0.5
       commands:
         - make docker-build
 

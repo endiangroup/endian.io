@@ -278,9 +278,22 @@ section
             height: auto
             width: 100%
         .company
-          h1, h2, h3, h4, h5, p, li
+          +xy-grid
+          h2
             text-align: left
-            width: 100%
+            +xy-cell(12)
+          .list-image
+            +xy-cell(2)
+          .list
+            +xy-cell(10)
+            h5
+              text-align: left
+              width: 100%
+          ul
+            li
+              text-align: left
+              list-style: disc
+              list-style-position: inside
           +xy-cell(12)
           +breakpoint(medium)
             +xy-cell(8)

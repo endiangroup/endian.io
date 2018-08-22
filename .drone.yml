@@ -1,11 +1,26 @@
 pipeline:
 
-    build:
+    build-staging:
       image: kowalatech/hugo-dev:1.0.4
+      environment:
+        - HUGO_ENV="staging"
+        - HUGO_BASEURL="http://www.staging.endian.io"
       commands:
         - make docker-build
       when:
-        branch: [develop, master]
+        branch: [develop]
+        event: [push, tag]
+
+    build-production:
+      image: kowalatech/hugo-dev:1.0.4
+      environment:
+        - HUGO_ENV="production"
+        - HUGO_BASEURL="https://endian.io"
+      commands:
+        - make docker-build
+      when:
+        branch: [master]
+        event: [push, tag]
 
     staging:
       image: plugins/s3
@@ -18,6 +33,7 @@ pipeline:
       encryption: AES256
       when:
         branch: [develop]
+        event: [push, tag]
 
     production:
       image: plugins/s3
@@ -30,3 +46,4 @@ pipeline:
       encryption: AES256
       when:
         branch: master
+        event: [push, tag]

@@ -27,21 +27,22 @@ section#who-weve-helped
         h2 Kowala - Cryptocurrency Startup
         h5 Technical Consulting (Braintrust)
         ul
-          li Product research and development
-          li US legality review
-          li Whitepaper foundations
-          li Algorithm design
-          li Proof of concept implementation
-          li Cryptocurrency security best practises
-          li Product team sizing and requirements
+          li - Product research and development
+            ul
+              li - Algorithm design
+              li - US legality review
+              li - Whitepaper foundations
+              li - Proof of concept implementation
+          li - Security best practises
+          li - Product team sizing and requirements
         h5 Talent acquisition (Muscle)
         ul
-          li 1x Head of Development
-          li 5x Blockchain Engineers
-          li 3x Software Engineers
-          li 1x Security Engineer
-          li 1x Frontend Engineer
-          li 1x Designer
+          li - 1x Head of Development
+          li - 5x Blockchain Engineers
+          li - 3x Software Engineers
+          li - 1x Frontend Engineer
+          li - 1x Security Engineer
+          li - 1x Designer
     .study data-aos="fade-up"
       .image-container
         img src="/img/niwa.svg"
@@ -49,11 +50,12 @@ section#who-weve-helped
         h2 Niwa - Agricultural Technology Startup
         h5 Design & Build (Stewardship)
         ul
-          li Built to support 1000+ units
-          li Minimum viable product (MVP) build
-          li Ionic hybrid mobile application &mdash; Android & iOS
-          li Nodejs backend &mdash; Amazon AWS platform
-          li C++ IoT firmware &mdash; Particle IoT platform
+          li - Built to support 1000+ units
+          li - Minimum viable product (MVP) build
+            ul
+              li - Ionic hybrid mobile application &mdash; Android & iOS
+              li - Nodejs backend &mdash; Amazon AWS platform
+              li - C++ IoT firmware &mdash; Particle IoT platform
     .study data-aos="fade-up"
       .image-container
         img src="/img/scytale.svg"
@@ -61,7 +63,7 @@ section#who-weve-helped
         h2 Scytale - Digital Agency
         h5 Training (Indoctrination)
         ul
-          li Test Driven Development (TDD)
-          li Onsite
-          li x10 Attendees
-          li 98% positive feedback
+          li - Test Driven Development (TDD)
+          li - 98% positive feedback
+          li - x10 Attendees
+          li - Onsite

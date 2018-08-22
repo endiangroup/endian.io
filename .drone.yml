@@ -18,6 +18,7 @@ pipeline:
       encryption: AES256
       when:
         branch: [develop]
+        event: [push, tag]
 
     production:
       image: plugins/s3
@@ -30,3 +31,4 @@ pipeline:
       encryption: AES256
       when:
         branch: master
+        event: [push, tag]

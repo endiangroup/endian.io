@@ -16,7 +16,7 @@ section#who-weve-helped
       p
         | It’s always a pleasure working with Endian. Their ability to understand our business is second to none. We think of them as an extension of ourselves.”
         span ~ Aleks Malchrzyk, HR Manager, Sam Labs.
-  img data-aos="fade-down" src="/img/underscore.svg"
+  img data-aos="fade-down" src="/img/case-study-underscore.svg"
   #case-studies
     .title data-aos="fade-down"
       h1 Case studies
@@ -43,6 +43,7 @@ section#who-weve-helped
           li - 1x Frontend Engineer
           li - 1x Security Engineer
           li - 1x Designer
+    img.divider data-aos="fade-down" src="/img/case-study-divider.svg"
     .study data-aos="fade-up"
       .image-container
         img src="/img/niwa.svg"
@@ -56,6 +57,7 @@ section#who-weve-helped
               li - Ionic hybrid mobile application &mdash; Android & iOS
               li - Nodejs backend &mdash; Amazon AWS platform
               li - C++ IoT firmware &mdash; Particle IoT platform
+    img.divider data-aos="fade-down" src="/img/case-study-divider.svg"
     .study data-aos="fade-up"
       .image-container
         img src="/img/scytale.svg"

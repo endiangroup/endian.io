@@ -4,7 +4,7 @@ pipeline:
       image: kowalatech/hugo-dev:1.0.4
       environment:
         - HUGO_ENV="staging"
-        - HUGO_BASEURL="https://www.staging.endian.io"
+        - HUGO_BASEURL="http://www.staging.endian.io"
       commands:
         - make docker-build
       when:

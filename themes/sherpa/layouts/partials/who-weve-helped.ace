@@ -51,9 +51,9 @@ section#who-weve-helped
         ul
           li Built to support 1000+ units
           li Minimum viable product (MVP) build
-          li Ionic hybrid mobile application -- Android & iOS
-          li Nodejs backend -- Amazon AWS platform
-          li C++ IoT firmware -- Particle IoT platform
+          li Ionic hybrid mobile application &mdash; Android & iOS
+          li Nodejs backend &mdash; Amazon AWS platform
+          li C++ IoT firmware &mdash; Particle IoT platform
     .study data-aos="fade-up"
       .image-container
         img src="/img/scytale.svg"

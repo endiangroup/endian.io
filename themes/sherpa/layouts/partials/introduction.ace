@@ -1,7 +1,6 @@
 section#introduction
   .title data-aos="fade-down-right"
-    h1 We're not an agency.
-    h1 We're digital sherpas.
+    h1 We're not an agency.<br />We're digital sherpas.
   .mountains
     img.cloud-1 src="/img/cloud.svg" data-aos="fade-right" data-aos-duration="3000" data-aos-easing="ease-out-sine"
     div data-aos="fade-up"

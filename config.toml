@@ -1,8 +1,8 @@
 # Hugo params for global setup
-baseurl      = "http://www.staging.endian.io"
-languageCode = "en-us"
-title        = "Endian Group"
-theme        = "sherpa"
+languageCode    = "en-us"
+title           = "Endian Group"
+theme           = "sherpa"
+enableRobotsTXT = true
 
 # Site-wide content params
 [params]

@@ -51,13 +51,13 @@ docker-build: docker-npm-ci docker-assert-css-dir
 	@sass --style $(SASS_STYLE) $(SASS_INCLUDES) --update $(SASS_PATHS) -E "UTF-8"
 	@tsc
 	@sed 's/GITHASH/$(GITHASH)/' themes/sherpa/scripts/sw.js > themes/sherpa/static/sw.js
-	@GITHASH=$(GITHASH) hugo
+	@GITHASH=$(GITHASH) HUGO_BASEURL=$(HUGO_BASEURL) HUGO_ENV=$(HUGO_ENV) hugo
 
 docker-serve: docker-npm-install docker-assert-css-dir
 	@sass --style $(SASS_STYLE) $(SASS_INCLUDES) --watch $(SASS_PATHS) -E "UTF-8" &
 	@tsc -w &
 	@sed 's/GITHASH/$(GITHASH)/' themes/sherpa/scripts/sw.js > themes/sherpa/static/sw.js &
-	@GITHASH=$(GITHASH) hugo serve . --bind=0.0.0.0 -w
+	@GITHASH=$(GITHASH) HUGO_BASEURL=$(HUGO_BASEURL) HUGO_ENV=$(HUGO_ENV) hugo serve . --bind=0.0.0.0 -w
 
 docker-clean:
 	@rm -rf node_modules

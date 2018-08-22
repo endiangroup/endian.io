@@ -34,13 +34,17 @@ section
       +breakpoint(large)
         font-size: 1.5rem
   &#introduction
-    +breakpoint(medium)
-      h1
+    h1
+      line-height: 2.5rem
+      font-size: 1.5rem
+      +breakpoint(medium)
         font-size: 3rem
-        line-height: 3rem
+        line-height: 3.5rem
     h3
       margin-top: 2rem
-      line-height: 2.5rem
+      line-height: 1.5rem
+      +breakpoint(medium)
+        line-height: 2rem
     p
       margin-top: 4em
     h5
@@ -224,10 +228,13 @@ section
       img
         box-shadow: inset 10px 10px 0px $colour-black, inset -10px -10px 0px $colour-black
     #quotes
+      > :first-child
+        margin-top: 0 !important
       margin: 2rem auto
       width: 95%
       .quote
         padding: 5%
+        margin-top: 1em
         +xy-grid
         background-color: $colour-grey
         .quotation-mark
@@ -252,6 +259,7 @@ section
       h2
         margin-bottom: 1em
       h5
+        font-size: 1.25em
         font-weight: 700
       .study
         +xy-grid
@@ -320,5 +328,7 @@ section
       width: 50%
       margin: 0 auto
     span
-      font-size: 2em
+      font-size: 1.5em
+      +breakpoint(medium)
+        font-size: 2em
       +text-gradient-fade(rainbow)

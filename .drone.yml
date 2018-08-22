@@ -1,7 +1,7 @@
 pipeline:
 
     build-staging:
-      image: kowalatech/hugo-dev:1.0.4
+      image: kowalatech/hugo-dev:1.0.5
       environment:
         - HUGO_ENV="staging"
         - HUGO_BASEURL="http://www.staging.endian.io"

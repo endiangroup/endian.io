@@ -12,7 +12,7 @@ pipeline:
         event: [push, tag]
 
     build-production:
-      image: kowalatech/hugo-dev:1.0.4
+      image: kowalatech/hugo-dev:1.0.5
       environment:
         - HUGO_ENV="production"
         - HUGO_BASEURL="https://endian.io"

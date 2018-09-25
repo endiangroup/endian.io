@@ -12,4 +12,4 @@
   {{ partial "say-hi" . }}
 
 = content footer
-  p © Endian Ltd. 2018
+  p © Endian Group Ltd. 2018

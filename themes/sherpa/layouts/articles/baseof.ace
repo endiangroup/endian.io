@@ -1,0 +1,24 @@
+// {{.Site.Params.headerComment | safeHTML }}
+= doctype html
+html lang={{.Site.LanguageCode}}
+  {{ partial "head" . }}
+
+  body
+    .container
+      header.compact
+        section
+          = yield header
+      article
+        section
+          = yield main
+      footer
+        = yield footer
+
+  script defer="true" src="/js/app.js?v={{getenv "GITHASH"}}"
+  script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-123637660-1"
+
+  // Google Analytics
+  script.
+    window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-123637660-1');
+
+ 

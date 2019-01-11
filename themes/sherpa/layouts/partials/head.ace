@@ -25,4 +25,4 @@ head
   meta name="theme-color" content="#0C1516"
 
   link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"
-  link href="/css/sherpa.css?v={{getenv "GITHASH"}}" rel="stylesheet"
+  link href="/css/sherpa.css{{getenv "GITHASH"}}" rel="stylesheet"

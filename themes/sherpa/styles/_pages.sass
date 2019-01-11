@@ -6,3 +6,54 @@
     line-height: 6vw
     margin-bottom: 2rem
     +text-gradient(rainbow)
+
+article
+  color: $colour-black
+  background-color: $colour-white
+  padding: 1em
+  font-size: 1em
+  section,p
+    text-align: left
+
+  h1
+    margin-bottom: 1em
+
+  h2
+    &.title 
+      font-weight: 800
+      margin-bottom: 0.25em
+      width: 100%
+      font-size: 2.5em
+
+  .byline
+    font-style: italic
+    font-size: 1em !important
+    padding-bottom: 1em
+    border-bottom: 1px dotted colour(marine,trans)
+
+  h2,h3,h4
+    margin-top: 1em
+    margin-left: 0
+    margin-bottom: 0.5em
+
+  h2
+    font-weight: 600
+  h3
+    font-weight: 500
+  h4
+    font-weight: 400
+
+  p
+    +breakpoint(medium)
+      font-size: 1.3em !important
+
+  #TableOfContents  
+    margin-bottom: 3em
+    ul,a
+      color: $colour-black
+
+    a
+      &:hover 
+        color: colour(orange,dark)
+        font-weight: bold
+

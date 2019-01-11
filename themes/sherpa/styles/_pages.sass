@@ -23,7 +23,6 @@ article
       font-weight: 800
       margin-bottom: 0.25em
       width: 100%
-      font-size: 2.5em
 
   .byline
     font-style: italic
@@ -43,17 +42,40 @@ article
   h4
     font-weight: 400
 
-  p
+  p, ol
     +breakpoint(medium)
       font-size: 1.3em !important
+
+  a
+    color: $colour-black
+    font-weight: 500
+    &:hover 
+      +colour-highlight-shift
+      font-weight: 500
+
+  sup
+    a
+      color: $colour-blue
+      font-weight: 500
+      font-size: 0.8em
+      &::before
+        content: "["
+      &::after
+        content: "]"
 
   #TableOfContents  
     margin-bottom: 3em
     ul,a
       color: $colour-black
 
-    a
-      &:hover 
-        color: colour(orange,dark)
-        font-weight: bold
+  table
+    margin-top: 1.5em
+    tr
+      td
+        font-size: 0.9em
+        +breakpoint(medium)
+          font-size: 1.2em
+    thead
+      th
+        color: $colour-black
 

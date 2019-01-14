@@ -9,8 +9,9 @@ html lang={{.Site.LanguageCode}}
         = yield header
       main
         = yield main
-      footer
-        = yield footer
+    footer
+      = yield footer
+      {{ partial "footer" . }}
 
   script src="/js/jquery.min.js"
   script src="/js/foundation.core.min.js"

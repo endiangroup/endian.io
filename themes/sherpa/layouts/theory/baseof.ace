@@ -11,8 +11,8 @@ html lang={{.Site.LanguageCode}}
       article
         section
           = yield main
-      footer
-        = yield footer
+    footer
+      {{ partial "footer" . }}
 
   script defer="true" src="/js/app.js?v={{getenv "GITHASH"}}"
   script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-123637660-1"

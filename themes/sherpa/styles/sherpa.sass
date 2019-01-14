@@ -7,9 +7,11 @@
 +foundation-global-styles
 +foundation-typography
 +foundation-table
++foundation-responsive-embed
 
 @import typography
 @import sections
+@import layouts
 @import pages
 @import slaask
 
@@ -55,6 +57,7 @@ header
       margin: 0
     section
       background: url(../img/mountains.svg) no-repeat right
+      background-position: 100% 10%
       padding: 1.5em 0 1.5em 1em
       margin: 0 auto
     h1
@@ -72,4 +75,67 @@ header
           border-left: 1px solid colour(white)
 
 footer
-  +xy-cell(12)
+  width: 100%
+  margin-top: 2em
+
+  .wrapper
+    +breakpoint(xxlarge)
+      background: url(../img/mountains.svg) no-repeat right
+      background-position: 110% 0%
+
+  .map
+    +responsive-embed("widescreen")
+    +breakpoint(large)
+      +responsive-embed(256 by 81)
+
+  .content
+    +xy-grid
+    +centered-content
+    padding: 0
+    padding-top: 2em
+    section
+      +xy-cell(12)
+      text-align: center
+      padding: 0
+
+      +breakpoint(medium)
+        +xy-cell(6)
+        text-align: left
+
+      +breakpoint(large)
+        +xy-cell(3)
+
+  h5
+    margin: 0
+    font-size: 1.5em
+    width: 100%
+    font-weight: 600
+    img
+      height: 1em
+      margin-right: 0.25em
+
+  p 
+    width: 100%
+    font-size: 1.2em
+    +breakpoint(medium)
+      text-align: left
+    +breakpoint(large)
+      margin-left: 0
+
+    &.email 
+      margin-top: 0.5em 
+
+  ul
+    li
+      font-size: 1.2em
+      a
+        background-color: rgba(12,21,22,0.75)
+        width: auto
+      i
+        display: inline-block
+        width: 1.5em
+
+  address
+    font-style: normal
+    font-size: 1.2em
+

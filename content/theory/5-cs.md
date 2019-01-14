@@ -1,5 +1,8 @@
 +++
 title = "Adject Clarity: Five Integral C-Words of Maximally Useful Product Specification for Teams"
+layout = "theory"
+authors = "Paul M Fox and Adrian Duke"
+summary = "In this article we demonstrate something"
 +++
 ## Abstract
 

@@ -1,19 +1,19 @@
 = content header
   ul
     li
-      a href="/"
-        h1
-          img src="/img/endian-logo.svg"
-          span endian
-          span.section articles
+      h1
+        img src="/img/endian-logo.svg"
+        a href="/" endian
+        span.section
+          a href="/articles" articles
 
 = content main
-  h2.title {{.Title}}
-  p.byline Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
-
-  {{ if and (gt .FuzzyWordCount 2000 ) (.TableOfContents) }}
-  h3 Table of contents
-  {{.TableOfContents}}
-  {{end}}
-
-  #body {{.Content}}
+  ul#articles
+    {{ range .Pages }}
+    li
+      a href="{{.Permalink}}"
+        h2 {{.Title}}
+      p.byline {{.Param "authors"}}.  Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
+      p.summary {{.Param "summary"}}
+      a.read href="{{.Permalink}}" Read more &raquo;
+    {{ end }}

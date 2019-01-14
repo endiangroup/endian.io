@@ -1,11 +1,11 @@
 = content header
   ul
     li
-      a href="/"
-        h1
-          img src="/img/endian-logo.svg"
-          span endian
-          span.section theory
+      h1
+        img src="/img/endian-logo.svg"
+        a href="/" endian
+        span.section
+          a href="/articles" articles
 
 = content main
   h2.title {{.Title}}

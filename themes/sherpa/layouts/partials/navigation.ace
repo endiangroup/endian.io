@@ -1,15 +1,57 @@
-nav#main 
-  section 
-    ul.vertical.medium-horizontal.menu 
+.sticky-wrapper data-sticky-container=""
+  nav#main data-sticky="" data-options="marginTop:0;" style="width:100%"
+    section 
+      ul.menu.horizontal.align-left
+        li
+          a href="/" class="{{if eq . "home"}}active{{end}}"
+            i class="fi-mountains"
+            span Home
+        li
+          a href="/theory" class="{{if eq . "theory"}}active{{end}}"
+            i class="fi-book"
+            span Theory
+        li
+          a href="/articles" class="{{if eq . "articles"}}active{{end}}"
+            i class="fi-comment-quotes"
+            span Articles
+      ul.menu.horizontal.align-right
+        li
+          a href="https://github.com/endiangroup" target="_blank"
+            i class="fi-social-github"
+            span GitHub
+        li
+          a href="https://www.linkedin.com/company/endian-group/about" target="_blank"
+            i class="fi-social-linkedin"
+            span LinkedIn
+
+#burger
+  a href="#"
+    span.icon
+
+#mobile-menu
+  .container
+    img src="/img/endian-logo.svg"
+    ul.menu.vertical
       li
-        a href="/" 
+        a href="/" class="{{if eq . "home"}}active{{end}}"
           i class="fi-mountains"
           span Home
       li
-        a href="/theory" 
+        a href="/theory" class="{{if eq . "theory"}}active{{end}}"
           i class="fi-book"
           span Theory
       li
-        a href="/articles" 
+        a href="/articles" class="{{if eq . "articles"}}active{{end}}"
           i class="fi-comment-quotes"
           span Articles
+    ul.menu.vertical
+      li
+        a href="https://github.com/endiangroup" target="_blank"
+          i class="fi-social-github"
+          span GitHub
+      li
+        a href="https://www.linkedin.com/company/endian-group/about" target="_blank"
+          i class="fi-social-linkedin"
+          span LinkedIn
+
+

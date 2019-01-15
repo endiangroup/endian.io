@@ -1,15 +1,15 @@
 $(document).foundation()
 
-var buffer = $('.buffer');
-var header = $('header');
-buffer.height(header.height());
+var burger = $("#burger");
+var menu   = $("#mobile-menu");
+burger.click(function(){
+  menu.fadeIn();
 
-$('.top-section').on('sticky.zf.stuckto:top', function(){
-$(this).addClass('shrink');
-$('.buffer').show();
-$('header').hide();
-}).on('sticky.zf.unstuckfrom:top', function(){
-  $(this).removeClass('shrink');
-$('header').slideDown();
-$('.buffer').slideUp();
-})
+  if (burger.hasClass("open")) {
+    burger.removeClass("open");
+    menu.fadeOut();
+  } else {
+    burger.addClass("open");
+    menu.fadeIn();
+  }
+});

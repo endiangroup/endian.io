@@ -5,6 +5,7 @@ html lang={{.Site.LanguageCode}}
 
   body
     .container
+      {{ partial "navigation" "articles" }}
       header.compact
         section
           = yield header
@@ -14,11 +15,4 @@ html lang={{.Site.LanguageCode}}
       footer
         {{ partial "footer" . }}
 
-  script defer="true" src="/js/app.js?v={{getenv "GITHASH"}}"
-  script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-123637660-1"
-
-  // Google Analytics
-  script.
-    window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-123637660-1');
-
- 
+  {{ partial "javascript" . }}

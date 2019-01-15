@@ -5,13 +5,16 @@
 @import foundation_settings
 @import foundation
 +foundation-global-styles
-+foundation-typography
-+foundation-table
++foundation-menu
 +foundation-responsive-embed
++foundation-sticky
++foundation-table
++foundation-typography
 
 @import typography
 @import sections
 @import layouts
+@import navigation
 @import pages
 @import slaask
 
@@ -27,6 +30,16 @@ ul
 
 .container
   width: 100%
+
+.top-section
+  background-color: $colour-black
+  position: fixed
+
+.buffer
+  padding: 0
+
+.shrink .buffer
+  background-color: $colour-white
 
 header
   +xy-cell(12)
@@ -46,7 +59,7 @@ header
     font-weight: 700
     margin-right: 0.5em
     +breakpoint(medium)
-      font-size: 3em
+      font-size: 2.5em
       margin-right: 0.7em
 
   &.compact 
@@ -56,14 +69,15 @@ header
     ul
       margin: 0
     section
-      background: url(../img/mountains.svg) no-repeat right
-      background-position: 100% 10%
       padding: 1.5em 0 1.5em 1em
+      +breakpoint(medium)
+        background: url(../img/mountains.svg) no-repeat right
+        background-position: 100% 10%
+        padding: 0.25em 0 0.25em 1em
       margin: 0 auto
     h1
       font-size: 1.5em
-      +breakpoint(medium)
-        font-size: 2em
+      margin-bottom: 0
       img 
         height: 1.5em
         margin-right: 0.5em

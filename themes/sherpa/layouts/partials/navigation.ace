@@ -1,0 +1,15 @@
+nav#main 
+  section 
+    ul.vertical.medium-horizontal.menu 
+      li
+        a href="/" 
+          i class="fi-mountains"
+          span Home
+      li
+        a href="/theory" 
+          i class="fi-book"
+          span Theory
+      li
+        a href="/articles" 
+          i class="fi-comment-quotes"
+          span Articles

@@ -48,7 +48,7 @@ $('article a').each(function() {
     el.addClass("footnote");
     el.attr("id", footnote.id);
     el.attr("href","#footnote-"+idx);
-    el.html(idx);
+    el.html(String(idx));
 
     var content = "<p>"+footnote.title+"</p><p>";
 
@@ -80,7 +80,7 @@ if (footnotes.length) {
 
 $('a.footnote').click(function(){
     var el = $(this);
-    var target = $('span',el.attr('href'));
+    var target = $('span',$(el.attr('href')));
     target.addClass("highlight");
     setTimeout(function () {
           target.removeClass('highlight');

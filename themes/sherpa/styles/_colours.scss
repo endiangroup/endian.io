@@ -100,7 +100,7 @@ $colours: (
 
 @mixin colourshiftkeyframes($element, $name) {
     @include keyframes($name) {
-        0% { #{$element}: colour(red) !important; }
+        0% { #{$element}: colour(red); }
         20% { #{$element}: colour(orange); }
         40% { #{$element}: colour(yellow); }
         60% { #{$element}: colour(green); }
@@ -126,6 +126,7 @@ $colours: (
 }
 
 @mixin border-and-colour-highlight-shift {
+    border-color: pink;
     @include animation('border_colour_shift 5s infinite alternate,colour_shift 5s infinite alternate');
 }
 

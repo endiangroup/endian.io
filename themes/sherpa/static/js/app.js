@@ -11,4 +11,5 @@ burger.click(function () {
         burger.addClass("open");
         menu.fadeIn();
     }
+    return false;
 });

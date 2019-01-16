@@ -31,12 +31,17 @@ article
     border-bottom: 1px dotted colour(marine,trans)
 
   h2,h3,h4
+    width: 100%
     margin-top: 1em
     margin-left: 0
     margin-bottom: 0.5em
 
   h2
     font-weight: 600
+    &#notes
+      margin-top: 2em
+      padding-top: 2em
+      border-top: 1px dotted colour(marine,trans)
   h3
     font-weight: 500
   h4
@@ -46,6 +51,17 @@ article
     +breakpoint(medium)
       font-size: 1.3em !important
 
+  ol
+    li
+      margin-top: 1em
+      &.footnote
+        margin-top: -3em
+        padding-top: 5em
+
+      span
+        &.highlight
+          +highlight
+
   a
     color: $colour-black
     font-weight: 500
@@ -53,11 +69,18 @@ article
       +colour-highlight-shift
       font-weight: 500
 
-  sup
+  p 
     a
-      color: $colour-blue
+      font-size: 0.75em
+
+  a
+    &.footnote
+      color: $colour-olive
       font-weight: 500
-      font-size: 0.8em
+      font-size: 0.63em
+      vertical-align: super
+      margin-top: -8em
+      padding-top: 8em
       &::before
         content: "["
       &::after

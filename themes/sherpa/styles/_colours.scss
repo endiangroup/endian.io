@@ -171,3 +171,16 @@ skipped.
         }
     }
 }
+
+@keyframes highlight {
+    0% {
+        background: #ffff99; 
+    }
+    100% {
+        background: none;
+    }
+}
+
+@mixin highlight {
+    animation: highlight 3s;
+}

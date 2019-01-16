@@ -1,5 +1,6 @@
 $(document).foundation()
 
+// Mobile navigation
 var burger = $("#burger");
 var menu   = $("#mobile-menu");
 burger.click(function(){
@@ -13,4 +14,75 @@ burger.click(function(){
     menu.fadeIn();
   }
   return false;
+});
+
+// Footnotes
+var footnotes = [];
+var idx = 0;
+var host_regex = new RegExp(location.host);
+
+$('article a').each(function() {
+
+    var el = $(this);
+
+    if (el.html() != "*") {
+
+        if (!host_regex.test(el.attr('href')) && el.attr('href').charAt(0) != '/') {
+            el.addClass('external-link');
+        }
+
+        return;
+    }      
+
+    // Index is zero-based; make human readable.
+    ++idx;
+
+    var footnote = {
+        idx:   idx,
+        href:  el.attr("href"),
+        id:    "reference-"+idx,
+        title: el.attr("title")
+    };
+
+    // Update the element
+    el.addClass("footnote");
+    el.attr("id", footnote.id);
+    el.attr("href","#footnote-"+idx);
+    el.html(idx);
+
+    var content = "<p>"+footnote.title+"</p><p>";
+
+    if (footnote.href != "none") {
+        content += "<a href='"+footnote.href+"' target='_blank'><i class='fi-link'></i> " + footnote.href + "</a></p>" 
+    }
+
+    footnotes.push(footnote);
+});
+
+if (footnotes.length) {
+
+    var footnotes_el   = $('<ol id="footnotes"></ol>');
+    var article_footer = $('article section');
+
+    for (var i = 0; i < footnotes.length; i++) {
+        footnotes_el.append("<li class='footnote' id='footnote-"+footnotes[i].idx+"'><span><a href='#"+footnotes[i].id+"'><i class='fi-arrow-up'></i></a> " + footnotes[i].title + ".</span>");
+        
+        if (footnotes[i].href != "none"){
+            var parts = footnotes[i].href.split(",");
+            for (var j = 0; j < parts.length; j++) {
+                footnotes_el.append("<i class='fi-link'></i> <a href='"+footnotes[i].href+"'>"+parts[j]+"</a><br/>");
+            }
+        }
+    }
+
+    article_footer.append("<h2 id='notes'>Notes</h2>").append(footnotes_el);
+}
+
+$('a.footnote').click(function(){
+    var el = $(this);
+    var target = $('span',el.attr('href'));
+    target.addClass("highlight");
+    setTimeout(function () {
+          target.removeClass('highlight');
+    }, 3000);
 });

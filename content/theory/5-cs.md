@@ -9,7 +9,7 @@ When humans work in teams to create something, they must be in agreement about w
 
 More importantly, the product must be fit for its intended purpose.  A perfectly harmonious team may create a fantastic product, but if it doesn't solve the problem it was intended for, its real-world function is very likely to be diminished. Complete agreement doesn't guarantee success, and a great product idea doesn't guarantee successful completion. 
 
-One common solution to these problems is to create a specification. Working from the intended real-world application of their product through to the details of its creation<sup id="a1">[1](#f1)</sup>, it's possible for a team to explicitly catalogue the requirements of their product in such a way that all team members can work toward satisfying them.  A well-specified product will be much more likely to be fit for purpose, and the team creating it will have a significantly increased chance of working together cohesively.
+One common solution to these problems is to create a specification. Working from the intended real-world application of their product through to the details of its creation[*](https://en.wikipedia.org/wiki/Outside%E2%80%93in_software_development "This approach is sometimes called 'outside-in', especially in software development"), it's possible for a team to explicitly catalogue the requirements of their product in such a way that all team members can work toward satisfying them.  A well-specified product will be much more likely to be fit for purpose, and the team creating it will have a significantly increased chance of working together cohesively.
 
 There are many approaches to specification creation. Goals, considerations and constraints for product design vary between products, teams and even individual team members. In light of all that variation, the most significant measurement of a specification’s appropriateness in any given situation is its *utility*; that is, the extent to which it is practical or beneficial to a particular team creating a particular product.
 
@@ -31,9 +31,9 @@ In practice, a product is anything produced or sold, but the specific meaning he
 
 A specification is an explicit set of requirements for a product, material or service. 
 
-In the real world, specifications range from the completely informal (hand-drawn diagrams, written instructions, recipes, etc) to the rigorously formal<sup id="a2">[2](#f2)</sup> (blueprints, construction manuals or industrial designs). Specifications may or may not conform to various technical standards, and are sometimes expressed in discrete parts. For example, it's common in engineering to create a ISO-standard requirement specification and an ISO-standard product specification that describes the solutions.
+In the real world, specifications range from the completely informal  (hand-drawn diagrams, written instructions, recipes, etc) to the rigorously formal[*](https://en.wikipedia.org/wiki/Formal_specification,https://www.divms.uiowa.edu/~tinelli/classes/181/Spring03/Readings/vLam00.pdf "It should be noted that <em>formal specification</em> has a particular meaning in computer science, where it refers to a mathematical description that can be used to verify that a design implementation is correct with regards to its specification. Such specifications are included in definition of <em>specification</em> for the purposes of this document.  See https://en.wikipedia.org/wiki/Formal_specification for an overview, and Axel van Lamsweerde's paper <em>Formal Specification: a Roadmap</em>") (blueprints, construction manuals or industrial designs). Specifications may or may not conform to various technical standards, and are sometimes expressed in discrete parts. For example, it's common in engineering to create a ISO-standard requirement specification and an ISO-standard product specification that describes the solutions.
 
-For the purposes of this document, a specification includes both requirements and solutions. The specific focus of the authors is software specifications by example<sup id="a3">[3](#f3)</sup>, but the 5 C-Words apply to any explicit set of requirements that must be satisfied by a team in order achieve a goal.
+For the purposes of this document, a specification includes both requirements and solutions. The specific focus of the authors is software specifications by example[*](https://en.wikipedia.org/wiki/Specification_by_example "Specification by example, or SBE, is a collaborative approach to defining requirements and business-oriented functional tests for software products based on capturing and illustrating requirements using realistic examples instead of abstract statements"), but the 5 C-Words apply to any explicit set of requirements that must be satisfied by a team in order achieve a goal.
 
 #### 1.1.3 Team
 
@@ -47,19 +47,19 @@ As discussed below, there is utility in creating computer-readable specification
 
 For the purposes of this document, *canon* is defined as a single, recognised, orthodox source of truth.
 
-A canonical specification should have exactly one self-contained representation. The representation is usually centralised, but some software approaches use multiple copies that automatically synchronise; these are still considered canonical as long as all team members can access up-to-date versions of the specification.
+A perfectly canonical specification will have exactly one self-contained representation. The representation is usually centralised, but some software approaches use multiple copies that automatically synchronise; these are still considered canonical as long as all team members can access up-to-date versions of the specification.
 
 #### 1.2.2 Coherent
 
 *Coherence* refers to a state of being ordered, logical and consistent. There is also a deliberate implication of a harmoniousness of parts; each component fits logically with those around it. 
 
-A coherent specification should use the same structure throughout. Any natural patterns that form in the specification should be maintained as long as it is logical and useful to do so. There should be no inconsistencies in language or diagrammatic grammar, style, format or organisation. There should be no redundancy and no unnecessary components<sup id="a4">[4](#f4)</sup>. 
+A coherent specification should use the same structure throughout. Any natural patterns that form in the specification should be maintained as long as it is logical and useful to do so. There should be no inconsistencies in language or diagrammatic grammar, style, format or organisation. There should be no redundancy and no unnecessary components[*](http://www.informit.com/articles/article.aspx?p=1152528&seqNum=4 "A good example of clear and coherent requirements writing in plain text comes from the book <em>Requirements Management Using IBM® Rational® RequisitePro®</em>. See section 1.4 of the sample chapter"). 
 
 #### 1.2.3 Comprehensible
 
 Wherever humans are involved, *comprehension* is a key requirement for their understanding. In this document, it refers to the capacity to be understood or grasped fully and thoroughly, and to being expressed in the most basic and straightforwardly applicable manner.
 
-Given a comprehensible specification, all members of the team should be able to understand at least the parts that concern them. Written parts of the specification should be readable<sup id="a5">[5](#f5)</sup>, concise, specific and precise; diagrams should be clearly labelled with any additional explanations embedded in the specification.
+Given a comprehensible specification, all members of the team should be able to understand at least the parts that concern them. Written parts of the specification should be readable[*](https://en.wikipedia.org/wiki/Readability "Readability is a well-studied field. There is no panacea for writing readable specifications, but simplicity and clarity score highly on all readability formulas"), concise, specific and precise; diagrams should be clearly labelled with any additional explanations embedded in the specification.
 
 #### 1.2.4 Comprehensive
 
@@ -71,8 +71,10 @@ A comprehensive specification should cover all the requirements of the product. 
 
 To be *current* is to exist or occur during the present moment. In versional or evolving systems this refers to the most recent, generally accepted iteration. An example of this is the phrase 'current fashion', wherein it's accepted that fashion will continuously evolve, but there is a present state of that evolution.
 
-For a specification to be considered current, it must be possible to explicitly nominate a particular version or iteration as being the accepted or signed-off form of the specification. It is this form which will be used to make the product at any given time. It should be possible to continue developing the specification without disrupting the accepted form. This is typically accomplished with specialised software<sup id="a6">[6](#f6)</sup>.
+For a specification to be considered current, it must be possible to explicitly nominate a particular version or iteration as being the accepted or signed-off form of the specification. It is this form which will be used to make the product at any given time. It should be possible to continue developing the specification without disrupting the accepted form. This is typically accomplished with specialised software[*](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell,https://en.wikipedia.org/wiki/Mercurial "Some storage systems, especially software-based versioning management tools, allow for multiple concurrent versions of a specification. An example is the source code version control system <em>git</em>, with its concept of branches. There are also systems where there is no centralised repository for a specification; instead, multiple copies are maintained and a consensus of their content is automatically or manually negotiated by their maintainers. An example is the Mercurial source code version control system, which is decentralised. Specifications stored in these systems can still be considered current, as long as there is a way of universally nominating a particular version. At the time of writing, all major software versioning systems support such a feature").
 
+
+## 2 Measuring C-Adjectivity (scalar values)
 
 ## 2 Specification uses and applications
 
@@ -118,7 +120,7 @@ Current         | `Not required` | `Not required` | `Not required`
 
 ### 2.2 Complex interaction with other systems 
 
-Some products are explicitly designed to interface in a non-trivial<sup id="a7">[7](#f7)</sup> manner with entities outside of their anticipated user set. Specifications for these products typically identify the external entities by name, class or standard.  Examples of external entities include existing machinery, tooling, facilities, or, for software products, third-party APIs<sup id="a8">[8](#f8)</sup>. 
+Some products are explicitly designed to interface in a non-trivial[*](none "Triviality and complexity vary massively according to product domain, but for the purposes of this document the dividing line lies along the necessity of including interaction requirements in a product specification. If a team is creating a product that's designed to be used in a well-defined way that's intuitively understood by its users, then its interactivity would be considered trivial. An example of this category would be a standard wrench which is intended to be by humans for interacting with industrial nuts and bolts; there's no real need to define its interactions in a specification. Conversely,  the physical interface for hardware Bitcoin wallet would be considered complex. Its use will probably be quite novel, and it's very likely that users will require some training in its operation") manner with entities outside of their anticipated user set. Specifications for these products typically identify the external entities by name, class or standard.  Examples of external entities include existing machinery, tooling, facilities, or, for software products, third-party APIs[*](none "Depending on the specification process and team, examples may also include consideration for transitional entities like retailers, distributors and sales people or communicators. In many approaches to specification, such groups would be considered end users [see section <strong>2.1 End user identification</strong>]. For the purposes of this document, the distinction is drawn along lines of integral and non-integral users. If an identifiable entity or set of entities is considered integral to the success of the product, then they are considered to be end users. For example, a team creating a product that is intended to be sold exclusively in retail stores may well design its product packaging, in part, to be effectively shipped and handled. The shippers and in-store handlers would be integral to success, and thus would be considered end users"). 
 
 There are two broad categories of complex external interactions: *active* and *passive*.
 
@@ -130,7 +132,7 @@ Passive interactions occur when an external known or unknown entity interfaces w
 
 For both applications, a canonical source of truth is required. It's not possible to make an interface with multiple, possibly conflicting requirements. The specification must also be kept up to date, because changes in the interface requirements may limit interactions, or even make them impossible.
 
-In order to facilitate passive interactions, the nature of any interfaces must be published or made obvious to external entities.  This requires the specification to be translated or the information to be otherwise transferred to the makers of the external interface, and the specification must thus be readable.
+In order to facilitate explicit passive interactions, the nature of any interfaces must be published or made obvious to external entities.  This requires the specification to be translated or the information to be otherwise transferred to the makers of the external interface, and the specification must thus be readable.
 
 #### 2.2.2 Summary
 
@@ -158,13 +160,13 @@ Manual functional verification is the process of humans using the product, forma
 
 #### 2.3.1 Analysis
 
-Formal verification is carried out by automated tools. The typical process is to have a computer run a formal proof of the specification on an abstract mathematical model of the product. This requires that the specification be coherent and machine readable. For the formal proof to be maximally meaningful, the specification must also be  comprehensive. 
+Formal verification is carried out by automated tools. The typical process is to have a computer run a formal proof of the specification on an abstract mathematical model of the product. This requires that the specification be coherent and machine readable. For the formal proof to be maximally meaningful, the specification must also be comprehensive. 
 
 Automated functional verification also requires a coherent, machine-readable specification.  There is sometimes utility in testing an incomplete product, so it’s not necessary for the specification to be comprehensive. 
 
-Manual functional verification requires the specification to be read by humans, and this it must be comprehensible.   It would likely be of benefit for the specification to also be coherent, but it’s not a minimum requirement.
+Manual functional verification requires the specification to be read by humans, and this it must be comprehensible. It would likely be of benefit for the specification to also be coherent, but it’s not a minimum requirement.
 
-For any  testing feedback to use of use to the team, it is necessary to know which version of the specification was used for the tests, making currency a requirement for all applications.
+For any testing feedback to use of use to the team, it is necessary to know which version of the specification was used for the tests, making currency a requirement for all applications.
 
 #### 2.3.2 Summary
 
@@ -179,19 +181,19 @@ For any  testing feedback to use of use to the team, it is necessary to know whi
 
 ### 2.4 Product design 
 
-It’s possible, in many cases, to design the form, behaviour or internal structure of a product based on its specification<sup id="a9">[9](#f9)</sup>.  The applications for this fall into two non-exclusive categories: *explicit designs* and *derived designs*.
+It’s possible, in many cases, to design the form, behaviour or internal structure of a product based on its specification[*](none "A blueprint for a building, for example, outlines a large proportion of the features of the finished structure. An increasingly popular approach in software engineering is to define the user-apparent behavioural features in an explicit specification, and leave the internal workings to the programmers. Conversely, many electrical engineering and materials specifications focus entirely on the internal structure, forgoing everything that an end user might care about"). The applications for this fall into two non-exclusive categories: *explicit designs* and *derived designs*.
 
 Explicit designs are stated clearly in the specification itself. They are not subjective, and they are not intended as problems to be solved by the team. An example of this approach is the blueprint for a bridge: the design has very specific structure, materials and construction which must be implemented exactly.
 
-Derived designs are not stated explicitly in the specification, and are typically created by the team in response to the goals and constraints from the specification. This approach is common in user-centric specifications, and there will often be sub-specifications that detail the implementation of the product requirements<sup id="a10">[10](#f10)</sup>.
+Derived designs are not stated explicitly in the specification, and are typically created by the team in response to the goals and constraints from the specification. This approach is common in user-centric specifications, and there will often be sub-specifications that detail the implementation of the product requirements[*](https://en.wikipedia.org/wiki/Specification_by_example "One of the reasons that Specification By Example is popular in software engineering is that is focuses primarily on the user’s requirements. The foundational idea is that most consumers of technology products adopt a ‘I don’t care how it works as long as it works’ approach. It seems perfectly logical, then, to imagine the product entirely from the end-user’s perspective. The downside is that this becomes somewhat complicated when the user has unrealistic desires").
 
 It should be noted here that this use of a specification assumes that the requirements are correct and realistic at any given time. See **2.5 Requirements identification** for methods of measuring and refining requirements using a specification.
 
 #### 2.4.1 Analysis
 
-Any specification that explicitly or implicitly outlines design features must be canonical, otherwise there could be conflicting design features.  It must also be comprehensible so that the team is able to implement it. Currency would be of significant benefit for practical reasons, but it’s possible to design a product based on a specification without it.
+Any specification that explicitly or implicitly outlines design features must be canonical, otherwise there could be conflicting design features. It must also be comprehensible so that the team is able to implement it. Currency would be of significant benefit for practical reasons, but it’s possible to design a product based on a specification without it.
 
-For specifications with explicit design requirements, coherency is highly beneficial but not strictly necessary<sup id="a11">[11](#f11)</sup>. 
+For specifications with explicit design requirements, coherency is highly beneficial but not strictly necessary[*](none "It would be possible, if quite annoying for the team, to create a blueprint wherein the measurements were alternately in metric and imperial units. So long as the values were equivalent and the tooling was available to make the measurements, the structure could still be completed. Other inconsistencies in a specification are equally viable in terms of design, but also equal costly in terms of time and frustration"). 
 
 #### 2.4.2 Summary
 
@@ -208,17 +210,17 @@ For specifications with explicit design requirements, coherency is highly benefi
 
 Specifications can be used to identify two types of requirements for a product, *goals* and *constraints*. Depending on the type of specification and the nature of the product, it can be easier to capture one or the other.
 
-Goals are results or properties that the team hopes the product will allow for or achieve integrally. They are generally the impetus for creating the product, and are often highly relevant to the end user. Typically the goals for a product will remain largely consistent throughout the creation process, and any changes will be minor. 
+Goals are results or properties that the team hopes the product will allow for or achieve integrally. They are generally the impetus for creating the product, and are often highly relevant to the end user and the product stakeholders. Typically the goals for a product will remain largely consistent throughout the creation process, and any changes will be minor. 
 
 Most specifications start with at least one goal, so for the purposes of this document an identified goal is an additional goal that has been found by analysing the specification, or an additional goal that is an emergent property of the other goals and constraints in a specification.
 
-Constraints are restrictions or unavoidable conditions that the product must adhere to. They can be properties of the natural world, limitations of scope or available resources,  external behavioural requirements or more complex tradeoffs of cost and benefit<sup id="a12">[12](#f12)</sup>. Constraints are much more likely that goals to change over time.
+Constraints are restrictions or unavoidable conditions that the product must adhere to. They can be properties of the natural world, limitations of scope or available resources, external behavioural requirements or more complex tradeoffs of cost and benefit[*](none "Complex constraints can be the product of goals, other constraints, or a combination of the two. Consider, for example, a specification with goals A and B, and constraints C and D. C is only valid if both A and B are both valid goals, and D is only valid if C is valid. If either A or B is altered or removed from the specification, it’s quite possible that C will no longer be a valid constraints &mdash;  which in turn means that D is also invalid. Many similar, and often significantly more complex, relationships arise in specifications all the time"). Constraints are much more likely than goals to change over time.
 
 While it’s fairly easy to imagine the goals and other positive benefits of a product, it tends to be more difficult to accurately predict the constraints. Thus capturing constraints in specifications  is less common than capturing goals, but when both are present the specification has much more utility.
 
 #### 2.5.1 Analysis
 
-All requirements identification via specification must be carried out with a canonical source. Having multiple sources of truth would make identifying additional goals and constraints practically impossible.
+All requirement identification via specification must be carried out with a canonical source. Having multiple sources of truth would make identifying additional goals and constraints practically impossible.
 
 Although it would be highly beneficial, coherence is not required in order to identify goals and constraints.
 
@@ -237,7 +239,7 @@ Comprehensibility is not strictly required for goals, though it would be of sign
 
 ### 2.6 Project management 
 
-In many cases it’s possible to use a specification as the basis for managing the product creation.  Though there are formal project management models<sup id="a13">[13](#f13)</sup>, we’ve identified three general areas of intersection with a useful specification: *planning*, *resourcing* and *monitoring*<sup id="a14">[14](#f14)</sup>.
+In many cases it’s possible to use a specification as the basis for managing the product creation. Though there are formal project management models[*](https://en.wikipedia.org/wiki/Project_management_triangle "The Project Management Triangle is a trilemmatic model of project management constraints that shows some of the potential tradeoffs in running a project.  We don’t know of any specification approach that directly considers these factors, but any good specification would inform the scope"), we’ve identified three general areas of intersection with a useful specification: *planning*, *resourcing* and *monitoring*[*](none "An additional common project management requirement is quality assurance, which was omitted as an application of a specification under this use because it better falls under <strong>2.3 Design verification and testing</strong>").
 
 Planning, for the purposes of this document, refers to explicitly scoping the project, creating a plan or work breakdown for its execution, budgeting, assembling team member requirements and creating schedules. The specification itself should inform any requirements gathering, and typically much of the scope.
 
@@ -267,21 +269,21 @@ The measure the progress of production, it is necessary to have a good idea of w
 
 ### 2.7 Team consensus
 
-A primary function of a product specification is to align its team’s efforts. It’s possible that the initial production team will not continue developing the product’s future iterations or versions; instead, they will partly or wholly be replaced by a future team. As a result, product creation can divided into three mutually exclusive categories: *greenfield*, *continuing* and *transitional*.
+A primary function of a product specification is to align its team’s efforts. It’s possible that the initial team will not continue developing the product’s future iterations or versions; instead, they will partly or wholly be replaced by a future team. As a result, product creation can be divided into three mutually exclusive categories: *greenfield*, *continuing* and *transitional*.
 
-A greenfield product has no constraints imposed by prior work. The team can use any reasonable and practicable approach to meets the requirements of the specification. 
+A greenfield product has no constraints imposed by prior work[*](none "The term ‘greenfield’ analogises constructing a building on an empty plot of land. There is no existing infrastructure to worry about"). The team can use any reasonable and practicable approach to meet the requirements of the specification. 
 
-Conversely, a continuing product that has an initial specification and an existing set of constraints that are the result of previous work. The previous team may have made specific implementation decisions that impact future improvements or changes, and decisions may or may not be reflected in the initial specification. 
+Conversely, a continuing product has an initial specification and an existing set of constraints that are the result of previous work[*](none "The contrasting is analogy for continuing products is building an extension to one structure amongst many. There are many factors to consider, but the nature of the structure and lay of the land should be clear"). The previous team may have made specific implementation decisions that impact future improvements or changes, and decisions may or may not be reflected in the initial specification. 
 
-Some products lack useful formal specifications. If such a product requires a specification for further work, then it is considered to be transitional. There will be constraints imposed on the product by previous choices, but they will be captured in the specification.
+Some products lack useful formal specifications. If such a product requires a specification for further work, then it is considered to be transitional[*](none "The closest construction-themed analogy for transitional products is carrying out an architectural survey for an old building with the intention of extending it. Any decisions by the original builders that led to constraints will be catalogued as if they were new information"). There will be constraints imposed on the product by previous choices, but they will be captured in the specification.
 
 #### 2.7.1 Analysis
 
-Greenfield products need a specification that the team can engage with and make use of, with means it must have a single source of truth and be understandable to the team. Therefore it must be canonical and comprehensible.
+Greenfield products need a specification that the team can engage with and make use of, which means it must have a single source of truth and be understandable to the team. Therefore it must be canonical and comprehensible.
 
 A specification for a continuing product needs to be versional: the point at which the old version ends and the new one begins must be clearly marked. In addition to the qualities of a greenfield product specification, it must also be current.
 
-For a transitional product, a specifications require a single source of truth, an understandable set of requirements and an exhaustive survey of the existing product. It must be canonical, comprehensible and comprehensive. 
+For a transitional product, a specification requires a single source of truth, an understandable set of requirements and an exhaustive survey of the existing product. It must be canonical, comprehensible and comprehensive. 
 
 #### 2.7.2 Summary
 
@@ -293,12 +295,43 @@ For a transitional product, a specifications require a single source of truth, a
   Comprehensive  | `Not required` | `Not required` | `Required`           
   Current        | `Not required` | `Required`     | `Not required    
 
-### 2.8 Traceability
+### 2.8 Requirements management
+
+The requirements of products, and as a result any specifications they have, change over time. Requirements management is a significant part of production creation and development, and is usually performed continuously throughout a project.
+
+Aside from internal documentation (see **2.8 Documentation**) there are three components related to requirements management related to a product specification: *analysis*, *traceability* and *prioritisation*[*](none "There are other tasks in the domain of requirements management, including coming to agreement on changes, controlling and monitor changes during the project and communicating changes to the team and to stakeholders. These tasks are extremely important, but a specification has no ability to help").
+
+
+
+Analysis is the integration of new requirements into a specification or the alteration of existing requirements. There may be conflict with existing requirements or issues of real-world suitability. New or altered requirements may come from stakeholders, be the result of real-world issues identified during implementation, or  an emergent property of the specification itself (see **2.5 Requirements identification**, above).
+
+Traceability is the ability to follow the history and intention of requirements in a specification. The main concern of traceability is understanding how and why high-level requirements are broken down into lower-level requirements[*](https://en.wikipedia.org/wiki/Requirements_traceability "Traceability is a well-studied discipline. Wikipedia provides an excellent summary"). In some cases it may also be beneficial to follow the relationships between components described by the specification.
+
+Prioritisation is the act of arranging the work of a team such that requirements of a product are met in a desired order. In products than can be iterative, this usually relates to individual releases; in other kinds of products it typically benefits the team to work on the most important requirements first.
+
+#### 2.8.1 Analysis
+
+It isn’t practicable to manage requirements in a specification without a single source of truth. A specification that assists in any of these tasks must be canonical.
+
+Following the connections between requirements in a specification is impossible, or at least very difficult, without a logical structure. A specification that is used for traceability must therefore be coherent. 
+
+Analysing and tracing requirements requires humans to be able to read or otherwise interpret the specification. Any specification used for the tasks of analysis or traceability must be comprehensible.
+
+#### 2.8.2 Summary
+
+      C-Word     |    *Analysis*  | *Traceability*   | *Prioritisation* 
+ --- | --- | --- | ---
+  Canonical      | `Required`     | `Required`     | `Required`           
+  Coherent       | `Not required` | `Required      | `Not required`        
+  Comprehensible | `Required`     | `Required`     | `Not required`       
+  Comprehensive  | `Not required` | `Not required` | `Not required`           
+  Current        | `Not required` | `Not required` | `Not required  
 ### 2.9 Documentation
 
+#### 2.9.1 Analysis
 ## 3 Summary
 
-## 4 Conclusion
+## 5 Conclusion
 
 ### 4.1 Limit of implications
 
@@ -319,43 +352,3 @@ Lamsweerde's focus in this paper is on formal software specification, and is con
 In response, we assert that adequacy is too vague a concept to apply generally to specification design (though we also acknowledge that Lamsweerde is referring to mathematical adequacy in the problem domain of a formal software specification, which is entirely valid). A specification which was *invalid*, in the sense that it didn't identify requirements, would have little utility &mdash; and the purpose of the C-Words is to provide a framework for maximal utility.
 
 The idea of a specification being satisfied, or at least satiable, by lower-level entities merits further consideration. The concept of practicability (related to **2.1 FIXME: backpressure** above) if of particular concern. If there is no possibility of a requirement being implementable, then it may not belong in a specification. Conversely, it seems intuitive that a specification ought to have a feedback loop of real world data to inform the creation of the specification itself. We are continuing to research this problem.
-
-----------
-
-
-**Footnotes**
-
-<em id="f1">1. This approach is sometimes called 'outside-in', especially in software development. See https://en.wikipedia.org/wiki/Outside%E2%80%93in_software_development</em>. [↩](#a1)
-
-<em id="f2">2. It should be noted that</em> formal specification<em> has a particular meaning in computer science, where it refers to a mathematical description that can be used to verify that a design implementation is correct with regards to its specification. Such specifications are included in definition of </em>specification<em> for the purposes of this document.  See https://en.wikipedia.org/wiki/Formal_specification for an overview, and Axel van Lamsweerde's paper [Formal Specification: a Roadmap](https://www.divms.uiowa.edu/~tinelli/classes/181/Spring03/Readings/vLam00.pdf) for a more detailed analysis .</em> [↩](#a2)
-
-<em id="f3">3. Specification by example (SBE) is a collaborative approach to defining requirements and business-oriented functional tests for software products based on capturing and illustrating requirements using realistic examples instead of abstract statements. See https://en.wikipedia.org/wiki/Specification_by_example.</em> [↩](#a3)
-
-<em id="f4">4. A good example of clear and coherent requirements writing in plain text comes from the book </em>Requirements Management Using IBM® Rational® RequisitePro®<em>. See section 1.4 of the [sample chapter]( http://www.informit.com/articles/article.aspx?p=1152528&seqNum=4).</em> [↩](#a4)
-
-<em id="f5">5. Readability is a well-studied field. There is no panacea for writing readable specifications, but simplicity and clarity score highly on all readability formulas. See https://en.wikipedia.org/wiki/Readability.</em> [↩](#a5)
-
-<em id="f6">6. Some storage systems, especially software-based versioning management tools, allow for multiple concurrent versions of a specification. An example is the source code version control system `git`, with its concept of [branches](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell). There are also systems where there is no centralised repository for a specification; instead, multiple copies are maintained and a consensus of their content is automatically or manually negotiated by their maintainers. An example is the [Mercurial](https://en.wikipedia.org/wiki/Mercurial) source code version control system, which is decentralised. Specifications stored in these systems can still be considered current, as long as there is a way of universally nominating a particular version. At the time of writing, all major software versioning systems support such a feature.</em> [↩](#a6)
-
-<em id="f7">7.  Triviality and complexity vary massively according to product domain, but for the purposes of this document the dividing line lies along the necessity of including interaction requirements in a product specification. If a team is creating a product that's designed to be used in a well-defined way that's intuitively understood by its users, then its interactivity would be considered trivial. An example of this category would be a standard wrench which is intended to be by humans for interacting with industrial nuts and bolts; there's no real need to define its interactions in a specification. Conversely,  the physical interface for hardware Bitcoin wallet would be considered complex. Its use will probably be quite novel, and it's very likely that users will require some training in its operation.  </em> [↩](#a7)
-
-<em id="f8">8.  Depending on the specification process and team, examples may also include consideration for transitional entities like retailers, distributors and sales people or communicators. In many approaches to specification, such groups would be considered end users (see section **2.1 End user identification** above). For the purposes of this document, the distinction is drawn along lines of integral and non-integral users. If an identifiable entity or set of entities is considered integral to the success of the product, then they are considered to be end users. For example, a team creating a product that is intended to be sold exclusively in retail stores may well design its product packaging, in part, to be effectively shipped and handled. The shippers and in-store handlers would be integral to success, and thus would be considered end users.</em> [↩](#a8)
-
-<em id="f9">9.  A blueprint for a building, for example, outlines a large proportion of the features of the finished structure. An increasingly popular approach in software engineering is to define the user-apparent behavioural features in an explicit specification, and leave the internal workings to the programmers. Conversely, many electrical engineering and materials specifications focus entirely on the internal structure, forgoing everything that an end user might care about.</em> [↩](#a9)
-
-<em id="f10">10. One of the reasons that [Specification by example](https://en.wikipedia.org/wiki/Specification_by_example) is popular in software engineering is that is focuses primarily on the user’s requirements. The foundational idea is that most consumers of technology products adopt a ‘I don’t care how it works as long as it works’ approach. It seems perfectly logical, then, to imagine the product entirely from the end-user’s perspective. The downside is that this becomes somewhat complicated when the user has unrealistic desires.</em> [↩](#a10)
-
-<em id="f11">11. It would be possible, if quite annoying for the team, to create a blueprint wherein the measurements were alternately in metric and imperial units. So long as the values were equivalent and the tooling was available to make the measurements, the structure could still be completed. Other inconsistencies in a specification are equally viable in terms of design, but also equal costly in terms of time and frustration.</em> [↩](#a11)
-
-<em id="f12">12. Complex constraints can be the product of goals, other constraints, or a combination of the two. Consider, for example, a specification with goals A and B, and constraints C and D. C is only valid if both A and B are both valid goals, and D is only valid if C is valid. If either A or B is altered or removed from the specification, it’s quite possible that C will no longer be a valid constraints &mdash;  which in turn means that D is also invalid. Many similar, and often significantly more complex, relationships arise in specifications all the time.</em> [↩](#a12)
-
-<em id="f13">13. The [Project Management Triangle](https://en.wikipedia.org/wiki/Project_management_triangle) is a trilemmatic model of project management constraints that shows some of the potential tradeoffs in running a project.  We don’t know of any specification approach that directly considers these factors, but any good specification would inform the scope.</em> [↩](#a13)
-
-<em id="f14">14. An additional common project management requirement is quality assurance, which was omitted as an application of a specification under this use because it better falls under **2.3 Design verification and testing**.</em> [↩](#a14)
-
-<em id="f15">15. The term ‘greenfield’ analogises constructing a building on an empty plot of land.</em> [↩](#a15)
-
-<em id="f16">16. The contrasting is analogy for continuing products is building an extension to one structure amongst many. There are many factors to consider, but the nature of the structure and lay of the land should be clear.</em> [↩](#a16)
-
-<em id="f17">17. hose closest construction-themed analogy for transitional products is carrying out an architectural survey for an old building with the intention of extending it. Any decisions by the original builders that led to constraints will be catalogued as if they were new information.</em> [↩](#a17)
-

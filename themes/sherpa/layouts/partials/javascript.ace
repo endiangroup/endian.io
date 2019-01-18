@@ -4,6 +4,7 @@ script defer="true" src="/js/foundation.util.mediaQuery.min.js"
 script defer="true" src="/js/foundation.sticky.min.js"
 script defer="true" src="/js/foundation.util.triggers.min.js"
 script defer="true" src="/js/foundation.util.motion.min.js"
+script defer="true" src="/js/basictable.min.js"
 script defer="true" src="/js/app.js?v={{getenv "GITHASH"}}"
 script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-123637660-1"
 

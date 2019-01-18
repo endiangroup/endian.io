@@ -86,3 +86,5 @@ $('strong').each(function () {
         el.wrap('<a href="#' + linkMap[key] + '"></a>');
     }
 });
+// Tables
+$('table').basictable();

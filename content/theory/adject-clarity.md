@@ -7,23 +7,6 @@ This paper proposes that there are at least five integral qualities that any pro
 
 ## 0 Introduction
 
-<table id="A">
-  <thead>
-    <tr>
-      <th>One</th>
-      <th>Two</th>
-      <th>Three</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Test One</td>
-      <td>Test Two</td>
-      <td>Test Three</td>
-    </tr>
-  </tbody>
-</table>
-
 When humans work in teams to create something, they must be in agreement about what they're creating in order to maximise their chances of success. Without consensus on the final form of their product, there is a risk that individual team members may create or contribute to components or features that are misaligned with the rest of the team. The risk of misalignment is inversely proportional to the degree of consensus of the team as a whole: the less they agree, the more likely they are to mismatch their output.
 
 More importantly, the product must be fit for its intended purpose. A perfectly harmonious team may create a fantastic product, but if it doesn't solve the problem it was intended for, its real-world function is very likely to be diminished. Complete agreement doesn't guarantee success, and a great product idea doesn't guarantee successful completion. 

@@ -51,6 +51,14 @@ article
     +breakpoint(medium)
       font-size: 1.3em !important
 
+  p
+    code
+      font-size: 0.85em
+      padding: 0
+      border: 0
+      background: none
+      color: $colour-olive
+
   ol
     li
       margin-top: 0 
@@ -73,7 +81,6 @@ article
       +colour-highlight-shift
       font-weight: 500
 
-  a
     &.footnote
       color: $colour-olive
       font-weight: 500
@@ -98,19 +105,29 @@ article
         font-size: 0.9em
         +breakpoint(medium)
           font-size: 1.2em
+
+        strong
+          color: $colour-olive
+          font-weight: 500
     thead
       th
         color: $colour-black
 
   pre
-    background-color: #fafafa
+    background: none
     padding: 1em
     margin-bottom: 1em
 
     code
-      color: $colour-black
+      color: $colour-olive
       background: transparent
       border: none
+
+  span
+    &.required
+      &.bold
+        font-weight: 500
+        color: $colour-olive
 
 ul#articles
   li

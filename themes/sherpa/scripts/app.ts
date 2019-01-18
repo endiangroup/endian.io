@@ -105,7 +105,6 @@ $('strong').each(function() {
         if (text != key) {
             continue;
         }
-        console.log(key);
         el.wrap('<a href="#'+linkMap[key]+'"></a>');
     }
 });

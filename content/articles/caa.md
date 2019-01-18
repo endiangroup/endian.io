@@ -1,7 +1,7 @@
 +++
 title = "Caa article title"
 +++
-Compare-and-Authenticate (CAA) is a tiny algorithm for centrally managing the validity of a (chronological) subset of distributed sessions. It currently has a single Go implementation found here: https://github.com/endiangroup/compandauth.
+Compare-and-Authenticate (CAA) is a tiny algorithm for centrally managing the validity of a set of distributed sessions. It currently has a single Go implementation found here: https://github.com/endiangroup/compandauth.
 
 In this article we'll explore how we conceived of this solution given the problem and how it works in detail.
 
@@ -9,9 +9,9 @@ In this article we'll explore how we conceived of this solution given the proble
 
 Whilst working with a previous startup client, we were tasked with porting everything from a very functional MVP Ruby codebase to Go with no noticeable service disruption.
 
-The product was a geo-location recommendation engine for professional drivers in the form of  iOS and Android apps. Both the apps and the service were free  and had thousands of users at the time (this was in 2016) of whom hundreds were active daily.
+The product was a geo-location recommendation engine for professional drivers in the form of  iOS and Android apps. Both the apps and the service were free and had thousands of users at the time (this was in 2016) of whom hundreds were active daily.
 
-The backend system was in 2 partially migrated parts when we joined:  a 'RESTful' Ruby API  for handling app requests and a Go service for dealing with geo-location recommendations. Both components  shared a Postgres Database. All useful functionality in the app relied on API calls.
+The backend system was in 2 parts when we joined:  a 'RESTful' Ruby API  for handling app requests and a Go service for dealing with geo-location recommendations. Both components  shared a Postgres Database. All useful functionality in the app relied on API calls.
 
 >>> D: current architecture -> new achitecture
 
@@ -61,7 +61,7 @@ You may be wondering what that `persisted` flag is doing. Well, it acted as a se
   end
 ```
 
-I say *semi*-tether because if the key `persisted` didn't exist (thus indicating it wasn't saved in the DB) then the original session from token is returned. I don’t recall the original reason for its existence, but I suspect it was added after JWTs had been issued before the session table existed (and the 1 user 1 session requirement came in).
+I say *semi*-tether because if the key `persisted` didn't exist (thus indicating it wasn't saved in the DB) then the original session from token is returned. I don’t recall the original reason for its existence, but I suspect it was added after JWTs had been issued and before the session table existed (and the 1 user 1 session requirement came in).
 
 So the login and authentication flow would look as follows:
 
@@ -82,7 +82,7 @@ Finally, there was an nginx proxy in front of both services, which allowed granu
 
 ## The Problem
 
-We needed to migrate the login endpoint to the Go service (everything else had been moved already) and add request authentication on existing Go endpoints (which currently had none; not a major issue but the time had come to bring it back). here were, however, a few restrictions that applied:
+We needed to migrate the login endpoint to the Go service (everything else had been moved already) and add request authentication on existing Go endpoints (which currently had none; not a major issue but the time had come to bring it back). There were, however, a few restrictions that applied:
 
 1. There could be no impact to the service or UX. So no mass logout and reauthentication
 2. There could only be one active session per user… With the exception that we could have multiple sessions on test users (this was required for manual service tuning and app store reviews)
@@ -94,25 +94,25 @@ Additionally there were some nice-to-haves:
 
 ## The Solution(s)
 
-The immediate and obvious solution was to re-implement the existing Ruby behaviours like for like, adding in the session management to the Go codebase and doing the switch on the proxy. Honestly, it just felt messy. Embedding a `session_uuid` into a JWT which served the sole purpose of ensuring 1 session per user (as well as managing expiration... which JWT's already do) didn’t seem right. It would also mean Also inheriting the cruft of `persisted` &mdash; a strange flag that seemed to only serve only a purpose if it werewas set to `false` (ie. deny request), and likely the result of changing requirements post go- live.
+The immediate and obvious solution was to re-implement the existing Ruby behaviours like for like, adding in the session management to the Go codebase and doing the switch on the proxy. Honestly though, it just felt messy. Embedding a `session_uuid` into a JWT which served the sole purpose of ensuring 1 session per user (as well as managing expiration... which JWT's already do) didn’t seem right. It would also mean  inheriting the cruft of `persisted` &mdash; a strange flag that seemed to only serve a purpose if it were set to `false` (ie. deny request), and likely the product of changing requirements post go-live.
 
-So, what else could we do and could we make it cleaner?
+So, what else could we do and could we make it cleaner? The brainstorming began...
 
-We started by thinking about what sort of setup you have with a central server and sessions issued as JWT's. What kept coming to mind was multiple views of the world, where the central service had the authoritative ‘`current’` view and each device/user had its own `snapshot` (the JWT when it was issued). We couldn't touch the JWT's until requests were made, but what would happen if you had an old JWT on some device that hadsn't made a request in some time? We wanted to passively (relative to that device) invalidate its JWT without having to communicate with it.
+We started by thinking about what sort of setup you have with a central server and sessions issued as JWT's. What kept coming to mind was multiple views of the world, where the central service had the authoritative ‘current’ view and each device/user had its own ‘snapshot’ (the JWT when it was issued). We couldn't touch the JWT's until requests were made, but what would happen if you had an old JWT on some device that hadn't made a request in some time? We wanted to passively (relative to that device) invalidate its JWT without having to communicate with it.
 
-We kept pondering and hit across a concept that seemed analogous to the problem space, *cCompare-and-sSwap*. For those who aren't familiar, its used in multithreaded applications (and distributed applications like kKey/vValue stores) for synchronization where a 'master' integer (not originally an integer, but now tends to be see ABA problem) is stored, and each sub-thread thatwho wants to 'act' attempts to write to the memory location offering its current view (read: copy of 'master' integer) and if it matches allowing it to 'act' (incrementing the master integer). If its current view is wrong (some thread got in between when it read the 'master' integer and when it attempted to 'act') then it's denied and it must try again. As such the thread that has the most current view is allowed to perform its operation.
+We kept pondering and hit across a concept that seemed analogous to the problem space, *compare-and-swap*. For those who aren't familiar, its used in multithreaded applications (and distributed applications like key/value stores) for synchronization where a 'master' integer (not originally an integer, but now tends to be see ABA problem) is stored, and each sub-thread that wants to 'act' attempts to write to the memory location offering its current view (read: copy of 'master' integer) and if it matches allowing it to 'act' (incrementing the master integer). If its current view is wrong (some thread got in between when it read the 'master' integer and when it attempted to 'act') then it's denied and it must try again. As such the thread that has the most current view is allowed to perform its operation.
 
-This seemed perfect, buthowever what would itthat look like for JWT's? WAdditionally we also wanted more than just 1 session to be valid at a time for our test users., Hhow did that fit this pattern?
+This seemed perfect, but what would it look like for JWT's? We also wanted more than just 1 session to be valid at a time for our test users. How did that fit this pattern?
 
-The next idea came from rate limiters and sliding windows... What if we could nominate some fixed number of current sessions that are valid? That seemed perfect.
+The next idea came from rate limiters and sliding windows. What if we could nominate some fixed number of current sessions that are valid? That seemed perfect.
 
-Now all that was left was how to shoe-horn in our new solution into existing JWT’s such that we created no impact on service or UX. This is where one of my favourite features of Go comes into play, `zZero vValues`,.  Go will default a type to some z`Zero vValue`.F and for integers that value is, predictably, `0`. What that means for our problem is the absence of some key in existing JWTs could be defaulted to `0` without us touching it.
+Now all that was left was how to shoe-horn in our new solution into existing JWT’s such that we created no impact on service or UX. This is where one of my favourite features of Go comes into play, ero value.  Go will default a type to some zero value. For integers that value is, predictably, `0`. What that means for our problem is the absence of some key in existing JWTs could be defaulted to `0` without us touching it.
 
 We had all the pieces, now to put them together.
 
 ## Compare-and-Authenticate (CAA)
 
-CAA is extremely simple at its core., Tthere is a 'master' integer stored centrally and a copy of that integer is embedded into with each new session generated a copy of that integer is embedded in it. When you receive a session, you fetch the 'master' integer and extract the session integer, add your sliding window size to it and see if its more than or equal to the 'master' integer. If its not, its too old and considered invalid;, if it is, it’s valid. So for example:
+CAA is extremely simple at its core. There is a 'master' integer stored centrally and a copy of that integer is embedded into each new session generated it. When you receive a session, you fetch the 'master' integer and extract the session integer, add your sliding window size to it and see if its more than or equal to the 'master' integer. If its not, its too old and considered invalid; if it is, it’s valid. So for example:
 
 1. 'master' integer = 10
 2. incoming request with session integer = 5

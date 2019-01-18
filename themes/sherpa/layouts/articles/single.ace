@@ -11,7 +11,7 @@
   h2.title {{.Title}}
   p.byline Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
 
-  {{ if and (gt .FuzzyWordCount 1000 ) (.TableOfContents) }}
+  {{ if and (gt .FuzzyWordCount 2000 ) (.TableOfContents) }}
   h3 Table of contents
   {{.TableOfContents}}
   {{end}}

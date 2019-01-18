@@ -367,35 +367,35 @@ A table of all uses and applications combined is more enlightening for C-Word re
 
 Use/application           |               canonical                |                coherent                |             comprehensible             |             comprehensive              |                current                 
  -------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|---------------------------------------- 
-  **Complex interaction**             | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> 
+  **Complex interaction**             | <span class="required bold">required</span> | &mdash;                                | <span class="required bold">required</span> | &mdash;                                | <span class="required bold">required</span> 
   &#8627; Active                      | <span class="required">required</span> | &mdash;                                | &mdash;                                | &mdash;                                | <span class="required">required</span> 
   &#8627; Passive                     | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> 
-  **Design verification and testing** | &mdash;                                | <span class="required">required</span> | <span class="required">required</span> | <span class="required">required</span> | <span class="required">required</span> 
+  **Design verification and testing** | &mdash;                                | <span class="required bold">required</span> | <span class="required bold">required</span> | <span class="required bold">required</span> | <span class="required bold">required</span> 
   &#8627; Formal                      | &mdash;                                | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | <span class="required">required</span> 
   &#8627; Functional(automated)       | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                | <span class="required">required</span> 
   &#8627; Functional (manual)         | &mdash;                                | &mdash;                                | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> 
-  **Documentation**                   | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
+  **Documentation**                   | <span class="required bold">required</span> | &mdash;                                | <span class="required bold">required</span> | &mdash;                                | &mdash;                                
   &#8627; Specification-derived       | &mdash;                                | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
   &#8627; Specification-intrinsic     | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
-  **End user identification**         | &mdash;                                | &mdash;                                | <span class="required">required</span> | <span class="required">required</span> | &mdash;                                
+  **End user identification**         | &mdash;                                | &mdash;                                | <span class="required bold">required</span> | <span class="required bold">required</span> | &mdash;                                
   &#8627; User-first                  | &mdash;                                | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
   &#8627; Requirement-first           | &mdash;                                | &mdash;                                | <span class="required">required</span> | <span class="required">required</span> | &mdash;                                
   &#8627; User-unrelated              | &mdash;                                | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
-  **Product design**                  | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
+  **Product design**                  | <span class="required bold">required</span> | &mdash;                                | <span class="required bold">required</span> | &mdash;                                | &mdash;                                
   &#8627; Explicit                    | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
   &#8627; Derived                     | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
-  **Project management**              | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | <span class="required">required</span> | <span class="required">required</span> 
+  **Project management**              | <span class="required bold">required</span> | &mdash;                                | <span class="required bold">required</span> | <span class="required bold">required</span> | <span class="required bold">required</span> 
   &#8627; Planning                    | <span class="required">required</span> | &mdash;                                | &mdash;                                | <span class="required">required</span> | &mdash;                                
   &#8627; Resourcing                  | &mdash;                                | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
   &#8627; Monitoring                  | <span class="required">required</span> | &mdash;                                | &mdash;                                | <span class="required">required</span> | <span class="required">required</span> 
-  **Requirements identification**     | <span class="required">required</span> | &mdash; | <span class="required">required</span> | &mdash;                                | &mdash;                                
+  **Requirements identification**     | <span class="required bold">required</span> | &mdash; | <span class="required bold">required</span> | &mdash;                                | &mdash;                                
   &#8627; Goals                       | <span class="required">required</span> | &mdash;                                | &mdash;                                | &mdash;                                | &mdash;                                
   &#8627; Constraints                 | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
-  **Requirements management**         | <span class="required">required</span> | <span class="required">required</span> | <span class="required">required</span> | &mdash;                                | &mdash;                                
+  **Requirements management**         | <span class="required bold">required</span> | <span class="required bold">required</span> | <span class="required bold">required</span> | &mdash;                                | &mdash;                                
   &#8627; Analysis                    | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
   &#8627; Traceability                | <span class="required">required</span> | <span class="required">required</span> | <span class="required">required</span> | &mdash;                                | &mdash;                                
   &#8627; Prioritisation              | <span class="required">required</span> | &mdash;                                | &mdash;                                | &mdash;                                | &mdash;                                
-  **Team consensus**                  | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | <span class="required">required</span> | <span class="required">required</span> 
+  **Team consensus**                  | <span class="required bold">required</span> | &mdash;                                | <span class="required bold">required</span> | <span class="required bold">required</span> | <span class="required bold">required</span> 
   &#8627; Greenfield                  | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | &mdash;                                
   &#8627; Continuing                  | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> 
   &#8627; Transitional                | <span class="required">required</span> | &mdash;                                | <span class="required">required</span> | <span class="required">required</span> | &mdash;                               
@@ -417,7 +417,7 @@ Use/application           | C-Word requirements
   **Documentation**                   | **2**               
   &#8627; Specification-derived       | 1                   
   &#8627; Specification-intrinsic     | 2                   
-  **End user identification           | **2**               
+  **End user identification**           | **2**               
   &#8627; User-first                  | 1                   
   &#8627; Requirement-first           | 2                   
   &#8627; User-unrelated              | 1                   
@@ -461,13 +461,13 @@ We posit, however, that while all the C-Words are necessary for every instance o
 
 We do not assert that the C-Words are the only required attributes for a maximally effective specification. Other attributes may yet be identified and proven, and it's possible that one or more of them will supersede one or more of the C-Words. One particular potential attribute might be something about real-world pragmatism (see **4.2 Other interpretations and further research** below).
 
-It is also not proven that a specification that does not include one or more of the C-Words is necessarily without value. Some specific and unusual specifications may have few utility requirements (see **2. Specification uses and applications** above) and thus sufficient efficacy with a reduced C-Word set. We assert, however, that each omitted attribute will reduce the maximum efficacy of a specification, and that the reduction is proportional to the team size. It is unlikely that a large team using a specification that includes none of the C-Word attributes will succeed in making their product.
+It is also not proven that a specification that does not include one or more of the C-Words is necessarily without value. Some specific and unusual specifications may have few utility requirements (see **2  Specification uses and applications** above) and thus sufficient efficacy with a reduced C-Word set. We assert, however, that each omitted attribute will reduce the maximum efficacy of a specification, and that the reduction is proportional to the team size. It is unlikely that a large team using a specification that includes none of the C-Word attributes will succeed in making their product.
 
 Finally, we acknowledge that teams building exploitative or theoretical products, and individuals working alone, may have less utility for an explicit set of requirements. We are asserting that, where a specification is warranted, it must embody all five C-Words in order to be maximally effective.
 
 ### 4.2 Other interpretations and further research
 
-#### 4.2.1 Requirement Satiation 
+#### 4.2.1 Requirement satiation 
 
 In the computer science paper *Formal Specification: a Roadmap*, Axel van Lamsweerde asserts that:
 

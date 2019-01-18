@@ -67,3 +67,23 @@ $('a.footnote').click(function () {
         target.removeClass('highlight');
     }, 3000);
 });
+// Internal links
+var linkMap = {};
+$('h2,h3,h4,h5').each(function () {
+    var el = $(this);
+    var id = el.attr('id');
+    if (id) {
+        linkMap[el.text()] = id;
+    }
+});
+$('strong').each(function () {
+    var el = $(this);
+    var text = el.text();
+    for (let key in linkMap) {
+        if (text != key) {
+            continue;
+        }
+        console.log(key);
+        el.wrap('<a href="#' + linkMap[key] + '"></a>');
+    }
+});

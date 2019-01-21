@@ -136,21 +136,35 @@ $(document).ready(function() {
 var Trianglify:any;
 
 function makeTriangles() {
+    var cellSize = 41;
+    if (document.body.clientWidth < 1280) {
+        cellSize = 55;
+    }
+
     $('.trianglify').each(function(){
         var el = $(this);
         var pattern = Trianglify({
           height: Math.ceil(el.height()),
           width: Math.floor(el.width()),
-          cell_size: 21,
+          cell_size: cellSize,
           variance: 0.8,
           seed: el.data('seed'),
           stroke_width: 1.51,
         });
         el.append(pattern.svg());
+        $('svg',el).fadeIn();
     });
 }
 
+var width = 0;
+
 $( window ).resize(function() {
+    if (width == document.body.clientWidth) {
+        return;
+    }
+
+    width = document.body.clientWidth;
+
     $('.trianglify svg').remove();
     makeTriangles();
 });

@@ -110,15 +110,16 @@ function makeTriangles() {
         var pattern = Trianglify({
             height: Math.ceil(el.height()),
             width: Math.floor(el.width()),
-            cell_size: 20,
+            cell_size: 21,
             variance: 0.8,
             seed: el.data('seed'),
+            stroke_width: 1.51,
         });
-        el.append(pattern.canvas());
+        el.append(pattern.svg());
     });
 }
 $(window).resize(function () {
-    $('.trianglify canvas').remove();
+    $('.trianglify svg').remove();
     makeTriangles();
 });
 makeTriangles();

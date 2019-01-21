@@ -11,9 +11,12 @@
   ul#articles
     {{ range .Pages }}
     li
-      a href="{{.Permalink}}"
-        h2 {{.Title}}
-      p.byline {{.Param "authors"}}.  Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
-      p.summary {{.Param "summary"}}
-      a.read href="{{.Permalink}}" Read more &raquo;
+      .trianglify data-seed="{{.Permalink}}"
+        span 5 Cs
+      .content
+        a href="{{.Permalink}}"
+          h2 {{.Title}}
+        p.byline {{.Param "authors"}}.  Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
+        p.summary {{.Param "summary"}}
+        a.read href="{{.Permalink}}" Read more &raquo;
     {{ end }}

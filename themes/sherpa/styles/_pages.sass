@@ -30,7 +30,6 @@ article
     font-style: italic
     font-size: 1em !important
     padding-bottom: 1em
-    border-bottom: 1px dotted colour(marine,trans)
 
   h2,h3,h4
     width: 100%
@@ -131,15 +130,84 @@ article
         font-weight: 500
         color: $colour-olive
 
-ul#articles
+ul#articles,ul#articles-external
+  margin-top: 2em
+  margin-bottom: 6em
+
   li
-    a
-      color: $colour-black
-      font-weight: 500
-      &:hover 
-        +colour-highlight-shift
+    +breakpoint(large)
+      +xy-grid
+
+    margin-bottom: 2em
+    padding-bottom: 2em
+    border-bottom: 1px dotted colour(marine,trans)
+
+    &:last-of-type 
+      border: none
+      margin-bottom: 0
+
+    .trianglify
+      height: 8em
+      margin-bottom: 1em
+      +breakpoint(large)
+        +xy-cell(3)
+        display: block
+        height: unset
+        margin-bottom: 0
+      padding: 0
+      margin-left: 0
+      position: relative
+      canvas
+        position: absolute
+        z-index: 1
+      span
+        position: absolute
+        font-size: 40px
+        margin-top: -20px
+        font-weight: bold
+        z-index: 2
+        width: 100%
+        top: 50%
+        text-align: center
+        line-height: 100%
+        color: $colour-white
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7)
+
+    .content
+      +breakpoint(large)
+        +xy-cell(9)
+      a
+        color: $colour-black
         font-weight: 500
-     
-    h2
-      width: 100%
-      font-weight: 800
+        &:hover 
+          +colour-highlight-shift
+          font-weight: 500
+       
+      h2
+        width: 100%
+        font-weight: 800
+        margin-top: 0
+
+.trianglify.header
+  background-color: white
+  position: relative
+  .content
+    position: relative
+    z-index: 100
+    padding: 3em
+
+  h2
+    margin-top: 0
+    font-size: 4em
+    font-weight: bold
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7)
+
+  p.byline
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7)
+    
+  canvas
+    position: absolute
+    background-color: white
+    top: 0
+    left: 0
+    z-index: 99

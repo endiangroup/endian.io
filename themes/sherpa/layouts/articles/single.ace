@@ -7,13 +7,17 @@
         span.section
           a href="/articles" articles
 
+= content masthead
+  .trianglify.header data-seed="{{.Title}}"
+    .content
+      h2.title {{.Title}}
+      p.byline Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
+
 = content main
-  h2.title {{.Title}}
-  p.byline Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
+  section
+    {{ if and (gt .FuzzyWordCount 2000 ) (.TableOfContents) }}
+    h3 Table of contents
+    {{.TableOfContents}}
+    {{end}}
 
-  {{ if and (gt .FuzzyWordCount 2000 ) (.TableOfContents) }}
-  h3 Table of contents
-  {{.TableOfContents}}
-  {{end}}
-
-  #body {{.Content}}
+    #body {{.Content}}

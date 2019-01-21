@@ -14,7 +14,7 @@ enableRobotsTXT = true
     # garbled here because it has no line breaks.
 	##############################################################
 
-  headerComment = "\n######## ##    ## ########  ####    ###    ##    ##     ####  #######  \n##       ###   ## ##     ##  ##    ## ##   ###   ##      ##  ##     ## \n##       ####  ## ##     ##  ##   ##   ##  ####  ##      ##  ##     ## \n######   ## ## ## ##     ##  ##  ##     ## ## ## ##      ##  ##     ## \n##       ##  #### ##     ##  ##  ######### ##  ####      ##  ##     ## \n##       ##   ### ##     ##  ##  ##     ## ##   ### ###  ##  ##     ## \n######## ##    ## ########  #### ##     ## ##    ## ### ####  #######  \nMade with Hugo + Foundation 6.\n"
+  headerComment = "\n######## ##    ## ########  ####    ###    ##    ##     ####  #######  \n##       ###   ## ##     ##  ##    ## ##   ###   ##      ##  ##     ## \n##       ####  ## ##     ##  ##   ##   ##  ####  ##      ##  ##     ## \n######   ## ## ## ##     ##  ##  ##     ## ## ## ##      ##  ##     ## \n##       ##  #### ##     ##  ##  ######### ##  ####      ##  ##     ## \n##       ##   ### ##     ##  ##  ##     ## ##   ### ###  ##  ##     ## \n######## ##    ## ########  #### ##     ## ##    ## ### ####  #######  \nMade with Hugo + Foundation 6. https://github.com/endiangroup/endian.io\n"
 
   [[menu.main]]
   name = "Home"
@@ -45,3 +45,45 @@ enableRobotsTXT = true
   url  = "https://www.linkedin.com/company/endian-group/about"
   pre = "social-linkedin"
   weight = 2
+
+  [params.articles]
+    [[params.articles.article]]
+    title = "Introducing BDD"
+    url = "https://dannorth.net/introducing-bdd/"
+    source = "dannorth.net"
+    authors = "Dan North"
+    summary = "The origin story for behaviour driven development."
+    image_tag = "BDD"
+
+    [[params.articles.article]]
+    title = "\"Unit\" Tests"
+    url = "https://www.facebook.com/notes/kent-beck/unit-tests/1726369154062608"
+    source = "Facebook"
+    authors = "Kent Beck"
+    summary = "The fine line between unit tests and integration tests in programming."
+    image_tag = "{}"
+
+    [[params.articles.article]]
+    title = "How to apply a design thinking, HCD, UX or any creative process from scratch"
+    url = "https://medium.com/digital-experience-design/how-to-apply-a-design-thinking-hcd-ux-or-any-creative-process-from-scratch-b8786efbf812"
+    source = "Medium"
+    authors = "Dan Nessler"
+    summary = "We like the double diamond concept so much that we make it our logo."
+    image_tag = "♦♦"
+
+    [[params.articles.article]]
+    title = "Introducing example mapping"
+    url = "https://cucumber.io/blog/2015/12/08/example-mapping-introduction"
+    source = "cucumber.io"
+    authors = "Matt Wayne"
+    summary = "A low-tech method for having short, powerful conversations about products."
+    image_tag = "..."
+
+    [[params.articles.article]]
+    title = "Leverage Points: Places to Intervene in a System"
+    url = "http://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/"
+    source = "donellameadows.org"
+    authors = "Donella Meadows"
+    summary = "How to analyse ansd affect complex systems."
+    image_tag = "↻"
+

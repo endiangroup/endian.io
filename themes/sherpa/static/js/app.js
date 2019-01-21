@@ -102,3 +102,23 @@ $(document).ready(function () {
     $('a[href*="#"]').bind("click", jump); //Gets all hrefs
     return false;
 });
+// Deteminsitic images
+var Trianglify;
+function makeTriangles() {
+    $('.trianglify').each(function () {
+        var el = $(this);
+        var pattern = Trianglify({
+            height: Math.ceil(el.height()),
+            width: Math.floor(el.width()),
+            cell_size: 20,
+            variance: 0.8,
+            seed: el.data('seed'),
+        });
+        el.append(pattern.canvas());
+    });
+}
+$(window).resize(function () {
+    $('.trianglify canvas').remove();
+    makeTriangles();
+});
+makeTriangles();

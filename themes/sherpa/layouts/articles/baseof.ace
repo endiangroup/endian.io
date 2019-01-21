@@ -5,7 +5,7 @@ html lang={{.Site.LanguageCode}}
 
   body
     .container
-      {{ partial "navigation" "articles" }}
+      {{ partial "navigation" . }}
       header.compact
         section
           = yield header

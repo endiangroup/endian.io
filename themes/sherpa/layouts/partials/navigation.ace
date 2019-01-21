@@ -1,28 +1,21 @@
-.sticky-wrapper data-sticky-container=""
-  nav#main data-sticky="" data-options="marginTop:0;" style="width:100%"
+{{- $firstUrlElement := print "/" (index (split .URL "/") 1) -}}
+.sticky-wrapper
+  nav#main
     section 
       ul.menu.horizontal.align-left
+        {{ range .Site.Menus.main }}
         li
-          a href="/" class="{{if eq . "home"}}active{{end}}"
-            i class="fi-mountains"
-            span Home
-        li
-          a href="/theory" class="{{if eq . "theory"}}active{{end}}"
-            i class="fi-book"
-            span Theory
-        li
-          a href="/articles" class="{{if eq . "articles"}}active{{end}}"
-            i class="fi-comment-quotes"
-            span Articles
+          a href="{{.URL}}" class="{{if or ($.IsMenuCurrent "main" .) (eq ($firstUrlElement|lower) (.URL|lower)) }}active{{end}}"
+            i class="fi-{{.Pre}}"
+            span {{.Name}}
+        {{ end }}
       ul.menu.horizontal.align-right
+        {{ range .Site.Menus.secondary }}
         li
-          a href="https://github.com/endiangroup" target="_blank"
-            i class="fi-social-github"
-            span GitHub
-        li
-          a href="https://www.linkedin.com/company/endian-group/about" target="_blank"
-            i class="fi-social-linkedin"
-            span LinkedIn
+          a.external href="{{.URL}}" target="_blank"
+            i class="fi-{{.Pre}}"
+            span {{.Name}}
+        {{ end }}
 
 #burger
   a href="#"
@@ -32,26 +25,16 @@
   .container
     img src="/img/endian-logo.svg"
     ul.menu.vertical
+      {{ range .Site.Menus.main }}
       li
-        a href="/" class="{{if eq . "home"}}active{{end}}"
-          i class="fi-mountains"
-          span Home
-      li
-        a href="/theory" class="{{if eq . "theory"}}active{{end}}"
-          i class="fi-book"
-          span Theory
-      li
-        a href="/articles" class="{{if eq . "articles"}}active{{end}}"
-          i class="fi-comment-quotes"
-          span Articles
+        a href="{{.URL}}" class="{{if or ($.IsMenuCurrent "main" .) (eq ($firstUrlElement|lower) (.URL|lower)) }}active{{end}}"
+          i class="fi-{{.Pre}}"
+          span {{.Name}}
+      {{ end }}
     ul.menu.vertical
+      {{ range .Site.Menus.secondary }}
       li
-        a href="https://github.com/endiangroup" target="_blank"
-          i class="fi-social-github"
-          span GitHub
-      li
-        a href="https://www.linkedin.com/company/endian-group/about" target="_blank"
-          i class="fi-social-linkedin"
-          span LinkedIn
-
-
+        a.external href="{{.URL}}" target="_blank"
+          i class="fi-{{.Pre}}"
+          span {{.Name}}
+      {{ end }}

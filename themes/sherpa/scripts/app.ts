@@ -111,3 +111,23 @@ $('strong').each(function() {
 
 // Tables
 ($('table') as any).basictable();
+
+// Smooth scrolling for foothotes
+var jump=function(e) {
+    e.preventDefault();
+    var target = $(this).attr("href");
+    $('html,body').animate(
+        {
+            scrollTop: $(target).offset().top - $('#main').height() - 20
+        },
+        200,
+        function()
+        {
+            //location.hash = target;
+        });
+}
+
+$(document).ready(function() {
+    $('a[href*="#"]').bind("click", jump); //Gets all hrefs
+    return false;
+});

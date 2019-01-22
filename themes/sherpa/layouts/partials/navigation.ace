@@ -1,0 +1,40 @@
+{{- $firstUrlElement := print "/" (index (split .URL "/") 1) -}}
+.sticky-wrapper
+  nav#main
+    section 
+      ul.menu.horizontal.align-left
+        {{ range .Site.Menus.main }}
+        li
+          a href="{{.URL}}" class="{{if or ($.IsMenuCurrent "main" .) (eq ($firstUrlElement|lower) (.URL|lower)) }}active{{end}}"
+            i class="fi-{{.Pre}}"
+            span {{.Name}}
+        {{ end }}
+      ul.menu.horizontal.align-right
+        {{ range .Site.Menus.secondary }}
+        li
+          a.external href="{{.URL}}" target="_blank"
+            i class="fi-{{.Pre}}"
+            span {{.Name}}
+        {{ end }}
+
+#burger
+  a href="#"
+    span.icon
+
+#mobile-menu
+  .container
+    img src="/img/endian-logo.svg"
+    ul.menu.vertical
+      {{ range .Site.Menus.main }}
+      li
+        a href="{{.URL}}" class="{{if or ($.IsMenuCurrent "main" .) (eq ($firstUrlElement|lower) (.URL|lower)) }}active{{end}}"
+          i class="fi-{{.Pre}}"
+          span {{.Name}}
+      {{ end }}
+    ul.menu.vertical
+      {{ range .Site.Menus.secondary }}
+      li
+        a.external href="{{.URL}}" target="_blank"
+          i class="fi-{{.Pre}}"
+          span {{.Name}}
+      {{ end }}

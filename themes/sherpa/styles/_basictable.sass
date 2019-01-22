@@ -1,0 +1,75 @@
+table.bt
+  thead, tbody th
+    display: none
+  tfoot
+    th, td
+      border: none
+      display: block
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      display: flex
+      vertical-align: top
+      /* IE 9
+      float: left\9
+      width: 100% \9
+  tbody 
+    td
+      border: none
+      display: block
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      display: flex
+      vertical-align: top
+      /* IE 9
+      float: left\9
+      width: 100% \9
+    tr
+      td
+        &:first-of-type
+          padding-top: 1.5em
+        &:last-of-type
+          padding-bottom: 1.5em
+      &:first-of-type
+        td:first-of-type
+          padding-top: 1em
+      &:last-of-type
+        td:last-of-type
+          padding-top: 1em
+  tfoot
+    th::before, td::before
+      content: attr(data-th) ": "
+      display: inline-block
+      -webkit-flex-shrink: 0
+      -ms-flex-shrink: 0
+      flex-shrink: 0
+      font-weight: bold
+      width: 6.5em
+  tbody td::before
+    content: attr(data-th) ": "
+    display: inline-block
+    -webkit-flex-shrink: 0
+    -ms-flex-shrink: 0
+    flex-shrink: 0
+    font-weight: bold
+    width: 50%
+  tfoot
+    th.bt-hide, td.bt-hide
+      display: none
+  tbody td.bt-hide
+    display: none
+  tfoot
+    th .bt-content, td .bt-content
+      vertical-align: top
+  tbody td .bt-content
+    vertical-align: top
+
+.bt-wrapper.active
+  max-height: 310px
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+
+table.bt.bt--no-header
+  tfoot td::before, tbody td::before
+    display: none

@@ -5,12 +5,14 @@ html lang={{.Site.LanguageCode}}
 
   body
     .container
+      {{ partial "navigation" . }}
       header data-aos="fade-down"
         = yield header
       main
         = yield main
-      footer
-        = yield footer
+    footer
+      = yield footer
+      {{ partial "footer" . }}
 
   script src="/js/jquery.min.js"
   script src="/js/foundation.core.min.js"
@@ -31,7 +33,13 @@ html lang={{.Site.LanguageCode}}
 
   script.
     AOS.init();
-
+  script defer="true" src="/js/jquery.min.js"
+  script defer="true" src="/js/foundation.core.min.js"
+  script defer="true" src="/js/foundation.util.mediaQuery.min.js"
+  script defer="true" src="/js/foundation.sticky.min.js"
+  script defer="true" src="/js/foundation.util.triggers.min.js"
+  script defer="true" src="/js/foundation.util.motion.min.js"
+s
   script defer="true" src="/js/app.js?v={{getenv "GITHASH"}}"
 
   script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-123637660-1"

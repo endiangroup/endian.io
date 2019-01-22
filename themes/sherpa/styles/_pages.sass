@@ -134,6 +134,27 @@ article
 
   #feedback
     margin-top: 4em
+    .social
+      display: flex
+      align-items: center
+      justify-content: center
+      span
+        display: inline-block
+        width: 4.5em
+        height: 4.5em
+        background-color: $colour-grey
+        margin-left: 0.25em
+        margin-right: 0.25em
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        i
+          font-size: 3em
+          color: $colour-white
+        img
+          width: 3em
+
     .utterances
       max-width: 100%
 
@@ -202,6 +223,7 @@ ul#articles,ul#articles-external
   background-color: white
   position: relative
   .content
+    +centered-content
     position: relative
     z-index: 100
     padding: 3em
@@ -209,9 +231,9 @@ ul#articles,ul#articles-external
   h2
     margin-top: 0
     margin-bottom: 1em
-    font-size: 3em
+    font-size: 2em
     +breakpoint(medium)
-      font-size: 4em
+      font-size: 3em
     font-weight: bold
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7)
 
@@ -220,6 +242,8 @@ ul#articles,ul#articles-external
       background-color: rgba(0,0,0,0.25)
       padding: 0.25em 0.5em 0.25em 0.5em
       border-radius: 0.5em
+      margin-left: 0.25em
+      margin-right: 0.25em
       +breakpoint(large)
         font-size: 0.8em
     

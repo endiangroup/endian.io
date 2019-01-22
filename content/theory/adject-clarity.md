@@ -1,7 +1,8 @@
 +++
 title = "Adject Clarity: Five Integral C-Words of Maximally Useful Product Specification for Teams"
 authors = "Paul M Fox and Adrian Duke"
-summary = "In this article we demonstrate something"
+summary = "Identification and analysis of five integral qualities for maximally useful product speciifications."
+image_tag = "5 Cs"
 +++
 This paper proposes that there are at least five integral qualities that any product specification must have in order to benefit from maximal utility. Specifically, a specification  must be *canonical*, *coherent*, *comprehensible*, *comprehensive* and *current* in order to reach its maximum utility. The paper consists of a logical proof for each of the general uses of a specification, and shows that while it’s not necessary for every specification to perfectly embody all five qualities, there are no specifications that do not embody at least one.
 

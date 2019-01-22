@@ -7,14 +7,23 @@
         span.section
           a href="/theory" theory
 
+= content masthead
+  .trianglify.header data-seed="{{.Title}}"
+    .content
+      h2.title {{.Title}}
+      p.byline 
+        span <i class="fi-torso"></i> {{.Param "authors"}}
+      p.byline 
+        span <i class="fi-quote"></i> {{.FuzzyWordCount}} words
+        span <i class="fi-clock"></i> {{.ReadingTime}} minutes
+
 = content main
-  h2.title {{.Title}}
-  p.byline Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
+  section
+    {{ if and (gt .FuzzyWordCount 2000 ) (.TableOfContents) }}
+    h3 Table of contents
+    {{.TableOfContents}}
+    {{end}}
 
-  {{ if and (gt .FuzzyWordCount 1000 ) (.TableOfContents) }}
-  h3 Table of contents
-  {{.TableOfContents}}
-  {{end}}
-
-  h2.abstract Abstract
-  #body {{.Content}}
+    h2.abstract Abstract
+    #body {{.Content}}
+    {{ partial "feedback" . }}

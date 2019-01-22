@@ -9,9 +9,9 @@ html lang={{.Site.LanguageCode}}
       header.compact
         section
           = yield header
+      = yield masthead
       article
-        section
-          = yield main
+        = yield main
     footer
       {{ partial "footer" . }}
 

@@ -9,7 +9,7 @@
 
 = content main
   section
-    {{if gt (len .Pages) 0}}
+    {{if gt (len .Pages) 1}}
     h2 Endian articles
     ul#articles
       {{ range .Pages }}

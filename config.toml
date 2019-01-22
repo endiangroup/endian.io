@@ -108,7 +108,7 @@ enableRobotsTXT = true
     title = "Software Art Thou"
     url = "https://www.youtube.com/watch?v=RhdlBHHimeM"
     source = "YouTube"
-    authors = "Software Art Thou"
+    authors = "Glenn Vanderburg"
     summary = "Is software engineering worthy of the name?"
     icon_tag = "shield"
 
@@ -119,5 +119,13 @@ enableRobotsTXT = true
     authors = "Konstantin Kudryashov"
     summary = "Everything you need to know about Behaviour Driven Development."
     image_tag = "BDD"
+
+    [[params.theory.theory]]
+    title = "Formal Specification: A Roadmap"
+    url = "http://homepage.divms.uiowa.edu/~tinelli/classes/181/Spring03/Readings/vLam00.pdf"
+    source = "The University of Iowa"
+    authors = "Axel van Lamsweerde"
+    summary = "An excellent overview of formal proofs in computer science."
+    image_tag = "FML"
 
 

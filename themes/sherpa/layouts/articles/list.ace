@@ -9,13 +9,19 @@
 
 = content main
   section
+    {{if gt (len .Pages) 0}}
     h2 Endian articles
     ul#articles
       {{ range .Pages }}
       li
         .trianglify data-seed="{{.Title}}"
           a href="{{.Permalink}}"
+            {{if .Param "icon_tag"}}
+            i class="fi-{{.Param "icon_tag"}}"
+            {{end}}
+            {{if .Param "image_tag"}}
             span {{.Param "image_tag"}}
+            {{end}}
         .content
           a href="{{.Permalink}}"
             h2 {{.Title}}
@@ -23,14 +29,20 @@
           p.summary {{.Param "summary"}}
           a.read href="{{.Permalink}}" Read more &raquo;
       {{ end }}
+    {{ end }}
 
-    h2 Other stuff that we like  
+    h2 Articles we like
     ul#articles-external
       {{ range $.Site.Params.articles.article }}
       li
         .trianglify data-seed="{{.url}}"
           a href="{{.url}}" target="_blank"
+            {{if .icon_tag}}
+            i class="fi-{{.icon_tag}}"
+            {{end}}
+            {{if .image_tag}}
             span {{.image_tag}}
+            {{end}}
         .content
           a href="{{.url}}" target="_blank"
             h2 {{.title}}

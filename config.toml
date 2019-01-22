@@ -69,7 +69,7 @@ enableRobotsTXT = true
     source = "Medium"
     authors = "Dan Nessler"
     summary = "We like the double diamond concept so much that we make it our logo."
-    image_tag = "♦♦"
+    icon_tag = "heart"
 
     [[params.articles.article]]
     title = "Introducing example mapping"
@@ -77,7 +77,7 @@ enableRobotsTXT = true
     source = "cucumber.io"
     authors = "Matt Wayne"
     summary = "A low-tech method for having short, powerful conversations about products."
-    image_tag = "..."
+    icon_tag = "map"
 
     [[params.articles.article]]
     title = "Leverage Points: Places to Intervene in a System"
@@ -85,5 +85,5 @@ enableRobotsTXT = true
     source = "donellameadows.org"
     authors = "Donella Meadows"
     summary = "How to analyse ansd affect complex systems."
-    image_tag = "↻"
+    icon_tag = "wrench"
 

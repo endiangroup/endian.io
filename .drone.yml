@@ -32,7 +32,7 @@ pipeline:
       target: /
       encryption: AES256
       when:
-        branch: [develop, feature/article-layout]
+        branch: [develop]
         event: [push, tag]
 
     production:

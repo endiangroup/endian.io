@@ -134,14 +134,16 @@ article
 
   #feedback
     margin-top: 4em
+    margin-bottom: 4em
     .social
       display: flex
       align-items: center
       justify-content: center
+      margin-bottom: 4em
+      +breakpoint(large)
+        margin-bottom: 2em
       span
         display: inline-block
-        width: 4.5em
-        height: 4.5em
         background-color: $colour-grey
         margin-left: 0.25em
         margin-right: 0.25em
@@ -149,11 +151,20 @@ article
         align-items: center
         justify-content: center
         border-radius: 50%
+        width: 3em
+        height: 3em
+        +breakpoint(large)
+          width: 4.5em
+          height: 4.5em
         i
-          font-size: 3em
+          font-size: 2em
+          +breakpoint(large)
+            font-size: 3em
           color: $colour-white
         img
-          width: 3em
+          width: 2em
+          +breakpoint(large)
+            width: 3em
 
     .utterances
       max-width: 100%

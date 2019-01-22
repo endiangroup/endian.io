@@ -12,5 +12,5 @@
   h3 Feedback
   p Endian is a constantly evolving research project and work in progress. We're try to make sense of things by studying the world around us, and we think we've done pretty well so far, but we're going to get stuff wrong. When that happens, we'd really like to know about it.
   p If you've noticed mistakes or omissions in this article and you have a GitHub account, then you can use the handy form below to post them directly to a <a href="https://github.com/endiangroup/endian.io/issues?q=is%3Aissue+is%3Aopen+label%3Acomment" target="_blank">GitHub issue</a>. For specific changes, please open a <a href="https://github.com/endiangroup/endian.io/edit/develop/content/{{.File.Path}}" target="_blank">pull request</a>. 
-  p If you don't ue GitHub or you have more general feedback, please email us at <a href="mailto:hello@endian.io">hello@endian.io</a>.
+  p If you don't use GitHub or you have more general feedback, please email us at <a href="mailto:hello@endian.io">hello@endian.io</a>.
   script src="https://utteranc.es/client.js" repo="endiangroup/endian.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async

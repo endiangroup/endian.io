@@ -48,7 +48,7 @@
             h2 {{.title}}
           p.byline {{.authors}}
           p.summary {{.summary}}
-          a.read href="{{.url}}" target="_blank" Read more on {{.source}} &raquo;
+          a.read href="{{.url}}" target="_blank" More on {{.source}} &raquo;
         {{ end }}
 
 

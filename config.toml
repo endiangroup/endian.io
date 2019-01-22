@@ -87,3 +87,37 @@ enableRobotsTXT = true
     summary = "How to analyse ansd affect complex systems."
     icon_tag = "wrench"
 
+  [params.theory]
+    [[params.theory.theory]]
+    title = "On Being Lost"
+    url = "https://medium.com/wardleymaps/on-being-lost-2ef5f05eb1ec"
+    source = "Medium"
+    authors = "Simon Wardley"
+    summary = "The book that describes the incredibly powerful Wardley Maps model."
+    icon_tag = "compass"
+
+    [[params.theory.theory]]
+    title = "Cynefin Framework Introduction"
+    url = "http://cognitive-edge.com/videos/cynefin-framework-introduction/"
+    source = "cognitive-edge.com"
+    authors = "Dave Snowden"
+    summary = "A brief explanation of the decision-making framework."
+    icon_tag = "play-circle"
+
+    [[params.theory.theory]]
+    title = "Software Art Thou"
+    url = "https://www.youtube.com/watch?v=RhdlBHHimeM"
+    source = "YouTube"
+    authors = "Software Art Thou"
+    summary = "Is software engineering worthy of the name?"
+    icon_tag = "shield"
+
+    [[params.theory.theory]]
+    title = "The beginner's guide to BDD"
+    url = "https://inviqa.com/blog/bdd-guide"
+    source = "inviqa.com"
+    authors = "Konstantin Kudryashov"
+    summary = "Everything you need to know about Behaviour Driven Development."
+    image_tag = "BDD"
+
+

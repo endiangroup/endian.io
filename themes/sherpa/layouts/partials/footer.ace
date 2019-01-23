@@ -1,3 +1,4 @@
+{{if ne .Page.Kind "404"}}
 .wrapper
   .content
     section
@@ -27,3 +28,4 @@
           a href="https://github.com/endiangroup" target="_blank" <i class="fi-social-github"></i> GitHub
         li 
           a href="https://www.linkedin.com/company/endian-group" target="_blank" <i class="fi-social-linkedin"></i> LinkedIn
+{{end}}

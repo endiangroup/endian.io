@@ -38,6 +38,7 @@ $('article a').each(function () {
     el.addClass("footnote");
     el.attr("id", footnote.id);
     el.attr("href", "#footnote-" + idx);
+    el.attr("title", $('<div>' + el.attr("title") + '</div>').text());
     el.html(String(idx));
     var content = "<p>" + footnote.title + "</p><p>";
     if (footnote.href != "none") {
@@ -53,7 +54,7 @@ if (footnotes.length) {
         if (footnotes[i].href != "none") {
             var parts = footnotes[i].href.split(",");
             for (var j = 0; j < parts.length; j++) {
-                footnotes_el.append("<i class='fi-link'></i> <a href='" + footnotes[i].href + "'>" + parts[j] + "</a><br/>");
+                footnotes_el.append("<i class='fi-link'></i> <a class='fn-link' href='" + footnotes[i].href + "'>" + parts[j] + "</a><br/>");
             }
         }
     }

@@ -3,26 +3,25 @@ title = "Adject Clarity: Five Integral C-Words of Maximally Useful Product Speci
 authors = "Paul M Fox and Adrian Duke"
 summary = "Identification and analysis of five integral qualities for maximally useful product speciifications."
 image_tag = "5 Cs"
+abstract = "This paper proposes that there are at least five integral qualities that any product specification must have in order to have maximal utility. Specifically, a specification  must be *canonical*, *coherent*, *comprehensible*, *comprehensive* and *current* in order to reach its maximum utility. The paper consists of an analysis of each general use of a specification, and shows that while it’s not necessary for every specification to perfectly embody all five qualities, there are no specifications that do not embody at least one."
 +++
-This paper proposes that there are at least five integral qualities that any product specification must have in order to benefit from maximal utility. Specifically, a specification  must be *canonical*, *coherent*, *comprehensible*, *comprehensive* and *current* in order to reach its maximum utility. The paper consists of a logical proof for each of the general uses of a specification, and shows that while it’s not necessary for every specification to perfectly embody all five qualities, there are no specifications that do not embody at least one.
-
 ## 0 Introduction
 
-When humans work in teams to create something, they must be in agreement about what they're creating in order to maximise their chances of success. Without consensus on the final form of their product, there is a risk that individual team members may create or contribute to components or features that are misaligned with the rest of the team. The risk of misalignment is inversely proportional to the degree of consensus of the team as a whole: the less they agree, the more likely they are to mismatch their output.
+When humans work in teams to create something, they must be in agreement about what they're creating. Without consensus on the final form of their product, there is a risk that individual team members may create or contribute to components or features that are misaligned with the rest of the team. The risk of misalignment is inversely proportional to the degree of consensus of the team as a whole: the less they agree, the more likely they are to mismatch their output.
 
-More importantly, the product must be fit for its intended purpose. A perfectly harmonious team may create a fantastic product, but if it doesn't solve the problem it was intended for, its real-world function is very likely to be diminished. Complete agreement doesn't guarantee success, and a great product idea doesn't guarantee successful completion. 
+More importantly, the product must be fit for its intended purpose. A perfectly harmonious team may create a fantastic product, but if it doesn't solve the problem it was intended for, it’s not likely to be useful. Complete agreement doesn't guarantee success, and a great product idea doesn't guarantee successful completion. 
 
 One common solution to these problems is to create a specification. Working from the intended real-world application of their product through to the details of its creation[*](https://en.wikipedia.org/wiki/Outside%E2%80%93in_software_development "This approach is sometimes called 'outside-in', especially in software development"), it's possible for a team to explicitly catalogue the requirements of their product in such a way that all team members can work toward satisfying them. A well-specified product will be much more likely to be fit for purpose, and the team creating it will have a significantly increased chance of working together cohesively.
 
 There are many approaches to specification creation. Goals, considerations and constraints for product design vary between products, teams and even individual team members. In light of all that variation, the most significant measurement of a specification’s appropriateness in any given situation is its *utility*; that is, the extent to which it is practical or beneficial to a particular team creating a particular product.
 
-We propose that, in order to have maximal utility, a product specification must be *canonical*, *coherent*, *comprehensible*, *comprehensive* and *current*. These five attributes, known in this document as the *C-Words*, constitute a minimum property set for highly practicable and flexible product specifications. Only teams using specifications that embody all five C-Words could be afforded all the possible benefits of an explicit specification.
+We propose that, in order to have maximal utility, a product specification must be `canonical`, `coherent`, `comprehensible`, `comprehensive` and `current`. These five attributes, known in this document as the *C-Words*, constitute a minimum property set for highly practicable and flexible product specifications. Only teams using specifications that embody all five C-Words have the potential to reap all the possible benefits of an explicit specification.
 
-In order to prove this claim, we will show that removing or failing to embody one or more of the C-words will significantly impede the potential utility of a specification, and may have negative resulting implications on the product. We will also demonstrate that the C-Words, as a complete set and in various combinations, are a generally integral part of specifying products. To accomplish this, we will show that there are no useful specifications that do not embody at least one C-Word.
+In order to prove this claim, we will show that removing or failing to embody one or more of the C-words will significantly impede the potential utility of a specification, and may have negative resulting implications on the product. We will also demonstrate that the C-Words, as a complete set and in various combinations, are an integral part of specifying products. To accomplish this, we will show that there are no useful specifications that do not embody at least one C-Word.
 
 ## 1 Definitions of terms
 
-Before proceeding with a logical proof, it is necessary to clarify the use of words in this document. Since all of these words are used in other contexts with other connotations and meanings, they are defined in relation to product specifications as follows:
+Before proceeding, it is necessary to clarify the use of words in this document. Since all of these words are used in other contexts with other connotations and meanings, they are defined in relation to product specifications as follows:
 
 ### 1.1 General terms
 
@@ -48,31 +47,31 @@ As discussed below, there is utility in creating computer-readable specification
 
 #### 1.2.1 Canonical
 
-For the purposes of this document, *canon* is defined as a single, recognised, orthodox source of truth.
+For the purposes of this document, `canon` is defined as a single, recognised, orthodox source of truth.
 
 A perfectly canonical specification will have exactly one self-contained representation. The representation is usually centralised, but some software approaches use multiple copies that automatically synchronise; these are still considered canonical as long as all team members can access up-to-date versions of the specification.
 
 #### 1.2.2 Coherent
 
-*Coherence* refers to a state of being ordered, logical and consistent. There is also a deliberate implication of a harmoniousness of parts; each component fits logically with those around it. 
+`Coherence` refers to a state of being ordered, logical and consistent. There is also a deliberate implication of a harmoniousness of parts; each component fits logically with those around it. 
 
 A coherent specification should use the same structure throughout. Any natural patterns that form in the specification should be maintained as long as it is logical and useful to do so. There should be no inconsistencies in language or diagrammatic grammar, style, format or organisation. There should be no redundancy and no unnecessary components[*](http://www.informit.com/articles/article.aspx?p=1152528&seqNum=4 "A good example of clear and coherent requirements writing in plain text comes from the book <em>Requirements Management Using IBM® Rational® RequisitePro®</em>. See section 1.4 of the sample chapter"). 
 
 #### 1.2.3 Comprehensible
 
-Wherever humans are involved, *comprehension* is a key requirement for their understanding. In this document, it refers to the capacity to be understood or grasped fully and thoroughly, and to being expressed in the most basic and straightforwardly applicable manner.
+Wherever humans are involved, `comprehension` is a key requirement for their understanding. In this document, it refers to the capacity to be understood or grasped fully and thoroughly, and to being expressed in the most basic and straightforwardly applicable manner.
 
 Given a comprehensible specification, all members of the team should be able to understand at least the parts that concern them. Written parts of the specification should be readable[*](https://en.wikipedia.org/wiki/Readability "Readability is a well-studied field. There is no panacea for writing readable specifications, but simplicity and clarity score highly on all readability formulas"), concise, specific and precise; diagrams should be clearly labelled with any additional explanations embedded in the specification.
 
 #### 1.2.4 Comprehensive
 
-*Comprehensiveness* is the state of exhaustively or completely covering everything in a given domain. 
+`Comprehensiveness` is the state of exhaustively or completely covering everything in a given domain. 
 
 A comprehensive specification should cover all the requirements of the product. It should not include requirements that will never be part of the product, and it should not omit requirements that are part of the product &mdash; even if those parts are due to be deprecated or removed.  
 
 #### 1.2.5 Current
 
-To be *current* is to exist or occur during the present moment. In versional or evolving systems this refers to the most recent, generally accepted iteration. An example of this is the phrase 'current fashion', wherein it's accepted that fashion will continuously evolve, but there is a present state of that evolution.
+To be `current` is to exist or occur during the present moment. In versional or evolving systems this refers to the most recent, generally accepted iteration. An example of this is the phrase 'current fashion', wherein it's accepted that fashion will continuously evolve, but there is a present state of that evolution.
 
 For a specification to be considered current, it must be possible to explicitly nominate a particular version or iteration as being the accepted or signed-off form of the specification. It is this form which will be used to make the product at any given time. It should be possible to continue developing the specification without disrupting the accepted form. This is typically accomplished with specialised software[*](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell,https://en.wikipedia.org/wiki/Mercurial "Some storage systems, especially software-based versioning management tools, allow for multiple concurrent versions of a specification. An example is the source code version control system <em>git</em>, with its concept of branches. There are also systems where there is no centralised repository for a specification; instead, multiple copies are maintained and a consensus of their content is automatically or manually negotiated by their maintainers. An example is the Mercurial source code version control system, which is decentralised. Specifications stored in these systems can still be considered current, as long as there is a way of universally nominating a particular version. At the time of writing, all major software versioning systems support such a feature").
 
@@ -80,7 +79,7 @@ For a specification to be considered current, it must be possible to explicitly 
 
 #### 1.3.1 C-Adjectivity
 
-*C-Adjectivity*  is a term we created to describe the extent to which a specification embodies or conforms to the C-Words, all of which are expressed as adjectives. A specification can be considered minimally C-Adjective if it embodies any one of the C-Words concepts to at least the minimally useful extent defined in **1.2 The five C-Words**[*](none "It should be noted that the concept behind each of the C-Words is scalar; that is, it’s conceivable for each quality to range from zero (no presence at all&#41;to maximum (perfect embodiment&#41;. <br /><br/>In practice, a zero value for any of the C-Words can be hard to imagine. A specification with absolutely no source of truth (that is, zero canon&#41; probably couldn’t exist in any definable way. A totally incoherent specification would be little more than a random mess, an incomprehensible specification could not possibly have any utility to anyone, a totally non-comprehensive specification would have no value. Interestingly, a non-current (that is, non-versional&#41; specification may still have value &mdash; as long as it never changes").
+*C-Adjectivity*  is a term we created to describe the extent to which a specification embodies or conforms to the C-Words, all of which are expressed as adjectives. A specification can be considered minimally C-Adjective if it embodies any one of the C-Words concepts to at least the minimally useful extent defined in **1.2 The five C-Words**[*](none "It should be noted that the concept behind each of the C-Words is scalar; that is, it’s conceivable for each quality to range from zero (no presence at all&#41; to maximum (perfect embodiment&#41;. <br /><br/>In practice, a zero value for any of the C-Words can be hard to imagine. A specification with absolutely no source of truth (that is, zero canon&#41; probably couldn’t exist in any definable way. A totally incoherent specification would be little more than a random mess, an incomprehensible specification could not possibly have any utility to anyone, a totally non-comprehensive specification would have no value. Interestingly, a non-current (that is, non-versional&#41; specification may still have value &mdash; as long as it never changes").
 
 As part of the logical proof, we will evaluate each potential use of a specification for minimum C-Word requirements, and rate the C-Adjectivity of that use. In order for a C-Word to be considered required, it must be impossible to make use of the specification in the desired way without the minimum quality of the C-Word embodied in the specification.
 
@@ -104,9 +103,9 @@ Passive interactions occur when an external known or unknown entity interfaces w
 
 #### 2.1.1 C-Adjectivity
 
-For both applications, a canonical source of truth is required. It's not possible to make an interface with multiple, possibly conflicting requirements. The specification must also be kept up to date, because changes in the interface requirements may limit interactions, or even make them impossible.
+For both applications, a `canonical` source of truth is required. It's not possible to make an interface with multiple, possibly conflicting requirements. The specification must also be kept up to date, because changes in the interface requirements may limit interactions, or even make them impossible.
 
-In order to facilitate explicit passive interactions, the nature of any interfaces must be published or made obvious to external entities.  This requires the specification to be translated or the information to be otherwise transferred to the makers of the external interface, and the specification must thus be readable.
+In order to facilitate explicit passive interactions, the nature of any interfaces must be published or made obvious to external entities.  This requires the specification to be translated or the information to be otherwise transferred to the makers of the external interface, and the specification must thus be `comprehensible`.
 
 #### 2.1.2 Tabulation
 
@@ -126,7 +125,7 @@ Formal verification typically applies to hardware and software systems. Algorith
 
 Functional verification is the process of making sure that the design and behaviour of the product conform to its specification. As a formal practise, functional verification can sometimes be extremely difficult because of the large number possible test cases that can exist in even a simple product. 
 
-As the task becomes less formal it gets much more simple: a manual test of a hammer is far more straightforward than building complex apparatus to test a fission reactor. For this reason, within the application of functional verification there are two essential categories: *automated* and *manual*.
+As a task becomes less formal it gets much more simple: a manual test of a hammer is far more straightforward than building complex apparatus to test a fission reactor. For this reason, within the application of functional verification there are two essential categories: *automated* and *manual*.
 
 Automated functional verification is the process of building hardware or software devices to run specification-driven tests on the product in a complete or incomplete state. It’s used most commonly in software engineering and electronic design.
 
@@ -134,13 +133,13 @@ Manual functional verification is the process of humans using the product, forma
 
 #### 2.2.1 C-Adjectivity
 
-Formal verification is carried out by automated tools. The typical process is to have a computer run a formal proof of the specification on an abstract mathematical model of the product. This requires that the specification be coherent and machine readable. For the formal proof to be maximally meaningful, the specification must also be comprehensive. 
+Formal verification is carried out by automated tools. The typical process is to have a computer run a formal proof of the specification on an abstract mathematical model of the product. This requires that the specification be coherent and machine readable. For the formal proof to be maximally meaningful, the specification must also be `comprehensive`. 
 
-Automated functional verification also requires a coherent, machine-readable specification.  There is sometimes utility in testing an incomplete product, so it’s not necessary for the specification to be comprehensive. 
+Automated functional verification also requires a coherent, machine-readable specification.  There is sometimes utility in testing an incomplete product, so it’s not necessary for the specification to be `comprehensive`. 
 
-Manual functional verification requires the specification to be read by humans, and this it must be comprehensible. It would likely be of benefit for the specification to also be coherent, but it’s not a minimum requirement.
+Manual functional verification requires the specification to be read by humans, and thus it must be `comprehensible`. It would likely be of benefit for the specification to also be `coherent`, but it’s not a minimum requirement.
 
-For any testing feedback to use of use to the team, it is necessary to know which version of the specification was used for the tests, making currency a requirement for all applications.
+For any testing feedback to use of use to the team, it is necessary to know which version of the specification was used for the tests, making `currency` a requirement for all applications.
 
 #### 2.2.2 Tabulation
 
@@ -169,9 +168,9 @@ A specification-intrinsic approach allows the specification, as whole, to also f
 
 #### 2.3.1 C-Adjectivity
 
-A single source of truth is required if the specification is going to usefully serve as documentation, making canon a requirement for specification-intrinsic documentation.
+A single source of truth is required if the specification is going to usefully serve as documentation, making `canon` a requirement for specification-intrinsic documentation.
 
-Documentation cannot be derived from a specification that cannot be read, and nor can such a specification be used as documentation. Therefore comprehensibility is a requirement for both approaches
+Documentation cannot be derived from a specification that cannot be read, and nor can such a specification be used as documentation. Therefore `comprehensibility` is a requirement for both approaches
 #### 3.3.2 Tabulation
 
 C-Word | *Specification-derived*  | *Specification-intrinsic* 
@@ -202,9 +201,9 @@ In user-unrelated specifications, there is no explicit relationship between the 
 
 #### 2.4.1 C-Adjectivity
 
-However they feature in the specification, end users must at least be identified comprehensibly. If all relevant team members can't infer the end users from the specification, then identifying them has little or no utility. 
+However they feature in the specification, end users must at least be identified `comprehensibly`. If all relevant team members can't infer the end users from the specification, then identifying them has little or no utility. 
 
-In order to extract a full set of users from a set of requirements, it's necessary for the requirement set to be complete. Thus requirement-first specifications must also be comprehensive.
+In order to extract a full set of users from a set of requirements, it's necessary for the requirement set to be complete. Thus requirement-first specifications must also be `comprehensive`.
 
 #### 2.4.2 Tabulation
 
@@ -220,17 +219,17 @@ Current         | &mdash; | &mdash; | &mdash;
 
 It’s possible, in many cases, to design the form, behaviour or internal structure of a product based on its specification[*](none "A blueprint for a building, for example, outlines a large proportion of the features of the finished structure. An increasingly popular approach in software engineering is to define the user-apparent behavioural features in an explicit specification, and leave the internal workings to the programmers. Conversely, many electrical engineering and materials specifications focus entirely on the internal structure, forgoing everything that an end user might care about"). The applications for this fall into two non-exclusive categories: *explicit designs* and *derived designs*.
 
-Explicit designs are stated clearly in the specification itself. They are not subjective, and they are not intended as problems to be solved by the team. An example of this approach is the blueprint for a bridge: the design has very specific structure, materials and construction which must be implemented exactly.
+Explicit designs are stated clearly in the specification itself. They are not subjective, and they are not intended as problems to be solved by the team. An example of this approach is the blueprint for a bridge: the design demands a very specific structure, and specifies materials and construction which must be implemented exactly.
 
-Derived designs are not stated explicitly in the specification, and are typically created by the team in response to the goals and constraints from the specification. This approach is common in user-centric specifications, and there will often be sub-specifications that detail the implementation of the product requirements[*](https://en.wikipedia.org/wiki/Specification_by_example "One of the reasons that Specification By Example is popular in software engineering is that its focuses primarily on the user’s requirements. The foundational idea is that most consumers of technology products adopt a ‘I don’t care how it works as long as it works’ approach. It seems perfectly logical, then, to imagine the product entirely from the end-user’s perspective. The downside is that this becomes somewhat complicated when the user has unrealistic desires").
+Derived designs are not stated explicitly in the specification, and are typically created by the team in response to the goals and constraints from the specification. This approach is common in user-centric specifications, and there will often be sub-specifications that detail the implementation of the product requirements[*](https://en.wikipedia.org/wiki/Specification_by_example "One of the reasons that Specification By Example is popular in software engineering is that it focuses primarily on the user’s requirements. The foundational idea is that most consumers of technology products adopt a ‘I don’t care how it works as long as it works’ approach. It seems perfectly logical, then, to imagine the product entirely from the end-user’s perspective. The downside is that this becomes somewhat complicated when the user has unrealistic desires").
 
 It should be noted here that this use of a specification assumes that the requirements are correct and realistic at any given time. See **2.7 Requirements identification** for methods of measuring and refining requirements using a specification.
 
 #### 2.5.1 C-Adjectivity
 
-Any specification that explicitly or implicitly outlines design features must be canonical, otherwise there could be conflicting design features. It must also be comprehensible so that the team is able to implement it. Currency would be of significant benefit for practical reasons, but it’s possible to design a product based on a specification without it.
+Any specification that explicitly or implicitly outlines design features must be `canonical`, otherwise there could be conflicting design features. It must also be `comprehensible` so that the team is able to implement it. `Currency` would be of significant benefit for practical reasons, but it’s possible to design a product based on a specification without it.
 
-For specifications with explicit design requirements, coherency is highly beneficial but not strictly necessary[*](none "It would be possible, if quite annoying for the team, to create a blueprint wherein the measurements were alternately in metric and imperial units. So long as the values were equivalent and the tooling was available to make the measurements, the structure could still be completed. Other inconsistencies in a specification are equally viable in terms of design, but also equally as costly in terms of time and frustration"). 
+For specifications with explicit design requirements, `coherency` is highly beneficial but not strictly necessary[*](none "It would be possible, if quite annoying for the team, to create a blueprint wherein the measurements were alternately in metric and imperial units. So long as the values were equivalent and the tooling was available to make the measurements, the structure could still be completed. Other inconsistencies in a specification are equally viable in terms of design, but also equally as costly in terms of time and frustration"). 
 
 #### 2.5.2 Tabulation
 
@@ -245,7 +244,7 @@ C-Word     |  *Explicit*    | *Derived*
 
 ### 2.6 Project management 
 
-In many cases it’s possible to use a specification as the basis for managing the product creation. Though there are formal project management models[*](https://en.wikipedia.org/wiki/Project_management_triangle "The Project Management Triangle is a trilemmatic model of project management constraints that shows some of the potential tradeoffs in running a project.  We don’t know of any specification approach that directly considers these factors, but any good specification would inform the scope"), we’ve identified three general areas of intersection with a useful specification: *planning*, *resourcing* and *monitoring*[*](none "An additional common project management requirement is quality assurance, which was omitted as an application of a specification under this use because it better falls under <strong>2.3 Design verification and testing</strong>").
+In many cases it’s possible to use a specification as the basis for managing the product creation. Though there are formal project management models[*](https://en.wikipedia.org/wiki/Project_management_triangle "The Project Management Triangle is a trilemmatic model of project management constraints that shows some of the potential tradeoffs in running a project. We don’t know of any specification approach that directly considers these factors, but any good specification would inform the scope"), we’ve identified three general areas of intersection with a useful specification: *planning*, *resourcing* and *monitoring*[*](none "An additional common project management requirement is quality assurance, which was omitted as an application of a specification under this use because it better falls under <strong>2.3 Design verification and testing</strong>").
 
 Planning, for the purposes of this document, refers to explicitly scoping the project, creating a plan or work breakdown for its execution, budgeting, assembling team member requirements and creating schedules. The specification itself should inform any requirements gathering, and typically much of the scope.
 
@@ -255,11 +254,11 @@ Monitoring is largely concerned with capturing and reporting progress, generally
 
 #### 2.6.1 C-Adjectivity
 
-Any kind of whole-project planning requires a vision of the entire product from a single source of truth. A specification used for the purposes of planning must therefore be canonical and comprehensive. 
+Any kind of whole-project planning requires a vision of the entire product from a single source of truth. A specification used for the purposes of planning must therefore be `canonical` and `comprehensive`. 
 
-The utility of a specification in the resourcing process is about communicating the vision, viability and requirements of the product. A specification used for resourcing should therefore be comprensible at minimum, and would ideally also be comprehensive.
+The utility of a specification in the resourcing process depends upon communicating the vision, viability and requirements of the product. A specification used for resourcing should therefore be `comprensible` at minimum, and would ideally also be `comprehensive`.
 
-The measure the progress of production, it is necessary to have a good idea of what the finished product will look like at in its intended version. A monitoring specification must be canonical, comprehensive and current.
+To measure the progress of production, it is necessary to have a good idea of what the finished product will look like Therefore a monitoring specification must be `canonical`, `comprehensive` and `current`.
 
 #### 2.6.2 Tabulation
 
@@ -279,7 +278,7 @@ Goals are results or properties that the team hopes the product will allow for o
 
 Most specifications start with at least one goal, so for the purposes of this document an identified goal is an additional goal that has been found by analysing the specification, or an additional goal that is an emergent property of the other goals and constraints in a specification.
 
-Constraints are restrictions or unavoidable conditions that the product must adhere to. They can be properties of the natural world, limitations of scope or available resources, external behavioural requirements or more complex tradeoffs of cost and benefit[*](none "Complex constraints can be the product of goals, other constraints, or a combination of the two. Consider, for example, a specification with goals A and B, and constraints C and D. C is only valid if both A and B are both valid goals, and D is only valid if C is valid. If either A or B is altered or removed from the specification, it’s quite possible that C will no longer be a valid constraints &mdash;  which in turn means that D is also invalid. Many similar, and often significantly more complex, relationships arise in specifications all the time"). Constraints are much more likely than goals to change over time.
+Constraints are restrictions or unavoidable conditions that the product must adhere to. They can be properties of the natural world, limitations of scope or available resources, external behavioural requirements or more complex tradeoffs of cost and benefit[*](none "Complex constraints can be the product of goals, other constraints, or a combination of the two. Consider, for example, a specification with goals A and B, and constraints C and D. C is only valid if both A and B are both valid goals, and D is only valid if C is valid. If either A or B is altered or removed from the specification, it’s quite possible that C will no longer be a valid constraints &mdash; which in turn means that D is also invalid. Many similar, and often significantly more complex, relationships arise in specifications all the time"). Constraints are much more likely than goals to change over time.
 
 While it’s fairly easy to imagine the goals and other positive benefits of a product, it tends to be more difficult to accurately predict the constraints. Thus capturing constraints in specifications  is less common than capturing goals, but when both are present the specification has much more utility.
 
@@ -287,9 +286,9 @@ While it’s fairly easy to imagine the goals and other positive benefits of a p
 
 All requirement identification via specification must be carried out with a canonical source. Having multiple sources of truth would make identifying additional goals and constraints practically impossible.
 
-Although it would be highly beneficial, coherence is not required in order to identify goals and constraints.
+Although it would be highly beneficial, `coherence` is not required in order to identify goals and constraints.
 
-Comprehensibility is not strictly required for goals, though it would be of significant benefit. Constraints, however, can only be identified if the goals can be understood by the team, making comprehensibility a requirement.
+`Comprehensibility` is not strictly required for goals, though it would be of significant benefit. Constraints, however, can only be identified if the goals can be understood by the team, making `comprehensibility` a requirement.
 
 #### 2.7.2 Tabulation
 
@@ -316,11 +315,11 @@ Prioritisation is the act of arranging the work of a team such that requirements
 
 #### 2.8.1 C-Adjectivity
 
-It isn’t practicable to manage requirements in a specification without a single source of truth. A specification that assists in any of these tasks must be canonical.
+It isn’t practicable to manage requirements in a specification without a single source of truth. A specification that assists in any of these tasks must be `canonical`.
 
-Following the connections between requirements in a specification is impossible, or at least very difficult, without a logical structure. A specification that is used for traceability must therefore be coherent. 
+Following the connections between requirements in a specification is impossible, or at least very difficult, without a logical structure. A specification that is used for traceability must therefore be `coherent`. 
 
-Analysing and tracing requirements requires humans to be able to read or otherwise interpret the specification. Any specification used for the tasks of analysis or traceability must be comprehensible.
+Analysing and tracing requirements requires humans to be able to read or otherwise interpret the specification. Any specification used for the tasks of analysis or traceability must be `comprehensible`.
 
 #### 2.8.2 Tabulation
 
@@ -344,11 +343,11 @@ Some products lack useful formal specifications. If such a product requires a sp
 
 #### 2.9.1 C-Adjectivity
 
-Greenfield products need a specification that the team can engage with and make use of, which means it must have a single source of truth and be understandable to the team. Therefore it must be canonical and comprehensible.
+Greenfield products need a specification that the team can engage with and make use of, which means it must have a single source of truth and be understandable to the team. Therefore it must be `canonical` and `comprehensible`.
 
-A specification for a continuing product needs to be versional: the point at which the old version ends and the new one begins must be clearly marked. In addition to the qualities of a greenfield product specification, it must also be current.
+A specification for a continuing product needs to be versional: the point at which the old version ends and the new one begins must be clearly marked. In addition to the qualities of a greenfield product specification, it must also be `current`.
 
-For a transitional product, a specification requires a single source of truth, an understandable set of requirements and an exhaustive survey of the existing product. It must be canonical, comprehensible and comprehensive. 
+For a transitional product, a specification requires a single source of truth, an understandable set of requirements and an exhaustive survey of the existing product. It must be `canonical`, `comprehensible` and `comprehensive`. 
 
 #### 2.9.2 Tabulation
 
@@ -441,7 +440,7 @@ Use/application           | C-Word requirements
   &#8627; Continuing                  | 3                   
   &#8627; Transitional                | 3
 
-Some C-Words are more important than others in terms of the number of uses and applications that require then. Comprehensibility, for example, is required for all nine uses and 16 of the 23 specific applications. Coherency is the least of the requirements, being required for only two uses and three applications. The full data are below: 
+Some C-Words are more important than others in terms of the number of uses and applications that require then. `Comprehensibility`, for example, is required for all nine uses and 16 of the 23 specific applications. `Coherency` is the least of the C-Words, being required for only two uses and three applications. The full data are below: 
 
 Quality     |   Uses   | Applications 
 ----------------|----------|--------------
@@ -457,7 +456,7 @@ The C-Words, and C-Adjectivity as a concept, seem to be an important part of spe
 
 The minimum number of required C-Words for a specification depends on the nature of the team and product. For example, a team using a specification only for the purposes of documentation, project management and team consensus would not strictly require their specification to be very coherent at all. Once the applications of a specification have been identified, it’s possible to choose or create an specification approach that omits up to four of the C-Words entirely.
 
-We posit, however, that while all the C-Words are necessary for every instance of every specification, they are all are of significant benefit to the team. While the existence of a completely unreadable specification that will only ever be used for formal mathematical proofs is conceivable, it’s hard to imagine how it would come into being. And if that same specification didn’t also have a single source of truth, the team using it to create a product would likely have quite a baffling time.
+We posit, however, that while not all C-Words are necessary for every instance of every specification, they are all are of significant benefit to the team. While the existence of a completely unreadable specification that will only ever be used for formal mathematical proofs is conceivable, it’s hard to imagine how it would come into being. And if that same specification didn’t also have a single source of truth, the team using it to create a product would likely have quite a baffling time.
 ### 4.1 Limit of implications
 
 We do not assert that the C-Words are the only required attributes for a maximally effective specification. Other attributes may yet be identified and proven, and it's possible that one or more of them will supersede one or more of the C-Words. One particular potential attribute might be something about real-world pragmatism (see **4.2 Other interpretations and further research** below).
@@ -484,4 +483,4 @@ The idea of a specification being satisfied, or at least satiable, by lower-leve
 
 Implementing a specification system that has all five C-Word qualities is possible using modern software tooling. In our experience, it’s more difficult for some products than others, but it’s usually possible. Creating a specification system that allows for all possible applications, or a least a highly significant number of them, is more problematic.
 
-Such a system may be overkill for individual products, but as a general unified concept would be extremely valuable. We imagine a world where all specifications, or at least all specifications in a given domain, conform to a single system that is able to conveniently and fully allow for all possible applications while being human intuitive, cost effective and engaging &mdash; and of course being perfectly C-Adjective. We are actively researching this problem.
+Such a system may be overkill for individual products, but as a general unified concept would be extremely valuable. We imagine a world where all specifications, or at least all specifications in a given domain, conform to a single system that is able to conveniently and fully allow for all possible applications while being human intuitive, cost effective and engaging &mdash; and of course being perfectly C-Adjective. We are actively researching how to make this happen.

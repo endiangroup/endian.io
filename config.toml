@@ -105,7 +105,7 @@ enableRobotsTXT = true
     icon_tag = "play-circle"
 
     [[params.theory.theory]]
-    title = "Software Art Thou"
+    title = "Software Art Thou: Real Software Engineering"
     url = "https://www.youtube.com/watch?v=RhdlBHHimeM"
     source = "YouTube"
     authors = "Glenn Vanderburg"

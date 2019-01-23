@@ -7,8 +7,8 @@ head
   meta name="description" content="{{ .Site.Params.description }}"
   meta name="author" content="{{ .Site.Params.author }}"
 
-  meta property="og:url" content="{{ .Site.BaseURL }}"
-  meta property="og:title" content="{{ .Title }}"
+  meta property="og:url" content="{{ absURL .URL}}"
+  meta property="og:title" content="{{if .Param "social_title"}}{{.Param "social_title"}}{{else}}{{ .Title }}{{end}}"
   meta property="og:description" content="{{if .Param "Summary"}}{{.Param "Summary"}}{{else}}{{ .Site.Params.description }}{{end}}"
   meta property="og:image" content={{"endian-social-1200x630.png" | absURL}}
 

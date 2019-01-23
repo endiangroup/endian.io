@@ -19,11 +19,13 @@
 
 = content main
   section
+    h2.abstract Abstract
+    p {{.Param "abstract" | markdownify}}
+
     {{ if and (gt .FuzzyWordCount 2000 ) (.TableOfContents) }}
     h3 Table of contents
     {{.TableOfContents}}
     {{end}}
 
-    h2.abstract Abstract
     #body {{.Content}}
     {{ partial "feedback" . }}

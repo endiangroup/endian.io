@@ -1,0 +1,54 @@
+= content header
+  ul
+    li
+      h1
+        img src="/img/endian-logo.svg"
+        a href="/" endian
+        span.section
+          a href="/theory" theory
+
+= content main
+  section
+    {{if gt (len .Pages) 0}}
+    h2 Endian theory
+    ul#articles
+      {{ range .Pages }}
+      li
+        .trianglify data-seed="{{.Title}}"
+          a href="{{.Permalink}}"
+            {{if .Param "icon_tag"}}
+            i class="fi-{{.Param "icon_tag"}}"
+            {{end}}
+            {{if .Param "image_tag"}}
+            span {{.Param "image_tag"}}
+            {{end}}
+        .content
+          a href="{{.Permalink}}"
+            h2 {{.Title}}
+          p.byline {{.Param "authors"}}.  Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
+          p.summary {{.Param "summary"}}
+          a.read href="{{.Permalink}}" Read more &raquo;
+      {{ end }}
+    {{ end }}
+
+    h2 Theory we like
+    ul#articles-external
+      {{ range $.Site.Params.theory.theory }}
+      li
+        .trianglify data-seed="{{.url}}"
+          a href="{{.url}}" target="_blank"
+            {{if .icon_tag}}
+            i class="fi-{{.icon_tag}}"
+            {{end}}
+            {{if .image_tag}}
+            span {{.image_tag}}
+            {{end}}
+        .content
+          a href="{{.url}}" target="_blank"
+            h2 {{.title}}
+          p.byline {{.authors}}
+          p.summary {{.summary}}
+          a.read href="{{.url}}" target="_blank" More on {{.source}} &raquo;
+        {{ end }}
+
+

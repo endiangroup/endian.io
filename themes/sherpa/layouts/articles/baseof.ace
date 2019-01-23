@@ -1,0 +1,18 @@
+// {{.Site.Params.headerComment | safeHTML }}
+= doctype html
+html lang={{.Site.LanguageCode}}
+  {{ partial "head" . }}
+
+  body
+    .container
+      {{ partial "navigation" . }}
+      header.compact
+        section
+          = yield header
+      = yield masthead
+      article
+        = yield main
+      footer
+        {{ partial "footer" . }}
+
+  {{ partial "javascript" . }}

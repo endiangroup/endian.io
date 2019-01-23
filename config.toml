@@ -14,4 +14,118 @@ enableRobotsTXT = true
     # garbled here because it has no line breaks.
 	##############################################################
 
-  headerComment = "\n######## ##    ## ########  ####    ###    ##    ##     ####  #######  \n##       ###   ## ##     ##  ##    ## ##   ###   ##      ##  ##     ## \n##       ####  ## ##     ##  ##   ##   ##  ####  ##      ##  ##     ## \n######   ## ## ## ##     ##  ##  ##     ## ## ## ##      ##  ##     ## \n##       ##  #### ##     ##  ##  ######### ##  ####      ##  ##     ## \n##       ##   ### ##     ##  ##  ##     ## ##   ### ###  ##  ##     ## \n######## ##    ## ########  #### ##     ## ##    ## ### ####  #######  \nMade with Hugo + Foundation 6.\n"
+  headerComment = "\n######## ##    ## ########  ####    ###    ##    ##     ####  #######  \n##       ###   ## ##     ##  ##    ## ##   ###   ##      ##  ##     ## \n##       ####  ## ##     ##  ##   ##   ##  ####  ##      ##  ##     ## \n######   ## ## ## ##     ##  ##  ##     ## ## ## ##      ##  ##     ## \n##       ##  #### ##     ##  ##  ######### ##  ####      ##  ##     ## \n##       ##   ### ##     ##  ##  ##     ## ##   ### ###  ##  ##     ## \n######## ##    ## ########  #### ##     ## ##    ## ### ####  #######  \nMade with Hugo + Foundation 6. https://github.com/endiangroup/endian.io\n"
+
+  [[menu.main]]
+  name = "Home"
+  url  = "/"
+  pre = "mountains"
+  weight = 1
+
+  [[menu.main]]
+  name = "Theory"
+  url  = "/theory"
+  pre = "book"
+  weight = 2
+
+  [[menu.main]]
+  name = "Articles"
+  url  = "/articles"
+  pre = "comment-quotes"
+  weight = 3
+
+  [[menu.secondary]]
+  name = "GitHub"
+  url  = "https://github.com/endiangroup"
+  pre = "social-github"
+  weight = 1
+
+  [[menu.secondary]]
+  name = "LinkedIn"
+  url  = "https://www.linkedin.com/company/endian-group/about"
+  pre = "social-linkedin"
+  weight = 2
+
+  [params.articles]
+    [[params.articles.article]]
+    title = "Introducing BDD"
+    url = "https://dannorth.net/introducing-bdd/"
+    source = "dannorth.net"
+    authors = "Dan North"
+    summary = "The origin story for behaviour driven development."
+    image_tag = "BDD"
+
+    [[params.articles.article]]
+    title = "\"Unit\" Tests"
+    url = "https://www.facebook.com/notes/kent-beck/unit-tests/1726369154062608"
+    source = "Facebook"
+    authors = "Kent Beck"
+    summary = "The fine line between unit tests and integration tests in programming."
+    image_tag = "{}"
+
+    [[params.articles.article]]
+    title = "How to apply a design thinking, HCD, UX or any creative process from scratch"
+    url = "https://medium.com/digital-experience-design/how-to-apply-a-design-thinking-hcd-ux-or-any-creative-process-from-scratch-b8786efbf812"
+    source = "Medium"
+    authors = "Dan Nessler"
+    summary = "We like the double diamond concept so much that we make it our logo."
+    icon_tag = "heart"
+
+    [[params.articles.article]]
+    title = "Introducing example mapping"
+    url = "https://cucumber.io/blog/2015/12/08/example-mapping-introduction"
+    source = "cucumber.io"
+    authors = "Matt Wayne"
+    summary = "A low-tech method for having short, powerful conversations about products."
+    icon_tag = "map"
+
+    [[params.articles.article]]
+    title = "Leverage Points: Places to Intervene in a System"
+    url = "http://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/"
+    source = "donellameadows.org"
+    authors = "Donella Meadows"
+    summary = "How to analyse ansd affect complex systems."
+    icon_tag = "wrench"
+
+  [params.theory]
+    [[params.theory.theory]]
+    title = "On Being Lost"
+    url = "https://medium.com/wardleymaps/on-being-lost-2ef5f05eb1ec"
+    source = "Medium"
+    authors = "Simon Wardley"
+    summary = "The book that describes the incredibly powerful Wardley Maps model."
+    icon_tag = "compass"
+
+    [[params.theory.theory]]
+    title = "Cynefin Framework Introduction"
+    url = "http://cognitive-edge.com/videos/cynefin-framework-introduction/"
+    source = "cognitive-edge.com"
+    authors = "Dave Snowden"
+    summary = "A brief explanation of the decision-making framework."
+    icon_tag = "play-circle"
+
+    [[params.theory.theory]]
+    title = "Software Art Thou: Real Software Engineering"
+    url = "https://www.youtube.com/watch?v=RhdlBHHimeM"
+    source = "YouTube"
+    authors = "Glenn Vanderburg"
+    summary = "Is software engineering worthy of the name?"
+    icon_tag = "shield"
+
+    [[params.theory.theory]]
+    title = "The beginner's guide to BDD"
+    url = "https://inviqa.com/blog/bdd-guide"
+    source = "inviqa.com"
+    authors = "Konstantin Kudryashov"
+    summary = "Everything you need to know about Behaviour Driven Development."
+    image_tag = "BDD"
+
+    [[params.theory.theory]]
+    title = "Formal Specification: A Roadmap"
+    url = "http://homepage.divms.uiowa.edu/~tinelli/classes/181/Spring03/Readings/vLam00.pdf"
+    source = "The University of Iowa"
+    authors = "Axel van Lamsweerde"
+    summary = "An excellent overview of formal proofs in computer science."
+    image_tag = "FML"
+
+

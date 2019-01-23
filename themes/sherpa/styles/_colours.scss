@@ -71,3 +71,116 @@ $colours: (
 @function colour($name, $tone: 'base') {
     @return map-get(map-get($colours, $name), $tone);
 }
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+@mixin colourshiftkeyframes($element, $name) {
+    @include keyframes($name) {
+        0% { #{$element}: colour(red); }
+        20% { #{$element}: colour(orange); }
+        40% { #{$element}: colour(yellow); }
+        60% { #{$element}: colour(green); }
+        80% { #{$element}: colour(olive); }
+        100% { #{$element}: colour(blue); }
+    }
+}
+
+@include colourshiftkeyframes(color,colour_shift);
+@include colourshiftkeyframes(background-color,background_colour_shift);
+@include colourshiftkeyframes(border-color,border_colour_shift);
+
+@mixin colour-highlight-shift {
+    @include animation('colour_shift 5s infinite alternate');
+}
+
+@mixin background-colour-highlight-shift {
+    @include animation('background_colour_shift 5s infinite alternate');
+}
+
+@mixin border-colour-highlight-shift {
+    @include animation('border_colour_shift 5s infinite alternate');
+}
+
+@mixin border-and-colour-highlight-shift {
+    border-color: pink;
+    @include animation('border_colour_shift 5s infinite alternate,colour_shift 5s infinite alternate');
+}
+
+/*
+This can be used to create a rainbow effect in a set of nested elements.
+
+For example, it can be used to animate the anchors in a list
+
+```
+li
+    a
+li
+    a
+```
+
+using
+
+`@import element-colour-offset-shift(li,a);`
+
+The $start param is an option starting index, so that some elements can be
+skipped.
+*/
+
+@mixin element-colour-offset-shift($container, $element:a, $start:0) {
+
+    #{$element} {
+        @include colour-highlight-shift;
+    }
+
+    @each $index, $offset in (
+                                1: 0,
+                                2: -0.132s,
+                                3: -0.264s,
+                                4: -0.396s,
+                                5: -0.528s,
+                                6: -0.66s,
+                             ) {
+        #{$container}:nth-of-type(#{$index + $start}) {
+            #{$element} {
+                animation-delay: $offset;
+            }
+        }
+    }
+}
+
+@keyframes highlight {
+    0% {
+        background: #ffff99; 
+    }
+    100% {
+        background: none;
+    }
+}
+
+@mixin highlight {
+    animation: highlight 3s;
+}

@@ -3,13 +3,13 @@ head
   meta http-equiv="X-UA-Compatible" content="IE=edge"
   meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 
-  title {{ .Title }}
+  title {{ .Title }} | Endian
   meta name="description" content="{{ .Site.Params.description }}"
   meta name="author" content="{{ .Site.Params.author }}"
 
   meta property="og:url" content="{{ .Site.BaseURL }}"
   meta property="og:title" content="{{ .Title }}"
-  meta property="og:description" content="{{ .Site.Params.description }}"
+  meta property="og:description" content="{{if .Param "Summary"}}{{.Param "Summary"}}{{else}}{{ .Site.Params.description }}{{end}}"
   meta property="og:image" content={{"endian-social-1200x630.png" | absURL}}
 
   meta name="twitter:title" content="{{ .Title }}"
@@ -26,3 +26,4 @@ head
 
   link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"
   link href="/css/sherpa.css?v={{getenv "GITHASH"}}" rel="stylesheet"
+  link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet"

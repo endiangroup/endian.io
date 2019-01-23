@@ -1,11 +1,10 @@
 @import shapes
 @import gradients
+@import layouts
 
 section
-  padding: 1em
+  +centered-content
   margin-bottom: 3em
-  max-width: 960px
-  margin: 0 auto
   +breakpoint(medium)
     margin-bottom: 5em
   .title
@@ -354,3 +353,11 @@ section
       +breakpoint(medium)
         font-size: 2em
       +text-gradient-fade(rainbow)
+
+  &#article
+    background-color: $colour-white
+    border-radius: 2em
+    color: $colour-black
+    text-align: left !important
+    p
+      text-align: left !important

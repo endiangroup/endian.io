@@ -1,0 +1,29 @@
+.wrapper
+  .content
+    section
+      a href="/"
+        h5
+          img src="/img/endian-logo.svg"
+          span endian
+    section
+      address
+        | The Curtain<br />
+        | 45 Curtain Road<br />
+        | London <br />
+        | EC2A 3PT<br />
+      p.email
+        a href="mailto:hello@endian.io" hello@endian.io
+    section
+      ul
+        li 
+          a href="/" <i class="fi-mountains"></i> What we do
+        li 
+          a href="/theory" <i class="fi-book"></i> Theory
+        li 
+          a href="/articles" <i class="fi-comment-quotes"></i> Articles
+    section
+       ul
+        li 
+          a href="https://github.com/endiangroup" target="_blank" <i class="fi-social-github"></i> GitHub
+        li 
+          a href="https://www.linkedin.com/company/endian-group" target="_blank" <i class="fi-social-linkedin"></i> LinkedIn

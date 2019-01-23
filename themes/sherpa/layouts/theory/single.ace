@@ -1,0 +1,31 @@
+= content header
+  ul
+    li
+      h1
+        img src="/img/endian-logo.svg"
+        a href="/" endian
+        span.section
+          a href="/theory" theory
+
+= content masthead
+  .trianglify.header data-seed="{{.Title}}"
+    .content
+      h2.title {{.Title}}
+      p.byline 
+        span <i class="fi-torso"></i> {{.Param "authors"}}
+      p.byline 
+        span <i class="fi-quote"></i> {{.FuzzyWordCount}} words
+        span <i class="fi-clock"></i> {{.ReadingTime}} minutes
+
+= content main
+  section
+    h2.abstract Abstract
+    p {{.Param "abstract" | markdownify}}
+
+    {{ if and (gt .FuzzyWordCount 2000 ) (.TableOfContents) }}
+    h3 Table of contents
+    {{.TableOfContents}}
+    {{end}}
+
+    #body {{.Content}}
+    {{ partial "feedback" . }}

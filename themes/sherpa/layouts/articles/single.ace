@@ -1,0 +1,27 @@
+= content header
+  ul
+    li
+      h1
+        img src="/img/endian-logo.svg"
+        a href="/" endian
+        span.section
+          a href="/articles" articles
+
+= content masthead
+  .trianglify.header data-seed="{{.Title}}"
+    .content
+      h2.title {{.Title}}
+      p.byline 
+        span <i class="fi-pencil"></i> {{.Param "authors"}}
+      p.byline 
+        span Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
+
+= content main
+  section
+    {{ if and (gt .FuzzyWordCount 2000 ) (.TableOfContents) }}
+    h3 Table of contents
+    {{.TableOfContents}}
+    {{end}}
+
+    #body {{.Content}}
+    {{ partial "feedback" . }}

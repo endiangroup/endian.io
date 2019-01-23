@@ -8,7 +8,7 @@ pipeline:
       commands:
         - make docker-build
       when:
-        branch: [develop]
+        branch: [develop, feature/article-layout]
         event: [push, tag]
 
     build-production:

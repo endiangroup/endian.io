@@ -1,3 +1,5 @@
+@import basictable
+
 #error-page
   width: 50%
   margin: 0 auto
@@ -6,3 +8,262 @@
     line-height: 6vw
     margin-bottom: 2rem
     +text-gradient(rainbow)
+
+article
+  color: $colour-black
+  background-color: $colour-white
+  padding: 1em
+  +breakpoint(medium)
+    padding-top: 2.5em
+  font-size: 1em
+  section,p
+    text-align: left
+
+  h1
+    margin-bottom: 1em
+
+  h2
+    &.title 
+      font-weight: 800
+      margin-bottom: 0.25em
+      width: 100%
+
+  .byline
+    font-style: italic
+    font-size: 1em !important
+    padding-bottom: 1em
+
+  h2,h3,h4
+    width: 100%
+    margin-top: 1em
+    margin-left: 0
+    margin-bottom: 0.5em
+
+  h2
+    font-weight: 600
+    &#notes
+      margin-top: 2em
+      padding-top: 2em
+      border-top: 1px dotted colour(marine,trans)
+  h3
+    font-weight: 500
+  h4
+    font-weight: 400
+
+  p, ol
+    +breakpoint(medium)
+      font-size: 1.3em !important
+
+  p
+    code
+      font-size: 1.2em
+      +breakpoint(medium)
+        font-size: 0.85em
+      padding: 0
+      border: 0
+      background: none
+      color: $colour-olive
+
+  ol
+    li
+      margin-top: 0 
+
+  ol#footnotes
+    li
+      margin-top: 1em
+      &.footnote
+        margin-top: -2em
+        padding-top: 4em
+
+      span
+        &.highlight
+          +highlight
+
+  a
+    color: $colour-black
+    font-weight: 500
+    &:hover 
+      +colour-highlight-shift
+      font-weight: 500
+
+    &.footnote
+      color: $colour-olive
+      font-weight: 500
+      font-size: 0.63em
+      vertical-align: super
+      &::before
+        content: "["
+      &::after
+        content: "]"
+    &.fn-link
+      word-break: break-all
+
+  #TableOfContents  
+    margin-bottom: 3em
+    ul,a
+      color: $colour-black
+
+  table
+    margin-top: 1.5em
+    tr
+      td
+        font-size: 0.9em
+        +breakpoint(medium)
+          font-size: 1.2em
+
+        strong
+          color: $colour-olive
+          font-weight: 500
+    thead
+      th
+        color: $colour-black
+
+  pre
+    background: none
+    padding: 1em
+    margin-bottom: 1em
+
+    code
+      color: $colour-olive
+      background: transparent
+      border: none
+
+  span
+    &.required
+      &.bold
+        font-weight: 500
+        color: $colour-olive
+
+  #feedback
+    margin-top: 4em
+    margin-bottom: 4em
+    .social
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-bottom: 4em
+      +breakpoint(large)
+        margin-bottom: 2em
+      span
+        display: inline-block
+        background-color: $colour-grey
+        margin-left: 0.25em
+        margin-right: 0.25em
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        width: 3em
+        height: 3em
+        +breakpoint(large)
+          width: 4.5em
+          height: 4.5em
+        i
+          font-size: 2em
+          +breakpoint(large)
+            font-size: 3em
+          color: $colour-white
+        img
+          width: 2em
+          +breakpoint(large)
+            width: 3em
+
+    .utterances
+      max-width: 100%
+
+ul#articles,ul#articles-external
+  margin-top: 2em
+  margin-bottom: 6em
+
+  li
+    +breakpoint(large)
+      +xy-grid
+
+    margin-bottom: 2em
+    padding-bottom: 2em
+    border-bottom: 1px dotted colour(marine,trans)
+
+    &:last-of-type 
+      border: none
+      margin-bottom: 0
+
+    .trianglify
+      height: 8em
+      margin-bottom: 1em
+      +breakpoint(large)
+        +xy-cell(3)
+        display: block
+        height: unset
+        margin-bottom: 0
+      padding: 0
+      margin-left: 0
+      position: relative
+
+      svg
+        position: absolute
+        z-index: 1
+
+      a
+        position: absolute
+        font-size: 40px
+        font-weight: bold
+        z-index: 2
+        width: 100%
+        height: 100%
+        text-align: center
+        color: $colour-white
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7)
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .content
+      +breakpoint(large)
+        +xy-cell(9)
+      a
+        color: $colour-black
+        font-weight: 500
+        &:hover 
+          +colour-highlight-shift
+          font-weight: 500
+       
+      h2
+        width: 100%
+        font-weight: 800
+        margin-top: 0
+
+.trianglify.header
+  background-color: white
+  position: relative
+  .content
+    +centered-content
+    position: relative
+    z-index: 100
+    padding: 3em
+
+  h2
+    margin-top: 0
+    margin-bottom: 1em
+    font-size: 2em
+    +breakpoint(medium)
+      font-size: 3em
+    font-weight: bold
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7)
+
+  p.byline
+    span
+      background-color: rgba(0,0,0,0.25)
+      padding: 0.25em 0.5em 0.25em 0.5em
+      border-radius: 0.5em
+      margin-left: 0.25em
+      margin-right: 0.25em
+      +breakpoint(large)
+        font-size: 0.8em
+    
+  svg
+    position: absolute
+    display: none
+    background-color: white
+    top: 0
+    left: 0
+    z-index: 99

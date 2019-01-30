@@ -18,7 +18,7 @@
 
 = content main
   section
-    {{ if and (gt .FuzzyWordCount 2000 ) (.TableOfContents) }}
+    {{ if and (gt .FuzzyWordCount 3000 ) (.TableOfContents) }}
     h3 Table of contents
     {{.TableOfContents}}
     {{end}}

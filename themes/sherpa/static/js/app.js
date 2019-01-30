@@ -23,6 +23,7 @@ $('article a').each(function () {
     if (el.html() != "*") {
         if (!host_regex.test(el.attr('href')) && el.attr('href').charAt(0) != '/') {
             el.addClass('external-link');
+            el.attr('target', '_blank');
         }
         return;
     }

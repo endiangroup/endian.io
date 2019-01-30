@@ -12,9 +12,10 @@
     .content
       h2.title {{.Title}}
       p.byline 
-        span <i class="fi-pencil"></i> {{.Param "authors"}}
+        span <i class="fi-torso"></i> {{.Param "authors"}}
       p.byline 
-        span Roughly {{.FuzzyWordCount}} words, or about a {{.ReadingTime}} minute read
+        span <i class="fi-quote"></i> {{.FuzzyWordCount}} words
+        span <i class="fi-clock"></i> {{.ReadingTime}} minutes
 
 = content main
   section

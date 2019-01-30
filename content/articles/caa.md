@@ -3,6 +3,7 @@ title = "Caa article title"
 authors = "Adrian Duke"
 summary = " Compare-and-Authenticate (CAA) is a tiny algorithm for centrally managing the validity of a set of distributed sessions."
 icon_tag = "lock"
+draft = true
 +++
 Compare-and-Authenticate (CAA) is a tiny algorithm for centrally managing the validity of a set of distributed sessions. It currently has a single Go implementation found here: https://github.com/endiangroup/compandauth.
 

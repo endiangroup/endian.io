@@ -9,7 +9,6 @@
 
 = content main
   section
-    {{if gt (len .Pages) 1}}
     h2 Endian articles
     ul#articles
       {{ range .Pages }}
@@ -29,7 +28,6 @@
           p.summary {{.Param "summary"}}
           a.read href="{{.Permalink}}" Read more &raquo;
       {{ end }}
-    {{ end }}
 
     h2 Articles we like
     ul#articles-external

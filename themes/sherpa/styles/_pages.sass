@@ -51,6 +51,7 @@ article
     font-weight: 400
 
   p, ol
+    width: 100%
     +breakpoint(medium)
       font-size: 1.3em !important
 
@@ -254,7 +255,7 @@ ul#articles,ul#articles-external
 
   p.byline
     span
-      background-color: rgba(0,0,0,0.25)
+      background-color: rgba(0,0,0,0.5)
       padding: 0.25em 0.5em 0.25em 0.5em
       border-radius: 0.5em
       margin-left: 0.25em
@@ -262,9 +263,8 @@ ul#articles,ul#articles-external
       +breakpoint(large)
         font-size: 0.8em
     
-  svg
+  img
     position: absolute
-    display: none
     background-color: white
     top: 0
     left: 0

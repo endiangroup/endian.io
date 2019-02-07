@@ -33,7 +33,7 @@
     ul#articles-external
       {{ range $.Site.Params.articles.article }}
       li
-        .trianglify data-seed="{{.url}}"
+        .trianglify data-seed="{{.title}}"
           a href="{{.url}}" target="_blank"
             {{if .icon_tag}}
             i class="fi-{{.icon_tag}}"

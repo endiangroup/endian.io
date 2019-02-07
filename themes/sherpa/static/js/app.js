@@ -107,21 +107,13 @@ $(document).ready(function () {
 // Deteminsitic images
 var Trianglify;
 function makeTriangles() {
-    var cellSize = 41;
+    var ext = ".svg";
     if (document.body.clientWidth < 1280) {
-        cellSize = 55;
+        ext = ".jpg";
     }
     $('.trianglify').each(function () {
         var el = $(this);
-        var pattern = Trianglify({
-            height: Math.ceil(el.height()),
-            width: Math.floor(el.width()),
-            cell_size: cellSize,
-            variance: 0.8,
-            seed: el.data('seed'),
-            stroke_width: 1.51,
-        });
-        el.append(pattern.svg());
+        el.append('<img src="http://3.8.205.182/' + Math.floor(el.width()) + '/' + Math.ceil(el.height()) + '/' + el.data('seed') + ext + '"/>');
         $('svg', el).fadeIn();
     });
 }
@@ -131,7 +123,7 @@ $(window).resize(function () {
         return;
     }
     width = document.body.clientWidth;
-    $('.trianglify svg').remove();
+    $('.trianglify img').remove();
     makeTriangles();
 });
 makeTriangles();

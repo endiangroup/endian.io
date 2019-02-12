@@ -145,8 +145,7 @@ function makeTriangles() {
 
     $('.trianglify').each(function(){
         var el = $(this);
-        el.append('<img src="http://3.8.205.182/'+Math.floor(el.width())+'/'+Math.ceil(el.height())+'/'+el.data('seed')+ext+'"/>');
-        $('svg',el).fadeIn();
+        el.append('<object type="image/svg+xml" data="http://192.168.86.208:2003/'+Math.floor(el.width())+'/'+Math.ceil(el.height())+'/'+el.data('seed')+ext+'"/>');
     });
 }
 
@@ -159,7 +158,7 @@ $( window ).resize(function() {
 
     width = document.body.clientWidth;
 
-    $('.trianglify img').remove();
+    $('.trianglify object').remove();
     makeTriangles();
 });
 makeTriangles();

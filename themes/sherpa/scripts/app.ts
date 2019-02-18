@@ -112,7 +112,7 @@ $('strong').each(function() {
 });
 
 // Tables
-var tables = $('table') as a;
+var tables = $('table') as any;
 if (tables.length > 0) {
     tables.basictable();
 }

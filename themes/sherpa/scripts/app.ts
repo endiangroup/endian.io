@@ -112,7 +112,10 @@ $('strong').each(function() {
 });
 
 // Tables
-($('table') as any).basictable();
+var tables = $('table') as a;
+if (tables.length > 0) {
+    tables.basictable();
+}
 
 // Smooth scrolling for foothotes
 var jump=function(e) {
@@ -130,7 +133,7 @@ var jump=function(e) {
 }
 
 $(document).ready(function() {
-    $('a[href*="#"]').bind("click", jump); //Gets all hrefs
+    $('a[href*="#"]').bind("click", jump); 
     return false;
 });
 

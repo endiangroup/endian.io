@@ -15,7 +15,7 @@ section#who-weve-helped
         img src="/img/quotation-mark.svg"
       p
         | It’s always a pleasure working with Endian. Their ability to understand our business is second to none. We think of them as an extension of ourselves.”
-        span ~ Aleks Malchrzyk, HR Manager, Sam Labs.
+        span ~ Sam Labs.
   img data-aos="fade-down" src="/img/case-study-underscore.svg"
   #case-studies
     .title data-aos="fade-down"

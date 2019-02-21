@@ -1,49 +1,56 @@
-pipeline:
+---
+kind: pipeline
+name: endian.io
 
-    build-staging:
-      image: endian/hugo:1.0.1
-      environment:
-        - HUGO_ENV="staging"
-        - HUGO_BASEURL="http://www.staging.endian.io"
-      commands:
-        - make docker-build
-      when:
-        branch: [develop, feature/colour-experiment]
-        event: [push, tag]
+platform:
+  os: linux
+  arch: amd64
 
-    build-production:
-      image: endian/hugo:1.0.1
-      environment:
-        - HUGO_ENV="production"
-        - HUGO_BASEURL="https://endian.io"
-      commands:
-        - make docker-build
-      when:
-        branch: [master]
-        event: [push, tag]
+steps:
+- name: build-staging
+  image: endian/hugo:1.0.1
+  commands:
+  - make docker-build
+  environment:
+    HUGO_BASEURL: http://www.staging.endian.io
+    HUGO_ENV: staging
+  when:
+    branch:
+    - develop
+    - feature/colour-experiment
+    event:
+    - push
+    - tag
 
-    staging:
-      image: plugins/s3
-      acl: public-read
-      region: "eu-west-1"
-      bucket: "www.staging.endian.io"
-      source: public/**/*
-      strip_prefix: public/
-      target: /
-      encryption: AES256
-      when:
-        branch: [develop, feature/colour-experiment]
-        event: [push, tag]
+- name: build-production
+  image: endian/hugo:1.0.1
+  commands:
+  - make docker-build
+  environment:
+    HUGO_BASEURL: https://endian.io
+    HUGO_ENV: production
+  when:
+    branch:
+    - master
+    event:
+    - push
+    - tag
 
-    production:
-      image: plugins/s3
-      acl: public-read
-      region: "eu-west-2"
-      bucket: "endian.io"
-      source: public/**/*
-      strip_prefix: public/
-      target: /
-      encryption: AES256
-      when:
-        branch: master
-        event: [push, tag]
+- name: staging
+  image: plugins/s3
+  when:
+    branch:
+    - develop
+    - feature/colour-experiment
+    event:
+    - push
+    - tag
+
+- name: production
+  image: plugins/s3
+  when:
+    event:
+    - push
+    - tag
+
+...

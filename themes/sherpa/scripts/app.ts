@@ -141,14 +141,12 @@ $(document).ready(function() {
 var Trianglify:any;
 
 function makeTriangles() {
-    var ext = ".svg";
-    if (document.body.clientWidth < 1280) {
-		 ext = ".jpg";
-    }
+    var ext = ".png";
 
     $('.trianglify').each(function(){
         var el = $(this);
-        el.append('<object type="image/svg+xml" data="http://192.168.86.208:2003/'+Math.floor(el.width())+'/'+Math.ceil(el.height())+'/'+el.data('seed')+ext+'"/>');
+        el.append('<img src="http://18.130.96.111/'+Math.floor(el.width())+'/'+Math.ceil(el.height())+'/'+el.data('seed')+'.png"/>');
+		$('img',el).fadeIn();
     });
 }
 
@@ -161,7 +159,7 @@ $( window ).resize(function() {
 
     width = document.body.clientWidth;
 
-    $('.trianglify object').remove();
+    $('.trianglify img').remove();
     makeTriangles();
 });
 makeTriangles();

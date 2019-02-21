@@ -141,8 +141,6 @@ $(document).ready(function() {
 var Trianglify:any;
 
 function makeTriangles() {
-    var ext = ".png";
-
     $('.trianglify').each(function(){
         var el = $(this);
         el.append('<img src="http://18.130.96.111/'+Math.floor(el.width())+'/'+Math.ceil(el.height())+'/'+el.data('seed')+'.png"/>');

@@ -1,5 +1,4 @@
 pipeline:
-
     build-staging:
       image: endian/hugo:1.0.1
       environment:

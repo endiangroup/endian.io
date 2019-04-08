@@ -14,7 +14,8 @@
     ],
     "types": [
       "jquery",
-	    "foundation-sites"
+      "foundation-sites",
+      "knockout"
     ]
   },
   "exclude": [

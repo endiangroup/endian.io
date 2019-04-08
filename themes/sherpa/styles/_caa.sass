@@ -1,0 +1,54 @@
++foundation-forms
++foundation-button
++foundation-switch
+
+#caa
+  .grid-y
+    +xy-grid($direction: vertical)
+  .grid-x
+    +xy-grid
+  .cell
+    +xy-gutters($gutter-type: padding)
+    .no-padding
+      padding: 0
+
+  .controls
+    text-align: center
+    button
+      width: 100%
+    input[type="number"]
+      width: 3rem
+
+  .results
+    text-align: center
+    max-height: 20rem
+    ul
+      overflow: scroll
+    li
+      display: block
+
+  button.issue
+    background-color: $colour-green
+  button.revoke
+    background-color: $colour-red
+    input
+      width: 3rem
+      height: 1.2rem
+      display: inline
+      margin: 0 0 0 1rem
+
+  input[disabled] ~ .switch-paddle
+    opacity: .25
+    cursor: not-allowed
+
+  input:checked ~ .switch-paddle
+    background-color: $colour-red
+    &::after
+      left: 4.7rem
+
+  .switch.large .switch-paddle
+    border-radius: 5000px
+    width: 7rem
+    &::after
+      border-radius: 5000px
+

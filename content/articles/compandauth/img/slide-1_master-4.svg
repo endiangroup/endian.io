@@ -1,0 +1,555 @@
+<svg class="bob" font-family="arial" font-size="14" height="464" width="928" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="triangle" markerHeight="8" markerWidth="8" orient="auto" refX="4" refY="2" viewBox="0 0 8 4">
+<polygon class="fg_fill" points="0,0 0,4 8,2 0,0"/>
+</marker>
+<marker id="clear_triangle" markerHeight="10" markerWidth="10" orient="auto" refX="1" refY="7" viewBox="0 0 20 14">
+<polygon class="bg_fill fg_stroke" points="2,2 2,12 18,7 2,2"/>
+</marker>
+<marker id="circle" markerHeight="5" markerWidth="5" orient="auto" refX="10" refY="10" viewBox="0 0 20 20">
+<circle class="fg_fill" cx="10" cy="10" r="8"/>
+</marker>
+<marker id="square" markerHeight="5" markerWidth="5" orient="auto" refX="10" refY="10" viewBox="0 0 20 20">
+<rect class="fg_fill" height="20" width="20" x="0" y="0"/>
+</marker>
+<marker id="open_circle" markerHeight="10" markerWidth="10" orient="auto" refX="10" refY="10" viewBox="0 0 20 20">
+<circle class="bg_fill fg_stroke" cx="10" cy="10" r="4"/>
+</marker>
+<marker id="big_open_circle" markerHeight="20" markerWidth="20" orient="auto" refX="20" refY="20" viewBox="0 0 40 40">
+<circle class="bg_fill fg_stroke" cx="20" cy="20" r="6"/>
+</marker>
+</defs>
+<style type="text/css">
+
+rect.backdrop {
+    fill: white;
+}
+
+.fg_fill {
+    fill: black;
+}
+
+
+.bg_fill {
+    fill: white;
+}
+
+.fg_stroke {
+    stroke: black;
+    stroke-width: 2;
+}
+
+.no_fill {
+    fill: none;
+}
+
+.dashed {
+    stroke-dasharray: 5;
+}
+
+
+text{
+    fill: black;
+}
+
+line, path {
+    stroke-linecap: round;
+    stroke-linejoin: miter;
+    stroke-opacity: 1;
+    fill-opacity: 1;
+}
+
+
+
+
+tspan.head{
+    fill: none;
+    stroke: none;
+}
+    
+</style>
+<rect class="backdrop" height="464" width="928" x="0" y="0"/>
+<g>
+<line class="fg_stroke" x1="68" x2="68" y1="88" y2="152"/>
+<line class="fg_stroke" x1="68" x2="68" y1="152" y2="216"/>
+<line class="fg_stroke" x1="68" x2="236" y1="152" y2="152"/>
+<line class="fg_stroke" x1="68" x2="68" y1="216" y2="280"/>
+<line class="fg_stroke" x1="68" x2="236" y1="216" y2="216"/>
+<line class="fg_stroke" x1="68" x2="68" y1="280" y2="344"/>
+<line class="fg_stroke" x1="68" x2="236" y1="280" y2="280"/>
+<line class="fg_stroke" x1="68" x2="68" y1="344" y2="408"/>
+<line class="fg_stroke" x1="68" x2="236" y1="344" y2="344"/>
+<line class="fg_stroke" marker-end="url(#triangle)" x1="68" x2="68" y1="408" y2="460"/>
+<line class="fg_stroke" x1="68" x2="236" y1="408" y2="408"/>
+<line class="fg_stroke" x1="236" x2="236" y1="88" y2="152"/>
+<line class="fg_stroke" x1="236" x2="236" y1="152" y2="216"/>
+<line class="fg_stroke" x1="236" x2="236" y1="216" y2="280"/>
+<line class="fg_stroke" x1="236" x2="300" y1="216" y2="216"/>
+<line class="fg_stroke" x1="236" x2="236" y1="280" y2="344"/>
+<line class="fg_stroke" x1="236" x2="300" y1="280" y2="280"/>
+<line class="fg_stroke" x1="236" x2="236" y1="344" y2="408"/>
+<line class="fg_stroke" x1="236" x2="364" y1="344" y2="344"/>
+<line class="fg_stroke" x1="236" x2="428" y1="408" y2="408"/>
+<line class="fg_stroke" x1="300" x2="300" y1="216" y2="280"/>
+<line class="fg_stroke" x1="300" x2="364" y1="280" y2="280"/>
+<line class="fg_stroke" x1="364" x2="364" y1="280" y2="344"/>
+<line class="fg_stroke" x1="364" x2="428" y1="344" y2="344"/>
+<line class="fg_stroke" x1="428" x2="428" y1="344" y2="408"/>
+</g>
+<g>
+<line class="fg_stroke" x1="140" x2="140" y1="104" y2="136"/>
+<line class="fg_stroke" x1="140" x2="172" y1="104" y2="104"/>
+<line class="fg_stroke" x1="140" x2="172" y1="136" y2="136"/>
+<line class="fg_stroke" x1="172" x2="172" y1="104" y2="136"/>
+</g>
+<g>
+<line class="fg_stroke" x1="140" x2="140" y1="168" y2="200"/>
+<line class="fg_stroke" x1="140" x2="172" y1="168" y2="168"/>
+<line class="fg_stroke" x1="140" x2="172" y1="200" y2="200"/>
+<line class="fg_stroke" x1="172" x2="172" y1="168" y2="200"/>
+</g>
+<g>
+<line class="fg_stroke" x1="140" x2="140" y1="232" y2="264"/>
+<line class="fg_stroke" x1="140" x2="172" y1="232" y2="232"/>
+<line class="fg_stroke" x1="140" x2="172" y1="264" y2="264"/>
+<line class="fg_stroke" x1="172" x2="172" y1="232" y2="264"/>
+</g>
+<g>
+<line class="fg_stroke" x1="140" x2="140" y1="296" y2="328"/>
+<line class="fg_stroke" x1="140" x2="172" y1="296" y2="296"/>
+<line class="fg_stroke" x1="140" x2="172" y1="328" y2="328"/>
+<line class="fg_stroke" x1="172" x2="172" y1="296" y2="328"/>
+</g>
+<g>
+<line class="fg_stroke" x1="140" x2="140" y1="360" y2="392"/>
+<line class="fg_stroke" x1="140" x2="172" y1="360" y2="360"/>
+<line class="fg_stroke" x1="140" x2="172" y1="392" y2="392"/>
+<line class="fg_stroke" x1="172" x2="172" y1="360" y2="392"/>
+</g>
+<g>
+<line class="fg_stroke" x1="252" x2="252" y1="168" y2="200"/>
+<line class="fg_stroke" x1="252" x2="256" y1="168" y2="168"/>
+<line class="fg_stroke" x1="252" x2="284" y1="200" y2="200"/>
+<line class="fg_stroke" x1="284" x2="284" y1="168" y2="200"/>
+</g>
+<g>
+<line class="fg_stroke" x1="252" x2="252" y1="232" y2="264"/>
+<line class="fg_stroke" x1="252" x2="284" y1="232" y2="232"/>
+<line class="fg_stroke" x1="252" x2="284" y1="264" y2="264"/>
+<line class="fg_stroke" x1="284" x2="284" y1="232" y2="264"/>
+</g>
+<g>
+<line class="fg_stroke" x1="252" x2="252" y1="296" y2="328"/>
+<line class="fg_stroke" x1="252" x2="284" y1="296" y2="296"/>
+<line class="fg_stroke" x1="252" x2="284" y1="328" y2="328"/>
+<line class="fg_stroke" x1="284" x2="284" y1="296" y2="328"/>
+</g>
+<g>
+<line class="fg_stroke" x1="252" x2="252" y1="360" y2="392"/>
+<line class="fg_stroke" x1="252" x2="284" y1="360" y2="360"/>
+<line class="fg_stroke" x1="252" x2="284" y1="392" y2="392"/>
+<line class="fg_stroke" x1="284" x2="284" y1="360" y2="392"/>
+</g>
+<g>
+<line class="fg_stroke" x1="256" x2="280" y1="166" y2="166"/>
+</g>
+<g>
+<line class="fg_stroke" x1="256" x2="280" y1="170" y2="170"/>
+</g>
+<g>
+<line class="fg_stroke" x1="284" x2="280" y1="168" y2="168"/>
+</g>
+<g>
+<line class="fg_stroke" x1="316" x2="316" y1="232" y2="264"/>
+<line class="fg_stroke" x1="316" x2="320" y1="232" y2="232"/>
+<line class="fg_stroke" x1="316" x2="348" y1="264" y2="264"/>
+<line class="fg_stroke" x1="348" x2="348" y1="232" y2="264"/>
+</g>
+<g>
+<line class="fg_stroke" x1="316" x2="316" y1="296" y2="328"/>
+<line class="fg_stroke" x1="316" x2="348" y1="296" y2="296"/>
+<line class="fg_stroke" x1="316" x2="348" y1="328" y2="328"/>
+<line class="fg_stroke" x1="348" x2="348" y1="296" y2="328"/>
+</g>
+<g>
+<line class="fg_stroke" x1="316" x2="316" y1="360" y2="392"/>
+<line class="fg_stroke" x1="316" x2="348" y1="360" y2="360"/>
+<line class="fg_stroke" x1="316" x2="348" y1="392" y2="392"/>
+<line class="fg_stroke" x1="348" x2="348" y1="360" y2="392"/>
+</g>
+<g>
+<line class="fg_stroke" x1="320" x2="344" y1="230" y2="230"/>
+</g>
+<g>
+<line class="fg_stroke" x1="320" x2="344" y1="234" y2="234"/>
+</g>
+<g>
+<line class="fg_stroke" x1="348" x2="344" y1="232" y2="232"/>
+</g>
+<g>
+<line class="fg_stroke" x1="380" x2="380" y1="296" y2="328"/>
+<line class="fg_stroke" x1="380" x2="384" y1="296" y2="296"/>
+<line class="fg_stroke" x1="380" x2="412" y1="328" y2="328"/>
+<line class="fg_stroke" x1="412" x2="412" y1="296" y2="328"/>
+</g>
+<g>
+<line class="fg_stroke" x1="380" x2="380" y1="360" y2="392"/>
+<line class="fg_stroke" x1="380" x2="412" y1="360" y2="360"/>
+<line class="fg_stroke" x1="380" x2="412" y1="392" y2="392"/>
+<line class="fg_stroke" x1="412" x2="412" y1="360" y2="392"/>
+</g>
+<g>
+<line class="fg_stroke" x1="384" x2="408" y1="294" y2="294"/>
+</g>
+<g>
+<line class="fg_stroke" x1="384" x2="408" y1="298" y2="298"/>
+</g>
+<g>
+<line class="fg_stroke" x1="412" x2="408" y1="296" y2="296"/>
+</g>
+<g>
+<line class="fg_stroke" x1="444" x2="444" y1="360" y2="392"/>
+<line class="fg_stroke" x1="444" x2="448" y1="360" y2="360"/>
+<line class="fg_stroke" x1="444" x2="476" y1="392" y2="392"/>
+<line class="fg_stroke" x1="476" x2="476" y1="360" y2="392"/>
+</g>
+<g>
+<line class="fg_stroke" x1="448" x2="472" y1="358" y2="358"/>
+</g>
+<g>
+<line class="fg_stroke" x1="448" x2="472" y1="362" y2="362"/>
+</g>
+<g>
+<line class="fg_stroke" x1="476" x2="472" y1="360" y2="360"/>
+</g>
+<g>
+<text class="fg_fill" x="9" y="284">
+Logins
+</text>
+</g>
+<g>
+<text class="fg_fill" x="65" y="60">
+𝗠𝗮𝘀𝘁𝗲𝗿
+</text>
+</g>
+<g>
+<text class="fg_fill" x="121" y="60">
+&#39;
+</text>
+</g>
+<g>
+<text class="fg_fill" x="129" y="60">
+𝗶𝗻𝘁𝗲𝗴𝗲𝗿&#39;
+</text>
+</g>
+<g>
+<text class="fg_fill" x="153" y="124">
+0
+</text>
+</g>
+<g>
+<text class="fg_fill" x="153" y="188">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="153" y="252">
+2
+</text>
+</g>
+<g>
+<text class="fg_fill" x="153" y="316">
+3
+</text>
+</g>
+<g>
+<text class="fg_fill" x="153" y="380">
+4
+</text>
+</g>
+<g>
+<text class="fg_fill" x="161" y="12">
+Sliding
+</text>
+</g>
+<g>
+<text class="fg_fill" x="201" y="60">
+(𝗖𝗔𝗔)
+</text>
+</g>
+<g>
+<text class="fg_fill" x="225" y="12">
+window
+</text>
+</g>
+<g>
+<text class="fg_fill" x="249" y="124">
+No
+</text>
+</g>
+<g>
+<text class="fg_fill" x="265" y="188">
+0
+</text>
+</g>
+<g>
+<text class="fg_fill" x="265" y="252">
+0
+</text>
+</g>
+<g>
+<text class="fg_fill" x="265" y="316">
+0
+</text>
+</g>
+<g>
+<text class="fg_fill" x="265" y="380">
+0
+</text>
+</g>
+<g>
+<text class="fg_fill" x="273" y="124">
+issued
+</text>
+</g>
+<g>
+<text class="fg_fill" x="281" y="12">
+size:
+</text>
+</g>
+<g>
+<text class="fg_fill" x="305" y="188">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="321" y="188">
+issued
+</text>
+</g>
+<g>
+<text class="fg_fill" x="329" y="12">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="329" y="124">
+sessions
+</text>
+</g>
+<g>
+<text class="fg_fill" x="329" y="252">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="329" y="316">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="329" y="380">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="337" y="60">
+𝗦𝗲𝘀𝘀𝗶𝗼𝗻𝘀
+</text>
+</g>
+<g>
+<text class="fg_fill" x="369" y="252">
+2
+</text>
+</g>
+<g>
+<text class="fg_fill" x="377" y="188">
+session,
+</text>
+</g>
+<g>
+<text class="fg_fill" x="385" y="252">
+issued
+</text>
+</g>
+<g>
+<text class="fg_fill" x="393" y="316">
+2
+</text>
+</g>
+<g>
+<text class="fg_fill" x="393" y="380">
+2
+</text>
+</g>
+<g>
+<text class="fg_fill" x="409" y="60">
+(𝗝𝗪𝗧
+</text>
+</g>
+<g>
+<text class="fg_fill" x="433" y="316">
+3
+</text>
+</g>
+<g>
+<text class="fg_fill" x="441" y="252">
+session,
+</text>
+</g>
+<g>
+<text class="fg_fill" x="449" y="60">
+𝗖𝗔𝗔)
+</text>
+</g>
+<g>
+<text class="fg_fill" x="449" y="188">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="449" y="316">
+issued
+</text>
+</g>
+<g>
+<text class="fg_fill" x="457" y="380">
+3
+</text>
+</g>
+<g>
+<text class="fg_fill" x="465" y="188">
+valid
+</text>
+</g>
+<g>
+<text class="fg_fill" x="497" y="380">
+4
+</text>
+</g>
+<g>
+<text class="fg_fill" x="505" y="316">
+sessions,
+</text>
+</g>
+<g>
+<text class="fg_fill" x="513" y="188">
+session,
+</text>
+</g>
+<g>
+<text class="fg_fill" x="513" y="252">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="513" y="380">
+issued
+</text>
+</g>
+<g>
+<text class="fg_fill" x="529" y="252">
+valid
+</text>
+</g>
+<g>
+<text class="fg_fill" x="569" y="380">
+sessions,
+</text>
+</g>
+<g>
+<text class="fg_fill" x="577" y="252">
+session,
+</text>
+</g>
+<g>
+<text class="fg_fill" x="585" y="188">
+0
+</text>
+</g>
+<g>
+<text class="fg_fill" x="585" y="316">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="601" y="188">
+invalid
+</text>
+</g>
+<g>
+<text class="fg_fill" x="601" y="316">
+valid
+</text>
+</g>
+<g>
+<text class="fg_fill" x="649" y="252">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="649" y="316">
+session,
+</text>
+</g>
+<g>
+<text class="fg_fill" x="649" y="380">
+1
+</text>
+</g>
+<g>
+<text class="fg_fill" x="665" y="188">
+session
+</text>
+</g>
+<g>
+<text class="fg_fill" x="665" y="252">
+invalid
+</text>
+</g>
+<g>
+<text class="fg_fill" x="665" y="380">
+valid
+</text>
+</g>
+<g>
+<text class="fg_fill" x="713" y="380">
+session,
+</text>
+</g>
+<g>
+<text class="fg_fill" x="721" y="316">
+2
+</text>
+</g>
+<g>
+<text class="fg_fill" x="729" y="252">
+session
+</text>
+</g>
+<g>
+<text class="fg_fill" x="737" y="316">
+invalid
+</text>
+</g>
+<g>
+<text class="fg_fill" x="785" y="380">
+3
+</text>
+</g>
+<g>
+<text class="fg_fill" x="801" y="316">
+sessions
+</text>
+</g>
+<g>
+<text class="fg_fill" x="801" y="380">
+invalid
+</text>
+</g>
+<g>
+<text class="fg_fill" x="865" y="380">
+sessions
+</text>
+</g>
+</svg>

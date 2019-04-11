@@ -35,10 +35,6 @@ html lang={{.Site.LanguageCode}}
     AOS.init();
   script defer="true" src="/js/jquery.min.js"
   script defer="true" src="/js/foundation.core.min.js"
-  script defer="true" src="/js/foundation.util.mediaQuery.min.js"
-  script defer="true" src="/js/foundation.sticky.min.js"
-  script defer="true" src="/js/foundation.util.triggers.min.js"
-  script defer="true" src="/js/foundation.util.motion.min.js"
 s
   script defer="true" src="/js/app.js?v={{getenv "GITHASH"}}"
 

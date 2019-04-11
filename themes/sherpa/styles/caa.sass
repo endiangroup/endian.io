@@ -1,0 +1,97 @@
+@import foundation_settings
+@import foundation
+
++foundation-forms
++foundation-button
++foundation-switch
+
+#caa
+  background-color: #efefef
+  margin-top: 2em
+  margin-bottom: 3em
+  padding: 0.5em
+  padding-bottom: 1em
+  +xy-grid
+
+  .controls
+    +xy-cell(4)
+    +xy-grid($direction: vertical)
+    text-align: center
+
+    button
+      +button($expand:true)
+      font-size: 1.2em
+      font-weight: bold
+      height: 3.1em
+
+    .input-group
+      width: 100%
+      font-size: 1.2em
+      font-weight: 400
+      span,button
+        width: 100%
+        padding: 0.5em 0.5em 0.5em 0.5em
+        input
+          margin-left: 0.5em
+
+    input[type="number"]
+      width: 4em
+      text-align: center
+      display: inline-block
+      position: absolute
+      right: 0.5em
+      top: 0.5em
+
+    &>div
+      +xy-cell
+
+    .issue
+      button
+        background-color: $colour-green
+
+    .window-size
+      .input-group
+        span
+          height: 3.1em
+          position: relative
+          border: 1px solid #cacaca
+
+    .revoke
+      button
+        background-color: $colour-red
+        font-size: 1em
+        position: relative
+        text-align: left
+
+    .lock
+      input[disabled] ~ .switch-paddle
+        opacity: .25
+        cursor: not-allowed
+
+      input:checked ~ .switch-paddle
+        background-color: $colour-red
+        &::after
+          left: 4.7rem
+
+      .switch.large .switch-paddle
+        border-radius: 5000px
+        width: 7rem
+        &::after
+          border-radius: 5000px
+
+  .results
+    +xy-cell(4)
+    padding-left: 1em
+    padding-right: 1em
+    h4
+      text-align: center
+    ul
+      overflow: none
+      text-align: left
+      li
+        font-size: 0.8em
+        display: inline
+        &:after 
+          content: ", "
+        &:last-child:after
+          content: ""

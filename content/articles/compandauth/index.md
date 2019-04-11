@@ -1,12 +1,13 @@
 +++
 title = "Compare-and-Authenticate: Lightweight distributed session management"
 authors = "Adrian Duke"
-summary = " Compare-and-Authenticate (CAA) is a tiny algorithm for centrally managing the validity of a set of distributed sessions. We take a look at how we conceived of this solution given the problem we faced."
+summary = "Compare-and-Authenticate (CAA) is a tiny algorithm for centrally managing the validity of a set of distributed sessions. We take a look at how we conceived of this solution given the problem we faced."
 icon_tag = "lock"
 draft = false
+css = "caa"
 +++
 
-Compare-and-Authenticate (CAA) is a tiny algorithm for centrally managing the validity of a set of distributed sessions. It currently has a single Go implementation found here: https://github.com/endiangroup/compandauth.
+Compare-and-Authenticate (CAA) is a tiny algorithm for centrally managing the validity of a set of distributed sessions. It currently has a single Go implementation found on [GitHub](https://github.com/endiangroup/compandauth).
 
 In this article we'll explore how we conceived of this solution given the problem and get into how it works in detail.
 
@@ -68,7 +69,6 @@ I say *semi*-tether because if the key `persisted` didn't exist (thus indicating
 
 So the login and authentication flow would look as follows:
 
-```
 1. First time user starts app
 2. Asked to enter phone number
 3. Receives text message with 6-digit code
@@ -79,7 +79,6 @@ So the login and authentication flow would look as follows:
 8. API: New session created for User
 9. API: JWT created and returned referencing session and user
 10. App can successfully make requests to API with JWT
-```
 
 Finally, there was an nginx proxy in front of both services, which allowed granular control of redirecting endpoints to different services.
 
@@ -89,14 +88,14 @@ Finally, there was an nginx proxy in front of both services, which allowed granu
 
 We needed to migrate the login endpoint to the Go service (everything else had been moved already) and add request authentication on existing Go endpoints (which currently had none; not a major issue but the time had come to bring it back). There were, however, a few restrictions that applied:
 
-> 1. There could be no impact to the service or UX. So no mass logout and reauthentication
-> 2. There could only be one active session per user… With the exception that we could have multiple sessions on test users (this was required for manual service tuning and app store reviews)
-> 3. The app developers were mid-rewrite of the Android version (unbeknown to management or infact the PO/PM) and so it was preferred if we didn’t impose changes on the app side.
+1. **There could be no impact to the service or UX**. So no mass logout and reauthentication
+2. **There could only be one active session per user**... with the exception that we could have multiple sessions on test users (this was required for manual service tuning and app store reviews)
+3. **The app developers were mid-rewrite of the Android version** (unbeknown to management or in fact the PO/PM) and so it was preferred if we didn’t impose changes on the app side.
 
 Additionally there were some nice-to-haves:
 
-> 1. Locking/Unlocking whole user accounts - Preventing any valid session from performing any action temporarily
-> 2. Revoking all active sessions - Invalidating all currently valid sessions
+1. **Locking/Unlocking whole user accounts**. Preventing any valid session from performing any action temporarily
+2. **Revoking all active sessions**. Invalidating all currently valid sessions
 
 ## The Solution(s)
 
@@ -114,17 +113,20 @@ We kept pondering and hit across a concept that seemed analogous to the problem 
 
 If it's (the thread/client) current view is wrong (say some thread acted in between when it read the 'master' integer and when it attempted to 'act') then it's denied and it must try again. As such the thread/client that has the most current view is allowed to perform its operation.
 
-> Wikipedia: compare-and-swap (CAS) is an atomic instruction used in multithreading to achieve synchronization. It compares the contents of a memory location with a given value and, only if they are the same, modifies the contents of that memory location to a new given value. This is done as a single atomic operation. The atomicity guarantees that the new value is calculated based on up-to-date information; if the value had been updated by another thread in the meantime, the write would fail.
+<blockquote>
+Compare-and-swap (CAS) is an atomic instruction used in multithreading to achieve synchronization. It compares the contents of a memory location with a given value and, only if they are the same, modifies the contents of that memory location to a new given value. This is done as a single atomic operation. The atomicity guarantees that the new value is calculated based on up-to-date information; if the value had been updated by another thread in the meantime, the write would fail.
+<cite><a href="https://en.wikipedia.org/wiki/Compare-and-swap">https://en.wikipedia.org/wiki/Compare-and-swap</a></cite>
+</blockquote>
 
 This seemed perfect, but what would it look like for JWT's? We also wanted more than just 1 session to be valid at a time for our test users. How did that fit this pattern?
 
-The next idea came from rate limiters and sliding windows. Sliding windows tend to be implemented in either compressed or discrete manners (the former loses precision in place of lower storage requirements, the latter being perfectly granular tracking every event). [[See this great article](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting) for a good insight into a sliding window approach to rate limiting]
+The next idea came from rate limiters and sliding windows. Sliding windows tend to be implemented in either compressed or discrete manners (the former loses precision in place of lower storage requirements, the latter being perfectly granular tracking every event). (See [this great article](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting) for a good insight into a sliding window approach to rate limiting])
 
 Due to the nature of our needs, trying to get away from a bulky session system, it seemed appropriate to explore a compressed way of solving the issue. What we ideally wanted was some sliding window of valid sessions and for that window to be configurable centrally.
 
 Now all that was left was how to shoehorn our new solution into existing JWT’s such that we created no impact on service or UX. Here we faced an issue of existing behaviour app side that we couldn’t quickly change; only updating the JWT on a successful login, which meant we had to maintain the validity of the existing tokens in circulation.
 
-Seeing as the JWT’s were JSON and we decoded said JSON into a struct in Go, we needed ideally a solution that could make use of Go’s zero values (given a type, Go will default its value to some predefined zero value, for int its `0`, for strings its `""`... etc). Using zero values means we can add a field to a struct and regardless if its present in the JSON (JWT payload) that field’s value will be zeroed.
+Seeing as the JWT’s were JSON and we decoded said JSON into a struct in Go, we needed ideally a solution that could make use of Go’s zero values (given a type, Go will default its value to some predefined zero value, for int its `0`, for strings its `""`, etc.). Using zero values means we can add a field to a struct and regardless if its present in the JSON (JWT payload) that field’s value will be zeroed.
 
 We had all the pieces, now to put them together.
 
@@ -133,50 +135,43 @@ We had all the pieces, now to put them together.
 CAA is extremely simple at its core. There is a 'master' integer stored centrally and a copy of that integer is embedded into each new session at creation (whilst the 'master' integer is incremented). When you (server) receive a session, you fetch the 'master' integer and extract the session integer, add your sliding window size to it and see if its more than or equal to the 'master' integer. If its not, its too 'old' and considered invalid; if it is, it’s valid. So for example:
 
 User logs in:
-```
-1. 'master' integer = 0
+
+1. 'master' integer = `0`
 2. user submits a successful login request
-3. session is created with a copy of 'master' integer = 0
-4. 'master' integer is incremented = 1
-```
+3. session is created with a copy of 'master' integer = `0`
+4. 'master' integer is incremented = `1`
 
 User makes a request:
-```
-1. 'master' integer = 1
-2. incoming request with session integer = 0
-3. sliding window size = 1
-4. session integer + sliding window size 0 + 1 = 1
-5. 1 is greater than or equal to 1, valid
-```
 
-Chronological view of logins with sliding window size of **1**:
+1. 'master' integer = `1`
+2. incoming request with session integer = `0`
+3. sliding window size = `1`
+4. session integer + sliding window size `0 + 1 = 1`
+5. `1` is greater than or equal to `1`; valid
 
-<img src="img/slide-1_master-4.svg" />
+Chronological view of logins with sliding window size of `1`:
 
-Chronological view of logins with sliding window size of **2**:
+{{< figure src="img/slide-1_master-4.svg" >}}
 
-<img src="img/slide-2_master-103.svg" />
+Chronological view of logins with sliding window size of `2`:
+
+{{< figure src="img/slide-2_master-103.svg" >}}
 
 If you want to revoke all active sessions, you increment the 'master' integer by the size of the sliding window:
 
-```
-1. 'master' integer = 10
-2. sliding window size = 5
-3. set 'master' integer 10 + 5 = 15
-```
+1. 'master' integer = `10`
+2. sliding window size = `5`
+3. set 'master' integer `10 + 5 = 15`
 
-Furthermore, if you want to lock an entire 'user', we just flip the sign bit on the 'master' integer to it’s negative. Any incoming sessions that are compared to a 'master' integer that is negative are considered locked.
+If you want to lock an entire 'user', we just flip the sign bit on the 'master' integer to it’s negative. Any incoming sessions that are compared to a 'master' integer that is negative are considered locked.
 
-```
-1. 'master' integer = -10
-2. incoming request with session integer = 9
-3. 'master' integer is negative, invalid
-```
+1. 'master' integer = `-10`
+2. incoming request with session integer = `9`
+3. 'master' integer is negative; invalid
 
 When you want to unlock that 'user' just flip the sign bit back to positive. All previously valid sessions will return to being valid.
 
-
-Heres an interactive version of all of the above:
+Here's an interactive version of all of the above:
 
 {{< caa >}}
 
@@ -253,7 +248,7 @@ type CAA interface {
 
 All methods that don’t return a `bool` mutate the 'master' integer in some form. Using this interface also gives us a neat ability to create an alternative implementation using unix timestamps with a separate set of behaviours. I’ll leave it up to the reader to figure out what properties that brings and what it might be useful for (or for the less inclined you can take a look at the [README](https://github.com/endiangroup/compandauth/blob/master/README.md)).
 
-For the very inclined, you can find the TLA+/PlusCal version of the above: https://github.com/endiangroup/compandauth/blob/master/compareandauth.tla
+For the very inclined, you can find the TLA+/PlusCal version of the above in [the repo](https://github.com/endiangroup/compandauth/blob/master/compareandauth.tla).
 
 ---
 

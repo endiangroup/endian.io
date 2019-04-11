@@ -26,4 +26,7 @@ head
 
   link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"
   link href="/css/sherpa.css?v={{getenv "GITHASH"}}" rel="stylesheet"
+  {{if .Param "css"}}
+  link href="/css/{{.Param "css"}}.css?v={{getenv "GITHASH"}}" rel="stylesheet"
+  {{end}}
   link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet"

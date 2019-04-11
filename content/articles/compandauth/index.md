@@ -17,7 +17,7 @@ Whilst working with a previous startup client, we were tasked with porting every
 
 The product was a geo-location recommendation engine for professional drivers in the form of an iOS and Android app. Both the apps and the service were free and had thousands of users at the time (this was 2016) of whom hundreds were active daily.
 
-The backend system was in 2 parts when we joined:  a 'RESTful' Ruby API for handling app requests and a Go service for dealing with geo-location recommendations. Both components  shared a Postgres Database. All useful functionality in the app relied on API calls.
+The backend system was in 2 parts when we joined:  a 'RESTful' Ruby API for handling app requests and a Go service for dealing with geo-location recommendations. Both components shared a Postgres Database. All useful functionality in the app relied on API calls.
 
 The Ruby service sat directly behind the mobile apps and managed sessions. The setup at this point was a long-lived JWT living on the mobile device itself, which had a payload as follows:
 
@@ -101,17 +101,17 @@ Additionally there were some nice-to-haves:
 
 The immediate and obvious solution was to re-implement the existing Ruby behaviours like for like, adding in the session management to the Go codebase and doing the switch on the proxy. Honestly though, it just felt messy...
 
-Embedding a `session_uuid` into a JWT which served the sole purpose of ensuring 1 session per user (as well as managing expiration... which JWT's already do) didn’t seem right. It would also mean inheriting the cruft of `persisted` &mdash; a strange flag that seemed to only serve a purpose if it were set to `false` (ie. deny request), and likely the product of changing requirements post go-live.
+Embedding a `session_uuid` into a JWT which served the sole purpose of ensuring one session per user (as well as managing expiration... which JWT's already do) didn’t seem right. It would also mean inheriting the cruft of `persisted` &mdash; a strange flag that seemed to only serve a purpose if it were set to `false` (ie. deny request), and likely the product of changing requirements post go-live.
 
 So, what else could we do and could we make it simpler? The brainstorming began...
 
 We started by thinking about what sort of situation you have with a central server and sessions issued as JWT's. What kept coming to mind was multiple views of the world, where the central service had the authoritative 'current' view and each device/user had its own 'snapshot' (the JWT when it was issued).
 
-We couldn't touch the JWT's until requests were made, so what would happen if you had an old JWT on some device that hadn't made a request in some time? In effect we wanted to passively invalidate JWT’s without having to communicate with them.
+We couldn't touch the JWT's until requests were made, so what would happen if you had an old JWT on some device that hadn't made a request in some time? In effect we wanted to passively invalidate JWT's without having to communicate with them.
 
-We kept pondering and hit across a concept that seemed analogous to the problem space, *compare-and-swap*. For those who aren't familiar, its used in multithreaded applications (and distributed applications like key/value stores) for synchronization where a 'master' integer is stored centrally, and each thread/client that wants to 'act' attempts to write to the central location offering its current view (read: copy of 'master' integer) and if it matches allowing it to 'act' (incrementing the 'master' integer).
+We kept pondering and hit across a concept that seemed analogous to the problem space, *compare-and-swap*. For those who aren't familiar, it's used in multithreaded applications (and distributed applications like key/value stores) for synchronization where a 'master' integer is stored centrally, and each thread/client that wants to 'act' attempts to write to the central location offering its current view (read: copy of 'master' integer) and if it matches allowing it to 'act' (incrementing the 'master' integer).
 
-If it's (the thread/client) current view is wrong (say some thread acted in between when it read the 'master' integer and when it attempted to 'act') then it's denied and it must try again. As such the thread/client that has the most current view is allowed to perform its operation.
+If the current view is wrong (say some thread acted in between when it read the 'master' integer and when it attempted to 'act') then it's denied and it must try again. As such the thread/client that has the most current view is allowed to perform its operation.
 
 <blockquote>
 Compare-and-swap (CAS) is an atomic instruction used in multithreading to achieve synchronization. It compares the contents of a memory location with a given value and, only if they are the same, modifies the contents of that memory location to a new given value. This is done as a single atomic operation. The atomicity guarantees that the new value is calculated based on up-to-date information; if the value had been updated by another thread in the meantime, the write would fail.
@@ -120,19 +120,19 @@ Compare-and-swap (CAS) is an atomic instruction used in multithreading to achiev
 
 This seemed perfect, but what would it look like for JWT's? We also wanted more than just 1 session to be valid at a time for our test users. How did that fit this pattern?
 
-The next idea came from rate limiters and sliding windows. Sliding windows tend to be implemented in either compressed or discrete manners (the former loses precision in place of lower storage requirements, the latter being perfectly granular tracking every event). (See [this great article](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting) for a good insight into a sliding window approach to rate limiting])
+The next idea came from rate limiters and sliding windows. Sliding windows tend to be implemented in either compressed or discrete manners (the former loses precision in place of lower storage requirements, the latter being perfectly granular tracking every event). (See [this great article](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting) for a good insight into a sliding window approach to rate limiting)
 
 Due to the nature of our needs, trying to get away from a bulky session system, it seemed appropriate to explore a compressed way of solving the issue. What we ideally wanted was some sliding window of valid sessions and for that window to be configurable centrally.
 
 Now all that was left was how to shoehorn our new solution into existing JWT’s such that we created no impact on service or UX. Here we faced an issue of existing behaviour app side that we couldn’t quickly change; only updating the JWT on a successful login, which meant we had to maintain the validity of the existing tokens in circulation.
 
-Seeing as the JWT’s were JSON and we decoded said JSON into a struct in Go, we needed ideally a solution that could make use of Go’s zero values (given a type, Go will default its value to some predefined zero value, for int its `0`, for strings its `""`, etc.). Using zero values means we can add a field to a struct and regardless if its present in the JSON (JWT payload) that field’s value will be zeroed.
+Seeing as the JWT’s were JSON and we decoded said JSON into a struct in Go, we needed ideally a solution that could make use of Go’s zero values (given a type, Go will default its value to some predefined zero value, for int it's `0`, for strings it's `""`, etc.). Using zero values means we can add a field to a struct and regardless if it's present in the JSON (JWT payload) that field’s value will be zeroed.
 
 We had all the pieces, now to put them together.
 
 ## Compare-and-Authenticate (CAA)
 
-CAA is extremely simple at its core. There is a 'master' integer stored centrally and a copy of that integer is embedded into each new session at creation (whilst the 'master' integer is incremented). When you (server) receive a session, you fetch the 'master' integer and extract the session integer, add your sliding window size to it and see if its more than or equal to the 'master' integer. If its not, its too 'old' and considered invalid; if it is, it’s valid. So for example:
+CAA is extremely simple at its core. There is a 'master' integer stored centrally and a copy of that integer is embedded into each new session at creation (whilst the 'master' integer is incremented). When you (server) receive a session, you fetch the 'master' integer and extract the session integer, add your sliding window size to it and see if it's more than or equal to the 'master' integer. If it's not, it's too 'old' and considered invalid; if it is, it’s valid. So for example:
 
 User logs in:
 

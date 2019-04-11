@@ -1,4 +1,4 @@
-FROM kowalatech/hugo-dev:1.0.5
+FROM endian/hugo:1.0.1
 
 RUN mkdir -p /sites
 WORKDIR /sites/endian.io

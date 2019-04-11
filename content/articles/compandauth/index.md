@@ -173,7 +173,7 @@ When you want to unlock that 'user' just flip the sign bit back to positive. All
 
 Here's an interactive version of all of the above:
 
-{{< caa >}}
+{{< articles/compandauth/caa >}}
 
 ## The Outcome
 

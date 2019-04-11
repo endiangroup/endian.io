@@ -5,6 +5,10 @@
 +foundation-button
 +foundation-switch
 
+.mobile-only
+  +breakpoint(medium)
+    display: none
+
 #caa
   background-color: #efefef
   margin-top: 2em
@@ -14,7 +18,10 @@
   +xy-grid
 
   .controls
-    +xy-cell(4)
+    +xy-cell(6)
+    +breakpoint(medium)
+      +xy-cell(4)
+
     +xy-grid($direction: vertical)
     text-align: center
 
@@ -80,7 +87,9 @@
           border-radius: 5000px
 
   .results
-    +xy-cell(4)
+    +xy-cell(3)
+    +breakpoint(medium)
+      +xy-cell(4)
     padding-left: 1em
     padding-right: 1em
     h4

@@ -171,7 +171,7 @@ If you want to lock an entire 'user', we just flip the sign bit on the 'master' 
 
 When you want to unlock that 'user' just flip the sign bit back to positive. All previously valid sessions will return to being valid.
 
-Here's an interactive version of all of the above<span class="mobile-only"> (you'll probably want to turn you phone to landscape)</span>:
+Here's an interactive version of all of the above:
 
 {{< caa >}}
 

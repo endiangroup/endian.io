@@ -18,7 +18,7 @@
   +xy-grid
 
   .controls
-    +xy-cell(6)
+    +xy-cell(12)
     +breakpoint(medium)
       +xy-cell(4)
 
@@ -89,7 +89,7 @@
           border-radius: 5000px
 
   .results
-    +xy-cell(3)
+    +xy-cell(12)
     +breakpoint(medium)
       +xy-cell(4)
     padding-left: 1em
@@ -98,7 +98,10 @@
       text-align: center
     ul
       text-align: left
-      height: 10em
+      height: 5em
+      +breakpoint(medium)
+        height: 10em
+
       overflow-y: auto
       li
         font-size: 0.8em

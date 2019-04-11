@@ -42,7 +42,9 @@
           margin-left: 0.5em
 
     input[type="number"]
-      width: 4em
+      width: 2em
+      +breakpoint(medium)
+        width: 4em
       text-align: center
       display: inline-block
       position: absolute
@@ -95,8 +97,9 @@
     h4
       text-align: center
     ul
-      overflow: none
       text-align: left
+      height: 10em
+      overflow-y: auto
       li
         font-size: 0.8em
         display: inline

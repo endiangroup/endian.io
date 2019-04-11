@@ -17,6 +17,16 @@
   padding-bottom: 1em
   +xy-grid
 
+  code
+    &[value^="-"]
+      color: $colour-red
+
+  h4 
+    code
+      border: none
+      background-color: transparent
+      font-weight: bold 
+
   .controls
     +xy-cell(12)
     +breakpoint(medium)
@@ -94,8 +104,14 @@
       +xy-cell(4)
     padding-left: 1em
     padding-right: 1em
+
     h4
       text-align: center
+
+    &.invalid
+      code
+        color: $colour-red
+
     ul
       text-align: left
       height: 5em

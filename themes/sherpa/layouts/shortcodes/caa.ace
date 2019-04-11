@@ -4,17 +4,18 @@ script defer="true" src="/js/caa/caa-server.js?v={{ getenv "GITHASH" }}"
 #caa
   .controls
     .issued
-      h4 Master: <strong data-bind="text: caa.master()">0</strong>
+      h4 Master:
+        code data-bind="attr: { 'value': caa.master() }, text: caa.master()" 0
     .issue
       button data-bind="click: issue" type="button" + Issue
     .window-size
       .input-group
         span.input-group-label Window size:
-          input.input-group-field type="number" data-bind="value: delta" value="3"
+          input.input-group-field type="number" data-bind="value: delta" value="3" min="1"
     .revoke
       .input-group
-        button data-bind="click: revoke, clickBubble: false, enable: hasIssued" type="button" disabled="" - Revoke
-          input.input-group-field type="number" data-bind="value: revokeN, clickBubble: false" value="3"
+        button data-bind="click: revoke, enable: hasIssued" type="button" disabled="" - Revoke
+          input.input-group-field type="number" min="0" data-bind="value: revokeN, click: function(){}, clickBubble: false" value="3"
     .lock
       .switch.large
         input class="switch-input" id="lock-unlock" type="checkbox" data-bind="checked: isLocked, enable: hasIssued" disabled=""

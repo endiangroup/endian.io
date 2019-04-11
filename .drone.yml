@@ -8,7 +8,7 @@ pipeline:
       commands:
         - make docker-build
       when:
-        branch: [develop, feature/article-layout]
+        branch: [develop, article/*]
         event: [push, tag]
 
     build-production:
@@ -32,7 +32,7 @@ pipeline:
       target: /
       encryption: AES256
       when:
-        branch: [develop]
+        branch: [develop, article/*]
         event: [push, tag]
 
     production:

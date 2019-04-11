@@ -1,0 +1,36 @@
+script defer="true" src="/js/knockout.min.js"
+script defer="true" src="/js/caa/caa-server.js?v={{ getenv "GITHASH" }}"
+
+#caa
+  .controls
+    .issued
+      h4 Master:
+        code data-bind="attr: { 'value': caa.master() }, text: caa.master()" 0
+    .issue
+      button data-bind="click: issue" type="button" + Issue
+    .window-size
+      .input-group
+        span.input-group-label Window size:
+          input.input-group-field type="number" data-bind="value: delta" value="3" min="1"
+    .revoke
+      .input-group
+        button data-bind="click: revoke, enable: hasIssued" type="button" disabled="" - Revoke
+          input.input-group-field type="number" min="0" data-bind="value: revokeN, click: function(){}, clickBubble: false" value="3"
+    .lock
+      .switch.large
+        input class="switch-input" id="lock-unlock" type="checkbox" data-bind="checked: isLocked, enable: hasIssued" disabled=""
+          label class="switch-paddle" for="lock-unlock"
+            span class="switch-active" aria-hidden="true" Unlock
+            span class="switch-inactive" aria-hidden="true" Lock
+
+  .results.valid
+    h4 Valid
+      ul class="valid" data-bind="foreach: validSessions.reversed()"
+        li 
+          code data-bind="text: caa"
+
+  .results.invalid
+    h4 Invalid
+      ul class="invalid" data-bind="foreach: invalidSessions.reversed()"
+        li 
+          code data-bind="text: caa"

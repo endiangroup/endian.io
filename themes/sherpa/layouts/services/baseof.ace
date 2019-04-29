@@ -1,0 +1,16 @@
+// {{.Site.Params.headerComment | safeHTML }}
+= doctype html
+html lang={{.Site.LanguageCode}}
+  {{ partial "head" . }}
+
+  body.services
+    .container
+      {{ partial "navigation" . }}
+      {{ $service := strings.TrimSuffix "/" (strings.TrimPrefix "/services/" .URL)}} 
+      {{ $partial := path.Join "services" $service }}
+      = yield header
+      {{partial $partial .}}
+    footer
+      {{ partial "footer" . }}
+
+  {{ partial "javascript" . }}

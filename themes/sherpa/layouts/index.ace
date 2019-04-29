@@ -3,13 +3,13 @@
   h1 endian
 
 = content main
-  {{ partial "introduction" . }}
-  {{ partial "the-endian-way" . }}
-  {{ partial "how-we-get-there" . }}
-  {{ partial "what-we-do" . }}
-  {{ partial "who-weve-helped" . }}
-  {{ partial "meet-the-sherpas" . }}
-  {{ partial "say-hi" . }}
+  {{ partial "landing/introduction" . }}
+  {{ partial "landing/the-endian-way" . }}
+  {{ partial "landing/how-we-get-there" . }}
+  {{ partial "landing/what-we-do" . }}
+  {{ partial "landing/who-weve-helped" . }}
+  {{ partial "landing/meet-the-sherpas" . }}
+  {{ partial "landing/say-hi" . }}
 
 = content footer
   .map

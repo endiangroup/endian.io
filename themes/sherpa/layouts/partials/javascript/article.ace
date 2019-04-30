@@ -1,0 +1,2 @@
+script defer="true" src="/js/basictable.min.js"
+script defer="true" src="/js/trianglify.min.js"

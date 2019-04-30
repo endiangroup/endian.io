@@ -1,15 +1,20 @@
+{{ partial "scratch/url" . }}
 // {{.Site.Params.headerComment | safeHTML }}
 = doctype html
 html lang={{.Site.LanguageCode}}
   {{ partial "head" . }}
 
-  body.services
+  {{ partial "navigation" . }}
+  {{ $service := strings.TrimSuffix "/" (strings.TrimPrefix "/services/" .URL)}} 
+  {{ .Scratch.Set "service-url" (path.Join "services" $service) }}
+
+  body class="services {{$service}}"
     .container
-      {{ partial "navigation" . }}
-      {{ $service := strings.TrimSuffix "/" (strings.TrimPrefix "/services/" .URL)}} 
-      {{ $partial := path.Join "services" $service }}
-      = yield header
-      {{partial $partial .}}
+      header data-aos="fade-down"
+        = yield header
+      main
+        = yield main
+        {{partial (.Scratch.Get "service-url") .}}
     footer
       {{ partial "footer" . }}
 

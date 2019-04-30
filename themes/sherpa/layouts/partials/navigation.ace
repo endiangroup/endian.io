@@ -1,4 +1,4 @@
-{{- $firstUrlElement := print "/" (index (split .URL "/") 1) -}}
+{{- $firstUrlElement := .Scratch.Get "url-stub" -}}
 .sticky-wrapper
   nav#main
     section 

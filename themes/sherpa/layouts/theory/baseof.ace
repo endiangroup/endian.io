@@ -1,3 +1,4 @@
+{{ partial "scratch/url" . }}
 // {{.Site.Params.headerComment | safeHTML }}
 = doctype html
 html lang={{.Site.LanguageCode}}

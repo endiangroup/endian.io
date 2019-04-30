@@ -1,2 +1,10 @@
 = content header
-  h1 {{.Title}}
+  img src="/img/endian-logo.svg"
+  h1 endian
+
+= content main
+  section#introduction
+    .title data-aos="fade-down-right"
+      h1 {{.Param "title1"}}<br />{{.Param "title2"}}
+      img src="/img/{{.Scratch.Get "service-url"}}.svg" style="width: 50px" alt="{{.Title}}"
+    h3 {{.Param "title3"}}

@@ -1,0 +1,1 @@
+{{- .Scratch.Set "url-stub" (print "/" (index (split .URL "/") 1)) -}}

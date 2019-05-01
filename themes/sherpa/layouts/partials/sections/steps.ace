@@ -1,6 +1,6 @@
 .numbered-steps
-  .wrapper
+  .wrapper data-aos="fade-up"
     ul
       {{range .steps}}
-      li {{.|markdownify}}
+      li data-aos="fade-up" {{.|markdownify}} 
       {{end}}

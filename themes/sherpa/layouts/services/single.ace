@@ -10,7 +10,7 @@
     h3 {{.Param "title3"}}
 
   {{ range  $k, $v := sort (.Param "sections") "weight"}}
-  section id="{{ $k }}" class="{{if $v.full_width}}full-width{{end}}"
+  section id="{{ $v.id }}" class="{{if $v.full_width}}full-width{{end}}"
     {{if $v.title}}
     h3 {{$v.title}}
     {{end}}

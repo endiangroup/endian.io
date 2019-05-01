@@ -19,6 +19,7 @@ aliases = [
 
 # Page sections
 [sections.terms]
+id = "terms"
 partial = "sections/chevrons"
 full_width = true
 weight = 10
@@ -45,6 +46,7 @@ weight = 10
     ]
 
 [sections.how-it-works]
+id = "how-it-works"
 title = "How it works"
 weight = 20
 partial = "sections/steps"

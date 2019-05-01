@@ -43,7 +43,7 @@ $gradients: map-merge((
         display: block;
         background: linear-gradient(0deg, transparent, transparent 50%, $colour-black, $colour-black 100%);
 background-size: $width 1em, 100% 3px;
-        z-index: 1;
+        z-index: 0;
     }
 }
 

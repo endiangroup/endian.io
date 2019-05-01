@@ -1,0 +1,13 @@
+.chevrons
+  ul
+    {{range .chevron}}
+    li
+      {{if .image_url}}
+      img src="{{.image_url}}" data-aos="zoom-in-up"
+      {{end}}
+      .description
+        h3 {{.title | markdownify}}
+        {{range .body}}
+        p {{.|markdownify}}
+        {{end}}
+    {{end}}

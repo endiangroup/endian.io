@@ -1,0 +1,6 @@
+.numbered-steps
+  .wrapper
+    ul
+      {{range .steps}}
+      li {{.|markdownify}}
+      {{end}}

@@ -10,11 +10,41 @@ $gradients: map-merge((
     hot: linear-gradient(135deg, $colour-red 0%, $colour-orange 100%),
     hotHalf: linear-gradient(135deg, $colour-red 0%, $colour-orange 50%,$colour-yellow 100%),
     coldHalf: linear-gradient(135deg, $colour-yellow 0%, $colour-green 50%, $colour-blue 100%),
-    rainbow: linear-gradient(135deg, $colour-red 0%, $colour-orange 25%, $colour-yellow 45%, $colour-green 65%, $colour-olive 75%, $colour-blue 100%)
+    rainbow: linear-gradient(135deg, $colour-red 0%, $colour-orange 25%, $colour-yellow 45%, $colour-green 65%, $colour-olive 75%, $colour-blue 100%),
+    verticalProgress: linear-gradient(180deg, $colour-red 0%,$colour-green 100%),
+    progress1: linear-gradient(0deg, $colour-red 0%, $colour-orange 100%),
+    progress2: linear-gradient(0deg, $colour-orange 0%, $colour-yellow 100%),
+    progress3: linear-gradient(135deg, $colour-yellow 0%, $colour-green 100%),
+    progress4: linear-gradient(135deg, $colour-green 0%, $colour-olive 100%),
 ), $gradients);
 
 @function gradient($name) {
   @return map-get($gradients, $name);
+}
+
+@mixin border-gradient($gradientName) {
+    border-image: gradient($gradientName);
+    border-image-slice: 1;
+}
+
+@mixin dashed-border-gradient($gradientName, $width) {
+    border-image: gradient($gradientName);
+    border-image-slice: 1;
+    position: relative;
+
+    &:before {
+        content: ' ';
+        background: red;
+        position: absolute;
+        top: 0;
+        left: -$width;
+        height: 100%;
+        width: $width;
+        display: block;
+        background: linear-gradient(0deg, transparent, transparent 50%, $colour-black, $colour-black 100%);
+background-size: $width 1em, 100% 3px;
+        z-index: 1;
+    }
 }
 
 @mixin round-border-gradient($gradientName) {

@@ -7,14 +7,14 @@ html lang={{.Site.LanguageCode}}
   {{ partial "navigation" . }}
   {{ $service := strings.TrimSuffix "/" (strings.TrimPrefix "/services/" .URL)}} 
   {{ .Scratch.Set "service-url" (path.Join "services" $service) }}
+  {{ .Scratch.Set "service-name" (index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0) }}
 
-  body class="services {{$service}}"
+  body class="services" id="{{.Scratch.Get "service-name"}}"
     .container
       header data-aos="fade-down"
         = yield header
       main
         = yield main
-        {{partial (.Scratch.Get "service-url") .}}
     footer
       {{ partial "footer" . }}
 

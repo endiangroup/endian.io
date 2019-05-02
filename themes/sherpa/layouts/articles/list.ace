@@ -31,7 +31,7 @@
 
     h2 Articles we like
     ul#articles-external
-      {{ range $.Site.Params.articles.article }}
+      {{ range $.Site.Params.article }}
       li
         .trianglify data-seed="{{.url}}"
           a href="{{.url}}" target="_blank"

@@ -1,0 +1,61 @@
+.case-study data-aos="fade-up" id="case-study-{{.id}}"
+  .image-container
+    img src="{{.logo}}"
+  .company
+    h2 {{.company|markdownify}}
+
+    {{if .consulting}}
+    .list-image
+      img src="/img/braintrust.svg"
+    .list
+      h5 Technical Consulting (Braintrust)
+      ul
+        {{range .consulting}}
+        li {{.|markdownify}}
+        {{end}}
+    {{end}}
+
+    {{if .recruiting}}
+    .list-image
+      img src="/img/muscle.svg"
+    .list
+      h5 Talent acquisition (Muscle)
+      ul
+        {{range .recruiting}}
+        li {{.|markdownify}}
+        {{end}}
+    {{end}}
+
+    {{if .cto}}
+    .list-image
+      img src="/img/services/talent/your-new-cto.svg"
+    .list
+      h5 CEO acquisition (Muscle)
+      ul
+        {{range .cto}}
+        li {{.|markdownify}}
+        {{end}}
+    {{end}}
+
+    {{if .build}}
+    .list-image
+      img src="/img/stewardship.svg"
+    .list
+      h5 Design & Build (Stewardship)
+      ul
+        {{range .build}}
+        li {{.|markdownify}}
+        {{end}}
+    {{end}}
+
+    {{if .training}}
+    .list-image
+      img src="/img/indoctrination.svg"
+    .list
+      h5 Training (Indoctrination)
+      ul
+        {{range .training}}
+        li {{.|markdownify}}
+        {{end}}
+    {{end}}
+

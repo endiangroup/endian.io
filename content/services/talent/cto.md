@@ -56,4 +56,53 @@ steps = [
     "**Interviews and hiring**<br /><br />The exact hiring and selection process is of course up to you, but we'll help set up meetings and keep the candidates engaged during the process. All you have to worry about is choosing a CTO. (If you're not confident with technical evaluations, we can help; see the optional extra below).",
     "**Onboarding your new CTO**<br /><br />After you've found your perfect match, we'll help negotiate terms and get them settled in. Depending on your situation, you may want to hire a new technical team --- and we'd love to help with that process!",
 ]
+
+[sections.features]
+id = "features"
+title = "A fully-featured service"
+weight = 30
+partial = "sections/features"
+
+    [[sections.features.feature]]
+    title = "Feature 1"
+    body = [
+    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+    ]
+
+    [[sections.features.feature]]
+    title = "Feature 2"
+    body = [
+    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+    ]
+
+    [[sections.features.feature]]
+    title = "Feature 3"
+    body = [
+    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+    ]
+
+[sections.boltons]
+id = "bolt-ons"
+title = "Optional extras"
+weight = 40
+partial = "sections/features"
+
+    [[sections.boltons.feature]]
+    title = "Feature 1"
+    body = [
+    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+    ]
+
+    [[sections.boltons.feature]]
+    title = "Feature 2"
+    body = [
+    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+    ]
+
+[sections.case_studies]
+id = "case-studies"
+title = "Case studies"
+weight = 50
+partial = "sections/case-studies-filter"
+filter = "cto"
 +++

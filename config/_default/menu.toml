@@ -1,0 +1,35 @@
+[[main]]
+name = "Home"
+url  = "/"
+pre = "mountains"
+weight = 1
+
+[[main]]
+name = "Theory"
+url  = "/theory"
+pre = "book"
+weight = 2
+
+[[main]]
+name = "Articles"
+url  = "/articles"
+pre = "comment-quotes"
+weight = 3
+
+[[main]]
+name = "Talent services"
+url  = "/services/talent/cto"
+pre = "torso-business"
+weight = 4
+
+[[secondary]]
+name = "GitHub"
+url  = "https://github.com/endiangroup"
+pre = "social-github"
+weight = 1
+
+[[secondary]]
+name = "LinkedIn"
+url  = "https://www.linkedin.com/company/endian-group/about"
+pre = "social-linkedin"
+weight = 2

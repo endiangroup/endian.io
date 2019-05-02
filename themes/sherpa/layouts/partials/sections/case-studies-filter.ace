@@ -1,0 +1,1 @@
+{{ partial "sections/case-studies" (where .context.Site.Params.case_study .section.filter "!=" nil ) }}

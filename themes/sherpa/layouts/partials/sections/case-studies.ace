@@ -1,0 +1,7 @@
+{{ $len := sub (len .) 1 }}
+{{ range $k, $v := sort . "weight"}}
+  {{partial "components/case-study" . }}
+  {{ if lt $k $len }}
+  img.divider data-aos="fade-down" src="/img/case-study-divider.svg"
+  {{end}}
+{{end}}

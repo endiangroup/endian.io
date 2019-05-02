@@ -1,0 +1,18 @@
+.features
+  {{ $len := ( sub (len .section.feature) 1) }}
+  {{ range $k, $v := .section.feature }}
+  {{ $aos := "fade-up" }}
+
+  {{ with (eq $k 0) }}
+    {{ $aos = "fade-right" }}
+  {{end}}
+  {{ with (eq $k $len) }}
+    {{ $aos = "fade-left" }}
+  {{end}}
+
+  .feature data-aos="{{$aos}}"
+    h3 {{.title | markdownify}}
+    {{range .body}}
+    p {{.|markdownify}}
+    {{end}}
+  {{end}}

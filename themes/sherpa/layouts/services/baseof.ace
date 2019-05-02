@@ -16,6 +16,7 @@ html lang={{.Site.LanguageCode}}
       main
         = yield main
     footer
+      {{ partial "components/map" . }}
       {{ partial "footer" . }}
 
   {{ partial "javascript" . }}

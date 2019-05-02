@@ -4,7 +4,7 @@
 
 = content main
   section#introduction
-    .title data-aos="fade-down-right"
+    .title
       h1 {{.Param "title1"}}<br />{{.Param "title2"}}
       img src="/img/{{.Scratch.Get "service-url"}}.svg?2" alt="{{.Title}}"
     h3 {{.Param "title3"}}
@@ -12,10 +12,11 @@
   {{ range  $k, $v := sort (.Param "sections") "weight"}}
   section id="{{ $v.id }}" class="{{if $v.full_width}}full-width{{end}}"
     {{if $v.title}}
-    h3 {{$v.title}}
+    .title
+      h3 {{$v.title}}
     {{end}}
 
     {{if $v.partial}}
-    {{ partial $v.partial $v }}
+    {{ partial $v.partial (dict "section" $v "context" $) }}
     {{end}}
   {{end}}

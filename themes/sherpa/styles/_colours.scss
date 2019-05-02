@@ -126,7 +126,6 @@ $colours: (
 }
 
 @mixin border-and-colour-highlight-shift {
-    border-color: pink;
     @include animation('border_colour_shift 5s infinite alternate,colour_shift 5s infinite alternate');
 }
 
@@ -171,6 +170,30 @@ skipped.
         }
     }
 }
+
+@mixin border-element-colour-offset-shift($container, $element:a, $start:0) {
+
+    #{$element} {
+        @include border-colour-highlight-shift;
+    }
+
+    @each $index, $offset in (
+                                1: 0,
+                                2: -0.132s,
+                                3: -0.264s,
+                                4: -0.396s,
+                                5: -0.528s,
+                                6: -0.66s,
+                             ) {
+        #{$container}:nth-of-type(#{$index + $start}) {
+            #{$element} {
+                animation-delay: $offset;
+            }
+        }
+    }
+}
+
+
 
 @keyframes highlight {
     0% {

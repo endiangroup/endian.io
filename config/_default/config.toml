@@ -1,0 +1,6 @@
+# Hugo params for global setup
+languageCode    = "en-us"
+title           = "Endian Group"
+theme           = "sherpa"
+enableRobotsTXT = true
+pygmentsCodeFences = true

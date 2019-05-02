@@ -1,6 +1,6 @@
 .chevrons
   ul
-    {{range .chevron}}
+    {{range .section.chevron}}
     li
       {{if .image_url}}
       img src="{{.image_url}}" data-aos="zoom-in-up"

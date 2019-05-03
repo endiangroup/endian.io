@@ -131,18 +131,6 @@ build = [
     "C++ IoT firmware &mdash; Particle IoT platform",
 ]
 
-[[case_study]]
-id = "scytale"
-company = "Scytale - Digital Agency"
-logo = "/img/scytale.svg"
-weight = 30
-training = [
-    "Test Driven Development (TDD)",
-    "98% positive feedback",
-    "x10 Attendees",
-    "Onsite",
-]
-
 # Testimonials
 [[testimonial]]
 from = "MobKoi"

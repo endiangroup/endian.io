@@ -30,7 +30,7 @@
     .list-image
       img src="/img/services/talent/your-new-cto.svg"
     .list
-      h5 CEO acquisition (Muscle)
+      h5 CEO acquisition (Headhunting)
       ul
         {{range .cto}}
         li {{.|markdownify}}

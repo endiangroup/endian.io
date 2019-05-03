@@ -89,7 +89,7 @@ image_tag = "FML"
 [[case_study]]
 id = "mobkoi"
 company = "Mobkoi"
-logo = "/img/scytale.svg"
+logo = "/img/mobkoi.svg"
 weight = 1
 cto = [
     "FIXME",

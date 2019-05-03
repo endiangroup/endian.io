@@ -3,6 +3,7 @@ author			= "Endian Group"
 
 headerComment = "\n######## ##    ## ########  ####    ###    ##    ##     ####  #######  \n##       ###   ## ##     ##  ##    ## ##   ###   ##      ##  ##     ## \n##       ####  ## ##     ##  ##   ##   ##  ####  ##      ##  ##     ## \n######   ## ## ## ##     ##  ##  ##     ## ## ## ##      ##  ##     ## \n##       ##  #### ##     ##  ##  ######### ##  ####      ##  ##     ## \n##       ##   ### ##     ##  ##  ##     ## ##   ### ###  ##  ##     ## \n######## ##    ## ########  #### ##     ## ##    ## ### ####  #######  \nMade with Hugo + Foundation 6. https://github.com/endiangroup/endian.io\n\n"
 
+# Stock articles
 [[article]]
 title = "Introducing BDD"
 url = "https://dannorth.net/introducing-bdd/"
@@ -43,6 +44,7 @@ authors = "Donella Meadows"
 summary = "How to analyse ansd affect complex systems."
 icon_tag = "wrench"
 
+# Stock theory posts
 [[theory]]
 title = "On Being Lost"
 url = "https://medium.com/wardleymaps/on-being-lost-2ef5f05eb1ec"
@@ -83,11 +85,12 @@ authors = "Axel van Lamsweerde"
 summary = "An excellent overview of formal proofs in computer science."
 image_tag = "FML"
 
+# Case studies
 [[case_study]]
 id = "mobkoi"
 company = "Mobkoi"
 logo = "/img/scytale.svg"
-weight = 10
+weight = 1
 cto = [
     "FIXME",
 ]
@@ -140,3 +143,21 @@ training = [
     "Onsite",
 ]
 
+# Testimonials
+[[testimonial]]
+from = "MobKoi"
+body = "todo"
+about = [ "recruiting", "cto"]
+weight = 1
+
+[[testimonial]]
+from = "Eiland Glover, CEO, Kowala Inc"
+body = "Endian hired our entire product team and as a testament to the quality of hires and their work we've since raised multi-million dollar funding rounds"
+about = [ "recruiting", "consulting"]
+weight = 10
+
+[[testimonial]]
+from = "Sam Labs"
+body = "It’s always a pleasure working with Endian. Their ability to understand our business is second to none. We think of them as an extension of ourselves"
+about = [ "recruiting"]
+weight = 20

@@ -105,4 +105,10 @@ title = "Case studies"
 weight = 50
 partial = "sections/case-studies-filter"
 filter = "cto"
+
+[sections.testimonials]
+id = "testimonials"
+weight = 60
+partial = "sections/testimonials-filter"
+filter = ["cto"]
 +++

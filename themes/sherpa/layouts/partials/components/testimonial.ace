@@ -1,0 +1,6 @@
+.testimonial data-aos="fade-up"
+  .quotation-mark
+    img src="/img/quotation-mark.svg"
+  p {{.body}}."
+    span ~ {{.from}}.
+

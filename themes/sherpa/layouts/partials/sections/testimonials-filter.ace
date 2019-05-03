@@ -1,0 +1,1 @@
+{{ partial "sections/testimonials" (where .context.Site.Params.testimonial "about" "intersect" .section.filter) }}

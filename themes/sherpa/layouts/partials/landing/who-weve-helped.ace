@@ -1,22 +1,15 @@
 section#who-weve-helped
   .title data-aos="fade-down"
     h1 Who we've helped
+
   #clients data-aos="zoom-in"
     img src="/img/clients.svg"
+
   #quotes
-    .quote data-aos="fade-up"
-      .quotation-mark
-        img src="/img/quotation-mark.svg"
-      p
-        | Endian hired our entire product team and as a testament to the quality of hires and their work we've since raised multi-million dollar funding rounds.”
-        span ~ Eiland Glover, CEO, Kowala Inc.
-    .quote data-aos="fade-up"
-      .quotation-mark
-        img src="/img/quotation-mark.svg"
-      p
-        | It’s always a pleasure working with Endian. Their ability to understand our business is second to none. We think of them as an extension of ourselves.”
-        span ~ Sam Labs.
+    {{ partial "sections/testimonials" .Site.Params.testimonial }}
+
   img data-aos="fade-down" src="/img/case-study-underscore.svg"
+
   #case-studies
     .title data-aos="fade-down"
       h1 Case studies

@@ -168,3 +168,31 @@
     height: 125px
   margin-bottom: 2em
 
+.testimonial
+  padding: 5%
+  margin-top: 1em
+  +xy-grid
+  background-color: $colour-grey
+  .quotation-mark
+    +xy-cell(2)
+    +breakpoint(medium)
+      +xy-cell(1)
+    img
+      width: 100%
+  p
+    +xy-cell(10)
+    +breakpoint(medium)
+      +xy-cell(11)
+    font-size: 1em
+    +breakpoint(medium)
+      font-size: 2vw
+    +breakpoint(large)
+      font-size: 1em
+    text-align: left
+    position: relative
+    margin-bottom: 0
+    span
+      display: block
+      text-align: left
+      margin-top: 1em
+      color: #999

@@ -1,0 +1,3 @@
+{{ range $k, $v := sort . "weight"}}
+  {{partial "components/testimonial" . }}
+{{end}}

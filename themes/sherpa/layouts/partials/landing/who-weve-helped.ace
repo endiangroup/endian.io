@@ -3,7 +3,7 @@ section#who-weve-helped
     h1 Who we've helped
 
   #clients data-aos="zoom-in"
-    img src="/img/clients.svg"
+    img src="/img/clients.svg?v={{getenv "GITHASH"}}"
 
   #quotes
     {{ partial "sections/testimonials" .Site.Params.testimonial }}

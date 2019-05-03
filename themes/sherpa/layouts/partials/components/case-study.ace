@@ -15,17 +15,6 @@
         {{end}}
     {{end}}
 
-    {{if .recruiting}}
-    .list-image
-      img src="/img/muscle.svg"
-    .list
-      h5 Talent acquisition (Muscle)
-      ul
-        {{range .recruiting}}
-        li {{.|markdownify}}
-        {{end}}
-    {{end}}
-
     {{if .cto}}
     .list-image
       img src="/img/services/talent/your-new-cto.svg"
@@ -33,6 +22,17 @@
       h5 CEO acquisition (Headhunting)
       ul
         {{range .cto}}
+        li {{.|markdownify}}
+        {{end}}
+    {{end}}
+
+    {{if .recruiting}}
+    .list-image
+      img src="/img/muscle.svg"
+    .list
+      h5 Talent acquisition (Muscle)
+      ul
+        {{range .recruiting}}
         li {{.|markdownify}}
         {{end}}
     {{end}}

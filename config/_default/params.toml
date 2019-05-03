@@ -92,7 +92,15 @@ company = "Mobkoi"
 logo = "/img/mobkoi.svg"
 weight = 1
 cto = [
-    "FIXME",
+    "Longlisted 20 specialised candidates",
+    "Shortlisted 5 for suitability",
+    "Introduced 2 (both headhunted)",
+    "Full technical evaluation",
+    "Produced strengths/weaknesses report",
+    "New CTO hired!",
+]
+recruiting = [
+    "Exclusive technical team recruitment agreement following CTO hire",
 ]
 
 [[case_study]]

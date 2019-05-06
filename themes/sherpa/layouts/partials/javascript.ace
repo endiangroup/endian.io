@@ -12,4 +12,6 @@ script defer="true" src="/js/foundation.core.min.js"
 
 script defer="true" src="/js/app.js?v={{getenv "GITHASH"}}"
 
+{{if eq (.Site.Params.analytics) true}}
 {{ partial "javascript/analytics" . }}
+{{end}}

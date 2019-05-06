@@ -4,12 +4,12 @@ title = "We're not recruiters. We're CTO hunters."
 
 # Social sharing
 social_title = "Endian Talent Services: CTO"
-summary = "We can hire your CTO. Technical leadership sourcing, the way it should be."
+summary = "We're CTOs who hire CTOs. We have a world-class, in-house talent team. Why settle for anyone else?"
 
 # On-page content
 title1 = "We're not recruiters."
 title2 = "We're CTO hunters."
-title3 = "Technical leadership sourcing, the way it should be."
+title3 = "We're CTOs who hire CTOs. We have a world-class, in-house talent team. Why settle for anyone else?"
 
 # Page aliases
 aliases = [
@@ -28,7 +28,7 @@ weight = 10
     title = "Who you are"
     image_url = "/img/braintrust.svg"
     body = [
-    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+    "You have a business with a critical technological component, and you're either expanding or you're reshuffling your technical leadership. It's time to level up.",
     ]
 
     [[sections.terms.chevron]]
@@ -39,69 +39,86 @@ weight = 10
     ]
 
   [[sections.terms.chevron]]
-    title = "Why choose us"
-    image_url = "/img/services/talent/why-choose-us.svg"
+    title = "Why use a third party service?"
+    image_url = "/img/muscle.svg"
     body = [
-        "This is not our first rodeo. Endian was founded by two former CTOs, and our talent team is second to none. We've built products and teams top-down and bottom-up. We've explored all the dead ends and mapped all the pitfalls so you don't have to."
+        "Finding a good CTO is time consuming and expensive. Likely candidates are often working for your competitors. Candidate evaluation can be tricky, especially if you're not equipped for C-level technical assessments."
     ]
 
-[sections.how-it-works]
-id = "how-it-works"
-title = "How it works"
-weight = 20
-partial = "sections/steps"
-steps = [
-    "**Requirements gathering**<br/><br/>Our first task is to work out the exact role of a CTO in your organisation. We'll create a profile that covers everything from required technical expertise (we can help with figuring that out; see optional extra below) through to cultural fit, outlook and approach.",
-    "**Candidate sourcing**<br /><br />Once the profile is signed off, we can start tapping our networks for potential CTOs. We put every candidate through a qualifying process, so the large pool we start out with typically ends in a promising handful. We'll then introduce to you to the most viable candidates.",
-    "**Interviews and hiring**<br /><br />The exact hiring and selection process is of course up to you, but we'll help set up meetings and keep the candidates engaged during the process. All you have to worry about is choosing a CTO. (If you're not confident with technical evaluations, we can help; see the optional extra below).",
-    "**Onboarding your new CTO**<br /><br />After you've found your perfect match, we'll help negotiate terms and get them settled in. Depending on your situation, you may want to hire a new technical team --- and we'd love to help with that process!",
-]
+  [[sections.terms.chevron]]
+    title = "Who we are"
+    image_url = "/img/services/talent/why-choose-us.svg"
+    body = [
+        "This is not our first rodeo. Endian was founded by two former CTOs, and our talent team is second to none. We’ve built products and teams top-down and bottom-up. We’ve explored all the dead ends and mapped all the pitfalls so you don’t have to. We'll give you the CTO you deserve."
+    ]
 
 [sections.features]
 id = "features"
 title = "A fully-featured service"
-weight = 30
+weight = 20
 partial = "sections/features"
 
     [[sections.features.feature]]
-    title = "Feature 1"
+    title = "Hands-on CTO experience"
     body = [
-    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+        "We don't idly trade in CTOs like some recruitment agency: we *are* CTOs. Our founders still lead teams, leverage cutting-edge technology, and write code every day.",
+        "When we talk about the qualities and responsibilities of a CTO, it's not academic. When we screen candidates, we'll challenge them like not recruiter ever could, and you will reap the benefits.",
     ]
 
     [[sections.features.feature]]
-    title = "Feature 2"
+    title = "World-class talent team"
     body = [
-    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+        "We're not just a couple of CTOs sitting around chatting: we have a full team of highly experienced talent sourcers working around the clock.",
+        "Some agencies use dirty tricks to get people hired. We don't. We rely on the quality of our service and our highly refined processes to get results. We wouldn't have it any other way.",
     ]
 
     [[sections.features.feature]]
-    title = "Feature 3"
+    title = "Headhunting"
     body = [
-    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+        "We don't just wait for people to contact us. We actively seek out good people, even when it might seem like they're unavailable.",
+        "Finding good candidates can be tricky, especially for C-level positions. Experienced CTOs tend to be highly in demand --- and often work for your competitors.",
     ]
+
+
+
+[sections.how-it-works]
+id = "how-it-works"
+title = "How it works"
+weight = 30
+partial = "sections/steps"
+steps = [
+    "**Requirements gathering**<br/><br/>Our first task is to work out the exact role of a CTO in your organisation. We'll create a profile that covers everything from their required technical expertise through to cultural fit, mindset and approach. If you want to cast you own net, we can help you map out a job specification (see optional extras, below).",
+    "**Candidate reconnaissance**<br /><br />Once the profile is signed off, we can start trawling our networks for potential CTOs. We put every candidate through a qualifying process, so the large pool we start out with ends in a promising handful. We'll then introduce you to the best potentials CTOs.",
+    "**Thinning the herd**<br /><br />We'll adapt to your hiring process, and we'll manage all the meetings, calls and other housekeeping. We'll hold candidates' hands the whole way (not literally). All you have to worry about is choosing your CTO. (If you're not confident with technical evaluations, we've got you covered; see the optional extra below).",
+    "**Onboarding your new CTO**<br /><br />After you've found your perfect match, we'll help negotiate terms and get them settled in. We'll even check in during any probation period. Depending on your situation, you may want to hire a new technical team -- and we'd love to help with that process, too!",
+]
 
 [sections.boltons]
 id = "bolt-ons"
-title = "Optional extras"
+title = "A fully-featured service, tailored for you"
 weight = 40
 partial = "sections/features"
 
     [[sections.boltons.feature]]
-    title = "Feature 1"
+    title = "Profile mapping"
     body = [
-    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+		"*(optional extra)*",
+		"If you're not technically inclined or you're taking a new technical approach, it can be hard to work out exactly what you want and need in a CTO.",
+		"Fortunately, we have a lot of experience in this area. We can help you build a comprehensive profile of your ideal CTO using our specialised process and custom-built software. The profile will include all of the technical expertise and experience they might need, and some simple ways of testing for those qualities.",
     ]
 
     [[sections.boltons.feature]]
-    title = "Feature 2"
+    title = "Technical review"
     body = [
-    "You have a business with a critical technological component, and things are ticking over nicely. You're doing so well, in fact, that it's time to level up.",
+		"*(optional extra)*",
+		"It can be tough to evaluate someone's technical chops --- especially when their job is highly specific.",
+		"We offer a thorough technical review service, which includes multiple technical interviews and a proof-of-ability challenge which promising candidates will complete on their own time.",
+		"Once the review is complete, we'll give you a comprehensive report with a statistical breakdown that you can use to compare candidates. Take a look at an example report [fixme]",
     ]
 
 [sections.case_studies]
 id = "case-studies"
-title = "Case studies"
+title = "Featured case study"
 weight = 50
 partial = "sections/case-studies-filter"
 filter = "cto"

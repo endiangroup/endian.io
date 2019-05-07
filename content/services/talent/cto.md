@@ -57,6 +57,7 @@ id = "features"
 title = "Why choose us?"
 weight = 20
 partial = "sections/features"
+full_width = "mobile"
 
     [[sections.features.feature]]
 	icon = "/img/services/talent/your-new-cto.svg"
@@ -86,7 +87,7 @@ partial = "sections/features"
 
 [sections.how-it-works]
 id = "how-it-works"
-title = "How it works"
+title = "How we work"
 weight = 30
 partial = "sections/steps"
 steps = [
@@ -101,8 +102,10 @@ id = "bolt-ons"
 title = "A fully-featured service, tailored for you"
 weight = 40
 partial = "sections/features"
+full_width = "mobile"
 
     [[sections.boltons.feature]]
+	icon = "/img/planning-circle.svg"
     title = "Profile mapping"
 	subtitle = "(optional extra)"
     body = [
@@ -111,6 +114,7 @@ partial = "sections/features"
     ]
 
     [[sections.boltons.feature]]
+	icon = "/img/binary.svg"
     title = "Technical review"
 	subtitle = "(optional extra)"
     body = [
@@ -126,9 +130,9 @@ weight = 50
 partial = "sections/case-studies-filter"
 filter = "cto"
 
-[sections.testimonials]
-id = "testimonials"
-weight = 60
-partial = "sections/testimonials-filter"
-filter = ["cto"]
+#[sections.testimonials]
+#id = "testimonials"
+#weight = 60
+#partial = "sections/testimonials-filter"
+#filter = ["cto"]
 +++

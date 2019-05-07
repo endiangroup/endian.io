@@ -6,11 +6,18 @@
   section#introduction
     .title
       h1 {{.Param "title1"}}<br />{{.Param "title2"}}
-      img src="/img/{{.Scratch.Get "service-url"}}.svg?2" alt="{{.Title}}"
+      img src="/img/{{.Scratch.Get "service-url"}}.svg" alt="{{.Title}}"
     h3 {{.Param "title3"}}
 
   {{ range  $k, $v := sort (.Param "sections") "weight"}}
-  section id="{{ $v.id }}" class="{{if $v.full_width}}full-width{{end}}"
+  {{$class := "centered"}}
+  {{if $v.full_width}}
+    {{$class = "full-width"}}
+    {{if eq $v.full_width "mobile"}}
+      {{$class = "full-width-mobile"}}
+    {{end}}
+  {{end}}
+  section id="{{ $v.id }}" class="{{$class}}{{if not $v.title}} no-title{{end}}"
     {{if $v.title}}
     .title
       h3 {{$v.title}}

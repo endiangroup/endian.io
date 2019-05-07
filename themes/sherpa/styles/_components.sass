@@ -4,6 +4,9 @@
       +xy-grid
       img
         +xy-cell(12)
+        width: 28%
+        text-align: center
+        margin: 0 auto
         +breakpoint(medium)
           +xy-cell(3)
         +breakpoint(xlarge)
@@ -26,7 +29,7 @@
         margin-bottom: 0 !important
       h3
         margin: 1em 0
-        margin-bottom: 0
+        margin-bottom: 0.5em
         text-align: center
         +breakpoint(medium)
           text-align: left
@@ -37,9 +40,11 @@
         +breakpoint(medium)
           text-align: left
       p
-        text-align: center
+        font-size: 0.9em
+        text-align: left
+        width: 100%
         +breakpoint(medium)
-          text-align: left
+          font-size: 1.5em
           min-height: 18vh
 
 .chevrons
@@ -53,6 +58,9 @@
     margin-left: 1.1em
     border-left: 0.25em dashed 
     +dashed-border-gradient(verticalProgress,0.25em)
+    font-size: 0.8em
+    +breakpoint(medium)
+      font-size: 1em
 
   ul
     counter-reset: ns
@@ -108,7 +116,8 @@
   margin-top: 2em
 
   .feature
-    +xy-cell(12)
+    +xy-cell(12,$gutter-output:false)
+    width: 100%
     +breakpoint(large)
       +xy-cell(auto)
     background-color: colour(grey) 
@@ -131,14 +140,19 @@
       margin-bottom: 1em
 
     h4
-      font-size: 1.2em
-      margin-bottom: 1em
+      font-size: 0.9em
+      margin-bottom: 1.5em
+      margin-top: -1.2em
       font-style: italic
+      +breakpoint(medium)
+        font-size: 1.2em
 
     p
       text-align: left
-      font-size: 1.1em
+      font-size: 0.8em
       width: 100%
+      +breakpoint(medium)
+        font-size: 1.1em
 
 .case-study
   +xy-grid
@@ -157,19 +171,31 @@
     +xy-grid
     h2
       text-align: left
+      margin-bottom: 1em
       +xy-cell(12)
     .list-image
-      +xy-cell(2)
+      +xy-cell(12)
+      display: none
+      +breakpoint(medium)
+        +xy-cell(2)
+        display: block
     .list
-      +xy-cell(10)
+      +xy-cell(12)
+      +breakpoint(medium)
+        +xy-cell(10)
       h5
         text-align: left
+        font-weight: bold
         width: 100%
+        margin-bottom: 0.5em
     ul
+      list-style: disc outside none
+      text-indent: -1.5em
       li
         text-align: left
         list-style: disc
         list-style-position: inside
+        padding-left: 1.5em
     +xy-cell(12)
     +breakpoint(medium)
       +xy-cell(8)

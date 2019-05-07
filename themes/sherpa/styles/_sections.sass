@@ -5,11 +5,15 @@
 
 section
   +centered-content
-  margin-bottom: 3em
+  margin-bottom: 2em
   +breakpoint(medium)
     margin-bottom: 5em
   .title
-    margin-bottom: 4em
+    padding-left: 2em
+    padding-right: 2em
+    margin-bottom: 2em
+    +breakpoint(medium)
+      margin-bottom: 4em
 
   h2, h3, h4, h5
     margin: 0 auto
@@ -39,9 +43,25 @@ section
     padding-right: 0
     max-width: 100%
 
+  &.full-width-mobile
+    padding-left: inherit
+    padding-right: inherit
+    max-width: inherit
+    +breakpoint(medium)
+      padding: 1em
+      max-width: 75rem
+
   &#introduction
+    min-height: calc(100vh - 12.5em)
+    background-image: url(/img/chevrons.svg)
+    background-repeat: no-repeat
+    background-position: bottom center
+    background-size: 1em
+    +breakpoint(medium)
+      background: none
+
     h1
-      line-height: 2.5rem
+      line-height: 2rem
       font-size: 1.5rem
       +breakpoint(medium)
         font-size: 3rem

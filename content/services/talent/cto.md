@@ -54,11 +54,12 @@ weight = 10
 
 [sections.features]
 id = "features"
-title = "A fully-featured service"
+title = "Why choose us?"
 weight = 20
 partial = "sections/features"
 
     [[sections.features.feature]]
+	icon = "/img/services/talent/your-new-cto.svg"
     title = "Hands-on CTO experience"
     body = [
         "We don't idly trade in CTOs like some recruitment agency: we *are* CTOs. Our founders still lead teams, leverage cutting-edge technology, and write code every day.",
@@ -66,6 +67,7 @@ partial = "sections/features"
     ]
 
     [[sections.features.feature]]
+	icon = "/img/muscle.svg"
     title = "World-class talent team"
     body = [
         "We're not just a couple of CTOs sitting around chatting: we have a full team of highly experienced talent sourcers working around the clock.",
@@ -73,7 +75,8 @@ partial = "sections/features"
     ]
 
     [[sections.features.feature]]
-    title = "Headhunting"
+	icon = "/img/braintrust.svg"
+    title = "Proactive headhunting"
     body = [
         "We don't just wait for people to contact us. We actively seek out good people, even when it might seem like they're unavailable.",
         "Finding good candidates can be tricky, especially for C-level positions. Experienced CTOs tend to be highly in demand --- and often work for your competitors.",
@@ -101,16 +104,16 @@ partial = "sections/features"
 
     [[sections.boltons.feature]]
     title = "Profile mapping"
+	subtitle = "(optional extra)"
     body = [
-		"*(optional extra)*",
 		"If you're not technically inclined or you're taking a new technical approach, it can be hard to work out exactly what you want and need in a CTO.",
 		"Fortunately, we have a lot of experience in this area. We can help you build a comprehensive profile of your ideal CTO using our specialised process and custom-built software. The profile will include all of the technical expertise and experience they might need, and some simple ways of testing for those qualities.",
     ]
 
     [[sections.boltons.feature]]
     title = "Technical review"
+	subtitle = "(optional extra)"
     body = [
-		"*(optional extra)*",
 		"It can be tough to evaluate someone's technical chops --- especially when their job is highly specific.",
 		"We offer a thorough technical review service, which includes multiple technical interviews and a proof-of-ability challenge which promising candidates will complete on their own time.",
 		"Once the review is complete, we'll give you a comprehensive report with a statistical breakdown that you can use to compare candidates. Take a look at an example report [fixme]",

@@ -112,7 +112,7 @@
     +breakpoint(large)
       +xy-cell(auto)
     background-color: colour(grey) 
-    padding: 1em
+    padding: 1.5em
     transition: transform 0.2s
     margin-bottom: 1em
 
@@ -120,13 +120,25 @@
       +breakpoint(medium)
         transform: scale(1.05)
 
+    img
+      width: 25%
+      margin-bottom: 1em
+      +breakpoint(large)
+        width: 40%
+
     h3
       font-size: 1.5em
       margin-bottom: 1em
 
+    h4
+      font-size: 1.2em
+      margin-bottom: 1em
+      font-style: italic
+
     p
       text-align: left
-      font-size: 1em
+      font-size: 1.1em
+      width: 100%
 
 .case-study
   +xy-grid

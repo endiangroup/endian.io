@@ -11,7 +11,13 @@
   {{end}}
 
   .feature data-aos="{{$aos}}"
+    {{if .icon}}
+    img src="{{.icon}}" alt="{{.title}}"
+    {{end}}
     h3 {{.title | markdownify}}
+    {{if .subtitle}}
+    h4 {{.subtitle | markdownify}}
+    {{end}}
     {{range .body}}
     p {{.|markdownify}}
     {{end}}

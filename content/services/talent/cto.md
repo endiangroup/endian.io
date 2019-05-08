@@ -120,7 +120,8 @@ full_width = "mobile"
     body = [
 		"It can be tough to evaluate someone's technical chops --- especially when their job is highly specific.",
 		"We offer a thorough technical review service, which includes multiple technical interviews and a proof-of-ability challenge which promising candidates will complete on their own time.",
-		"Once the review is complete, we'll give you a comprehensive report with a statistical breakdown that you can use to compare candidates. Take a look at an example report [fixme]",
+		"Once the review is complete, we'll give you a comprehensive report with a statistical breakdown that you can use to compare candidates.",
+		"Take a look at an <a href=\"/pdf/CTO-technical-report-sample.pdf\" target=\"blank\">example report</a>.",
     ]
 
 [sections.case_studies]

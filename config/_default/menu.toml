@@ -16,12 +16,6 @@ url  = "/articles"
 pre = "comment-quotes"
 weight = 3
 
-[[main]]
-name = "Talent services"
-url  = "/services/talent/cto"
-pre = "torso-business"
-weight = 4
-
 [[secondary]]
 name = "GitHub"
 url  = "https://github.com/endiangroup"

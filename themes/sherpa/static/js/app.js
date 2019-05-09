@@ -14,6 +14,26 @@ burger.click(function () {
     }
     return false;
 });
+let lastBotMessage = "";
+$('.ctas a.cta').each(function () {
+    let el = $(this);
+    el.click(() => {
+        if (!window._slaask) {
+            return false;
+        }
+        let slaask = window._slaask;
+        let messageText = el.data('message');
+        if (!slaask.isOpen()) {
+            slaask.show();
+        }
+        slaask.identifyContact();
+        if (slaask.isLive() && lastBotMessage != messageText) {
+            slaask.sendMessage(new slaask.Message(slaask.MessageSample.bot, messageText));
+            lastBotMessage = messageText;
+        }
+        return false;
+    });
+});
 // Footnotes
 var footnotes = [];
 var idx = 0;

@@ -8,6 +8,9 @@
       h1 {{.Param "title1"}}<br />{{.Param "title2"}}
       img src="/img/{{.Scratch.Get "service-url"}}.svg" alt="{{.Title}}"
     h3 {{.Param "title3"}}
+    .ctas
+      h5
+        a.cta#main-cta data-message="{{.Param "cta_message" | markdownify}}" {{.Param "cta_button_label"}}
 
   {{ range  $k, $v := sort (.Param "sections") "weight"}}
   {{$class := "centered"}}
@@ -27,3 +30,8 @@
     {{ partial $v.partial (dict "section" $v "context" $) }}
     {{end}}
   {{end}}
+
+  section#bookend
+    .ctas
+      h5
+        a.cta#main-cta data-message="{{.Param "cta_message" | markdownify}}" {{.Param "cta_button_label"}}

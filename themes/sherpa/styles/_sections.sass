@@ -51,6 +51,53 @@ section
       padding: 1em
       max-width: 75rem
 
+  .ctas
+    margin-top: 3em
+    h5
+      border: none
+      color: white !important
+    a
+      +button-hollow
+      border: 3px solid !important
+      +border-colour-highlight-shift
+      text-decoration: none
+      padding: 1em
+      font-size: 1.2em
+      width: 100%
+      display: inline-block
+      margin: 0 auto
+      transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s
+      position: relative
+      color: white !important
+      font-weight: 600
+
+      +breakpoint(medium)
+        min-width: 25vw
+        width: auto
+
+      &:hover
+        color: $colour-black !important
+        background-color: transparent
+        +border-colour-highlight-shift
+
+      &:hover:before
+        bottom: 0%
+        top: auto
+        height: 100%
+
+      &:before
+        display: block
+        position: absolute
+        left: 0px
+        top: 0px
+        height: 0px
+        width: 100%
+        z-index: -1
+        content: ''
+        color: #000 !important
+        +background-colour-highlight-shift
+        transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s
+
   &#introduction
     min-height: calc(100vh - 12.5em)
     background-image: url(/img/chevrons.svg)

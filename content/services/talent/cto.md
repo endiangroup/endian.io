@@ -11,6 +11,10 @@ title1 = "We're not recruiters."
 title2 = "We're CTO hunters."
 title3 = "We're CTOs who hire CTOs. We have a world-class, in-house talent team. Why settle for anyone else?"
 
+# Slaask CTA messages
+cta_button_label = "Get in contact"
+cta_message = "Hi, I'm the Endian helper bot. Let's get started finding you a CTO! What's your name and who do you work for?"
+
 # Page aliases
 aliases = [
     "/services",
@@ -62,6 +66,8 @@ full_width = "mobile"
     [[sections.features.feature]]
 	icon = "/img/services/talent/your-new-cto.svg"
     title = "Hands-on CTO experience"
+	cta_button_label = "Find out more &raquo;"
+	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our CTO experience?"
     body = [
         "We don't idly trade in CTOs like some recruitment agency: we *are* CTOs. Our founders still lead teams, leverage cutting-edge technology, and write code every day.",
         "When we talk about the qualities and responsibilities of a CTO, it's not academic. When we screen candidates, we'll challenge them like not recruiter ever could, and you will reap the benefits.",
@@ -70,6 +76,8 @@ full_width = "mobile"
     [[sections.features.feature]]
 	icon = "/img/muscle.svg"
     title = "World-class talent team"
+	cta_button_label = "Find out more &raquo;"
+	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our talent team?"
     body = [
         "We're not just a couple of CTOs sitting around chatting: we have a full team of highly experienced talent sourcers working around the clock.",
         "Some agencies use dirty tricks to get people hired. We don't. We rely on the quality of our service and our highly refined processes to get results. We wouldn't have it any other way.",
@@ -78,6 +86,8 @@ full_width = "mobile"
     [[sections.features.feature]]
 	icon = "/img/braintrust.svg"
     title = "Proactive headhunting"
+	cta_button_label = "Find out more &raquo;"
+	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our headhunting approach?"
     body = [
         "We don't just wait for people to contact us. We actively seek out good people, even when it might seem like they're unavailable.",
         "Finding good candidates can be tricky, especially for C-level positions. Experienced CTOs tend to be highly in demand --- and often work for your competitors.",
@@ -108,6 +118,8 @@ full_width = "mobile"
 	icon = "/img/planning-circle.svg"
     title = "Profile mapping"
 	subtitle = "(optional extra)"
+	cta_button_label = "Find out more &raquo;"
+	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our profile mapping service?"
     body = [
 		"If you're not technically inclined or you're taking a new technical approach, it can be hard to work out exactly what you want and need in a CTO.",
 		"Fortunately, we have a lot of experience in this area. We can help you build a comprehensive profile of your ideal CTO using our specialised process and custom-built software. The profile will include all of the technical expertise and experience they might need, and some simple ways of testing for those qualities.",
@@ -117,6 +129,8 @@ full_width = "mobile"
 	icon = "/img/binary.svg"
     title = "Technical review"
 	subtitle = "(optional extra)"
+	cta_button_label = "Find out more &raquo;"
+	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our technical review service?"
     body = [
 		"It can be tough to evaluate someone's technical chops --- especially when their job is highly specific.",
 		"We offer a thorough technical review service, which includes multiple technical interviews and a proof-of-ability challenge which promising candidates will complete on their own time.",

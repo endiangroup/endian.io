@@ -1,5 +1,6 @@
 .features
   {{ $len := ( sub (len .section.feature) 1) }}
+  {{ $id  := .section.id }}
   {{ range $k, $v := .section.feature }}
   {{ $aos := "fade-up" }}
 
@@ -11,14 +12,20 @@
   {{end}}
 
   .feature data-aos="{{$aos}}"
-    {{if .icon}}
-    img src="{{.icon}}" alt="{{.title}}"
-    {{end}}
-    h3 {{.title | markdownify}}
-    {{if .subtitle}}
-    h4 {{.subtitle | markdownify}}
-    {{end}}
-    {{range .body}}
-    p {{.|markdownify}}
+    .inner
+      {{if .icon}}
+      img src="{{.icon}}" alt="{{.title}}"
+      {{end}}
+      h3 {{.title | markdownify}}
+      {{if .subtitle}}
+      h4 {{.subtitle | markdownify}}
+      {{end}}
+      {{range .body}}
+      p {{.|markdownify}}
+      {{end}}
+
+    {{if .cta_button_label}}
+    .ctas
+      a.cta id="{{$id}}-{{$k}}-cta" data-message="{{.cta_message | markdownify}}" {{.cta_button_label | markdownify}}
     {{end}}
   {{end}}

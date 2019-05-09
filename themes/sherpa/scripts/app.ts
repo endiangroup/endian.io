@@ -4,17 +4,66 @@ $(document).foundation()
 var burger = $("#burger");
 var menu   = $("#mobile-menu");
 burger.click(function(){
-  menu.fadeIn();
-
-  if (burger.hasClass("open")) {
-    burger.removeClass("open");
-    menu.fadeOut();
-  } else {
-    burger.addClass("open");
     menu.fadeIn();
-  }
-  return false;
+
+    if (burger.hasClass("open")) {
+        burger.removeClass("open");
+        menu.fadeOut();
+    } else {
+        burger.addClass("open");
+        menu.fadeIn();
+    }
+    return false;
 });
+
+// CTAs
+interface MessageSample {
+    support, agent, visitor, bot : any
+}
+
+interface Slaask {
+    isOpen():boolean
+    isLive():boolean
+    show()
+    identifyContact()
+    sendMessage(any)
+    Message(any,string):void
+    MessageSample:MessageSample
+}
+interface Window {
+    _slaask:Slaask
+}
+
+let lastBotMessage:string = ""
+
+$('.ctas a.cta').each(function() {
+    let el = $(this)
+    el.click(()=> {
+        if (!window._slaask) {
+            return false
+        }
+
+        let slaask = window._slaask
+        let messageText = el.data('message')
+
+        if (!slaask.isOpen()) {
+            slaask.show()
+        }
+
+        slaask.identifyContact()
+
+        if (slaask.isLive() && lastBotMessage != messageText){
+            slaask.sendMessage(
+                new slaask.Message(
+                    slaask.MessageSample.bot,
+                    messageText,
+                ),
+            )
+            lastBotMessage = messageText
+        }
+        return false
+    })
+})
 
 // Footnotes
 var footnotes = [];
@@ -33,7 +82,7 @@ $('article a').each(function() {
         }
 
         return;
-    }      
+    }
 
     // Index is zero-based; make human readable.
     ++idx;
@@ -55,7 +104,7 @@ $('article a').each(function() {
     var content = "<p>"+footnote.title+"</p><p>";
 
     if (footnote.href != "none") {
-        content += "<a href='"+footnote.href+"' target='_blank'><i class='fi-link'></i> " + footnote.href + "</a></p>" 
+        content += "<a href='"+footnote.href+"' target='_blank'><i class='fi-link'></i> " + footnote.href + "</a></p>"
     }
 
     footnotes.push(footnote);
@@ -68,7 +117,7 @@ if (footnotes.length) {
 
     for (var i = 0; i < footnotes.length; i++) {
         footnotes_el.append("<li class='footnote' id='footnote-"+footnotes[i].idx+"'><span><a href='#"+footnotes[i].id+"'><i class='fi-arrow-up'></i></a> " + footnotes[i].title + ".</span>");
-        
+
         if (footnotes[i].href != "none"){
             var parts = footnotes[i].href.split(",");
             for (var j = 0; j < parts.length; j++) {
@@ -85,7 +134,7 @@ $('a.footnote').click(function(){
     var target = $('span',$(el.attr('href')));
     target.addClass("highlight");
     setTimeout(function () {
-          target.removeClass('highlight');
+        target.removeClass('highlight');
     }, 3000);
 });
 
@@ -133,7 +182,7 @@ var jump=function(e) {
 }
 
 $(document).ready(function() {
-    $('a[href*="#"]').bind("click", jump); 
+    $('a[href*="#"]').bind("click", jump);
     return false;
 });
 
@@ -149,12 +198,12 @@ function makeTriangles() {
     $('.trianglify').each(function(){
         var el = $(this);
         var pattern = Trianglify({
-          height: Math.ceil(el.height()),
-          width: Math.floor(el.width()),
-          cell_size: cellSize,
-          variance: 0.8,
-          seed: el.data('seed'),
-          stroke_width: 1.51,
+            height: Math.ceil(el.height()),
+            width: Math.floor(el.width()),
+            cell_size: cellSize,
+            variance: 0.8,
+            seed: el.data('seed'),
+            stroke_width: 1.51,
         });
         el.append(pattern.svg());
         $('svg',el).fadeIn();

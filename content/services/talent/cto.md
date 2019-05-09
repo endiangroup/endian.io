@@ -70,7 +70,7 @@ full_width = "mobile"
 	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our CTO experience?"
     body = [
         "We don't idly trade in CTOs like some recruitment agency: we *are* CTOs. Our founders still lead teams, leverage cutting-edge technology, and write code every day.",
-        "When we talk about the qualities and responsibilities of a CTO, it's not academic. When we screen candidates, we'll challenge them like not recruiter ever could, and you will reap the benefits.",
+        "When we talk about the qualities and responsibilities of a CTO, it's not academic. When we screen candidates, we'll challenge them like no recruiter ever could, and you will reap the benefits.",
     ]
 
     [[sections.features.feature]]

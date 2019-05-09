@@ -123,6 +123,7 @@ full_width = "mobile"
     body = [
 		"If you're not technically inclined or you're taking a new technical approach, it can be hard to work out exactly what you want and need in a CTO.",
 		"Fortunately, we have a lot of experience in this area. We can help you build a comprehensive profile of your ideal CTO using our specialised process and custom-built software. The profile will include all of the technical expertise and experience they might need, and some simple ways of testing for those qualities.",
+		"Take a look at an <a href=\"/img/services/talent/example-profile-map.jpg\" target=\"blank\">example map screenshot</a>.",
     ]
 
     [[sections.boltons.feature]]

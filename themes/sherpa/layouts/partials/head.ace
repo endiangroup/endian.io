@@ -25,8 +25,14 @@ head
   meta name="theme-color" content="#0C1516"
 
   link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"
-  link href="/css/sherpa.css?v={{getenv "GITHASH"}}" rel="stylesheet"
+
+  {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/foundation-sites/scss" "node_modules/aos/src/sass")) }}
   {{if .Param "css"}}
-  link href="/css/{{.Param "css"}}.css?v={{getenv "GITHASH"}}" rel="stylesheet"
+  {{ $style := resources.Get (.Param "css") | resources.ToCSS $options | resources.Fingerprint }}
+  link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}"
   {{end}}
   link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet"
+
+  {{ $style := resources.Get "styles/sherpa.sass" | resources.ToCSS $options | resources.Fingerprint }}
+  link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}"
+

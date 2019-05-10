@@ -2,6 +2,7 @@
 themes/sherpa/static/css
 themes/sherpa/static/fonts
 themes/sherpa/static/sw.js
+resources/_gen
 public/
 .sass-cache
 node_modules/

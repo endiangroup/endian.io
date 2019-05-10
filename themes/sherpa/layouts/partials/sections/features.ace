@@ -26,9 +26,9 @@
 
     {{if .cta_button_label}}
     div class="ctas{{if .link_button_label}} has-link{{end}}"
-      a.cta id="{{$id}}-{{$k}}-cta" data-message="{{.cta_message | markdownify}}" {{.cta_button_label | markdownify}}
       {{if .link_button_label}}
       a.cta.secondary href="{{.link_button_url}}" target="_blank" <i class="fi-{{.link_icon}}"></i> {{.link_button_label | markdownify}}
       {{end}}
+      a.cta id="{{$id}}-{{$k}}-cta" data-message="{{.cta_message | markdownify}}" {{.cta_button_label | markdownify}}
     {{end}}
   {{end}}

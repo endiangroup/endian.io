@@ -183,8 +183,10 @@
           width: calc(100% - 3em) !important
 
         &.secondary
-          bottom: 1.5em
-          margin-bottom: 4em
+          margin-bottom: 0.75em
+          +breakpoint(medium)
+            bottom: 1.5em
+            margin-bottom: 4em
 
 .case-study
   +xy-grid

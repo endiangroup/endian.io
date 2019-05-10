@@ -46,7 +46,7 @@ weight = 10
     title = "Why use a third party service?"
     image_url = "/img/muscle.svg"
     body = [
-        "Finding a good CTO is time consuming and expensive. Likely candidates are often working for your competitors. Candidate evaluation can be tricky, especially if you're not equipped for C-level technical assessments."
+        "Finding a good CTO is time consuming and expensive. Often the best candidates are working for your competitors. Candidate evaluation is hard, especially if you're not equipped for C-level technical assessments."
     ]
 
   [[sections.terms.chevron]]
@@ -120,10 +120,12 @@ full_width = "mobile"
 	subtitle = "(optional extra)"
 	cta_button_label = "Find out more &raquo;"
 	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our profile mapping service?"
+	link_button_label = "Example map screenshot"
+	link_button_url = "/img/services/talent/example-profile-map.jpg"
+	link_icon = "map"
     body = [
 		"If you're not technically inclined or you're taking a new technical approach, it can be hard to work out exactly what you want and need in a CTO.",
 		"Fortunately, we have a lot of experience in this area. We can help you build a comprehensive profile of your ideal CTO using our specialised process and custom-built software. The profile will include all of the technical expertise and experience they might need, and some simple ways of testing for those qualities.",
-		"Take a look at an <a href=\"/img/services/talent/example-profile-map.jpg\" target=\"blank\">example map screenshot</a>.",
     ]
 
     [[sections.boltons.feature]]
@@ -132,11 +134,13 @@ full_width = "mobile"
 	subtitle = "(optional extra)"
 	cta_button_label = "Find out more &raquo;"
 	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our technical review service?"
+	link_button_label = "Example report"
+	link_button_url = "/pdf/CTO-technical-report-sample.pdf"
+	link_icon = "page-filled"
     body = [
 		"It can be tough to evaluate someone's technical chops --- especially when their job is highly specific.",
 		"We offer a thorough technical review service, which includes multiple technical interviews and a proof-of-ability challenge which promising candidates will complete on their own time.",
 		"Once the review is complete, we'll give you a comprehensive report with a statistical breakdown that you can use to compare candidates.",
-		"Take a look at an <a href=\"/pdf/CTO-technical-report-sample.pdf\" target=\"blank\">example report</a>.",
     ]
 
 [sections.case_studies]

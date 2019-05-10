@@ -81,15 +81,15 @@ section
         +border-colour-highlight-shift
 
       &:hover:before
-        bottom: 0%
-        top: auto
+        top: 0%
+        bottom: auto
         height: 100%
 
       &:before
         display: block
         position: absolute
         left: 0px
-        top: 0px
+        bottom: 0px
         height: 0px
         width: 100%
         z-index: -1
@@ -97,6 +97,13 @@ section
         color: #000 !important
         +background-colour-highlight-shift
         transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s
+
+      &.secondary
+        animation: none
+        color: $colour-white !important  
+
+        i
+          margin-right: 0.5em
 
   &#introduction
     min-height: calc(100vh - 12.5em)

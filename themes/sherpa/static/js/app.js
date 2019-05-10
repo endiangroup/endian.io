@@ -15,7 +15,7 @@ burger.click(function () {
     return false;
 });
 let lastBotMessage = "";
-$('.ctas a.cta').each(function () {
+$('.ctas a.cta[data-message]').each(function () {
     let el = $(this);
     el.click(() => {
         if (!window._slaask) {

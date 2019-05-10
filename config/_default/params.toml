@@ -140,11 +140,11 @@ build = [
 ]
 
 # Testimonials
-[[testimonial]]
-from = "MobKoi"
-body = "todo"
-about = [ "recruiting", "cto"]
-weight = 1
+#[[testimonial]]
+#from = "MobKoi"
+#body = "todo"
+#about = [ "recruiting", "cto"]
+#weight = 1
 
 [[testimonial]]
 from = "Eiland Glover, CEO, Kowala Inc"

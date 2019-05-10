@@ -84,7 +84,7 @@ full_width = "mobile"
     ]
 
     [[sections.features.feature]]
-	icon = "/img/braintrust.svg"
+	icon = "/img/services/talent/headhunting.svg"
     title = "Proactive headhunting"
 	cta_button_label = "Find out more &raquo;"
 	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our headhunting approach?"

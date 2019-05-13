@@ -86,23 +86,23 @@ summary = "An excellent overview of formal proofs in computer science."
 image_tag = "FML"
 
 # Case studies
-[[case_study]]
-id = "mobkoi"
-company = "Mobkoi"
-logo = "/img/mobkoi.svg"
-weight = 1
-cto = [
-    "Created profile map for ideal candidate",
-    "Longlisted 20 specialised candidates",
-    "Shortlisted 5 for suitability",
-    "Headhunted 2",
-    "Full technical evaluation",
-    "Produced strengths/weaknesses report for each candidate",
-    "New CTO hired!",
-]
-recruiting = [
-    "Exclusive technical team build-out following CTO hire",
-]
+#[[case_study]]
+#id = "mobkoi"
+#company = "Mobkoi"
+#logo = "/img/mobkoi.svg"
+#weight = 1
+#cto = [
+#    "Created profile map for ideal candidate",
+#    "Longlisted 20 specialised candidates",
+#    "Shortlisted 5 for suitability",
+#    "Headhunted 2",
+#    "Full technical evaluation",
+#    "Produced strengths/weaknesses report for each candidate",
+#    "New CTO hired!",
+#]
+#recruiting = [
+#    "Exclusive technical team build-out following CTO hire",
+#]
 
 [[case_study]]
 id = "kowala"

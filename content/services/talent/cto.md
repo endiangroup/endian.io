@@ -143,12 +143,12 @@ full_width = "mobile"
 		"Once the review is complete, we'll give you a comprehensive report with a statistical breakdown that you can use to compare candidates.",
     ]
 
-[sections.case_studies]
-id = "case-studies"
-title = "Featured case study"
-weight = 50
-partial = "sections/case-studies-filter"
-filter = "cto"
+#[sections.case_studies]
+#id = "case-studies"
+#title = "Featured case study"
+#weight = 50
+#partial = "sections/case-studies-filter"
+#filter = "cto"
 
 #[sections.testimonials]
 #id = "testimonials"

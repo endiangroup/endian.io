@@ -3,6 +3,7 @@
 
 $gradients: () !default;
 $gradients: map-merge((
+    ice: linear-gradient(135deg, $colour-blue 0%,$colour-marine 100%),
     cold: linear-gradient(135deg, $colour-olive 0%,$colour-blue 100%),
     chill: linear-gradient(135deg, $colour-green 0%, $colour-olive 100%),
     mid: linear-gradient(135deg, $colour-yellow 0%, $colour-green 100%),

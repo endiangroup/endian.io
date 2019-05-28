@@ -3,7 +3,7 @@
 title = "We're not recruiters. We're engineer hunters."
 
 # Social sharing
-social_title = "Endian Talent Services: Go Enginners"
+social_title = "Endian Talent Services: Go Engineers"
 summary      = "We're Go engineers who hire Go engineers. We have a world-class, in-house talent team. Why settle for anyone else?"
 
 # On-page content

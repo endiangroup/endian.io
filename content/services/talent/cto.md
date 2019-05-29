@@ -102,7 +102,7 @@ weight = 30
 partial = "sections/steps"
 steps = [
     "**Requirements gathering**<br/><br/>Our first task is to work out the exact role of a CTO in your organisation. We'll create a profile that covers everything from their required technical expertise through to cultural fit, mindset and approach. If you want to cast you own net, we can help you map out a job specification (see optional extras, below).",
-    "**Candidate reconnaissance**<br /><br />Once the profile is signed off, we can start trawling our networks for potential CTOs. We put every candidate through a qualifying process, so the large pool we start out with ends in a promising handful. We'll then introduce you to the best potentials CTOs.",
+    "**Candidate reconnaissance**<br /><br />Once the profile is signed off, we can start trawling our networks for potential CTOs. We put every candidate through a qualifying process, so the large pool we start out with ends in a promising handful. We'll then introduce you to the best potential CTOs.",
     "**Thinning the herd**<br /><br />We'll adapt to your hiring process, and we'll manage all the meetings, calls and other housekeeping. We'll hold candidates' hands the whole way (not literally). All you have to worry about is choosing your CTO. (If you're not confident with technical evaluations, we've got you covered; see the optional extra below).",
     "**Onboarding your new CTO**<br /><br />After you've found your perfect match, we'll help negotiate terms and get them settled in. We'll even check in during any probation period. Depending on your situation, you may want to hire a new technical team -- and we'd love to help with that process, too!",
 ]

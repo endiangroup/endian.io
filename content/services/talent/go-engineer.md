@@ -31,7 +31,7 @@ weight = 10
     title = "Who you are"
     image_url = "/img/braintrust.svg"
     body = [
-    "You have a business with a critical technological component, and you're either expanding or you're reshuffling your technical team. It's time to level up.",
+    "You have a business with a critical technological component built in Go, and you're either expanding or you're reshuffling your technical team. It's time to level up.",
     ]
 
     [[sections.terms.chevron]]
@@ -68,7 +68,7 @@ full_width = "mobile"
 	cta_button_label = "Find out more &raquo;"
 	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our programming experience?"
     body = [
-        "We don't idly trade in Go developers like some recruiment agency: we build products with Go. Our founders still lead teams, leverage cutting-edge technology, and write code every day.",
+        "We don't idly trade in Go developers like some recruiment agency: we build products with Go (take a look at our <a href=\"https://github.com/endiangroup\" target=\"_blank\">Github</a>). Our founders still lead teams, leverage cutting-edge technology, and write code every day.",
         "When we talk about the qualities and responsibilities of a good engineer, it's not academic. When we screen candidates, we'll challenge them like no recruiter ever could, and you will reap the benefits.",
     ]
 
@@ -88,7 +88,7 @@ full_width = "mobile"
 	cta_button_label = "Find out more &raquo;"
 	cta_message = "Hi, I'm the Endian helper bot. What would you like to know about our headhunting approach?"
     body = [
-        "We don't just wait for people to contact us. We actively seek out good people, even when it might seem like they're unavailable.",
+        "We don't just wait for people to contact us. We actively seek out great people, even when it might seem like they're unavailable.",
         "Finding good candidates can be tricky, especially for specialised engineering roles. Great engineers tend to be highly in demand --- and often work for your competitors.",
     ]
 
@@ -100,9 +100,9 @@ title = "How we work"
 weight = 30
 partial = "sections/steps"
 steps = [
-    "**Requirements gathering**<br/><br/>Our first task is to work out the exact role of your new engineer. We'll create a profile that covers everything from their required technical expertise through to cultural fit, mindset and approach. If you want to cast you own net, we can help you map out a job specification (see optional extras, below).",
+    "**Requirements gathering**<br/><br/>Our first task is to work out the exact role of your new engineer. We'll create a profile that covers everything from their required technical expertise through to cultural fit, mindset and approach. If you want to cast you own net, we can help you map out a job specification (see [optional extras](#bolt-ons), below).",
     "**Candidate reconnaissance**<br /><br />Once the profile is signed off, we can start trawling our networks for potential engineers. We put every candidate through a qualifying process, so the large pool we start out with ends in a promising handful. We'll then introduce you to the best candidates.",
-    "**Thinning the herd**<br /><br />We'll adapt to your hiring process, and we'll manage all the meetings, calls and other housekeeping. We'll hold candidates' hands the whole way (not literally). All you have to worry about is choosing your new engineer. (If you're not confident with technical evaluations, we've got you covered; see the optional extra below).",
+    "**Thinning the herd**<br /><br />We'll adapt to your hiring process, and we'll manage all the meetings, calls and other housekeeping. We'll hold candidates' hands the whole way (not literally). All you have to worry about is choosing your new engineer. (If you're not confident with technical evaluations, we've got you covered; see the [optional extra](#bolt-ons) below).",
     "**Onboarding your new engineer**<br /><br />After you've found your perfect match, we'll help negotiate terms and get them settled in. We'll even check in during any probation period. Depending on your situation, you may want to hire other team members -- and we'd love to help with that process, too!",
 ]
 

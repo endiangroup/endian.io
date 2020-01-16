@@ -34,5 +34,5 @@ head
   link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet"
 
   {{ $style := resources.Get "styles/sherpa.sass" | resources.ToCSS $options | resources.Fingerprint }}
-  link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}"
+  link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}"
 
